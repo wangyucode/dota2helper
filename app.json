@@ -19,35 +19,35 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#0099ff",
+    "navigationBarBackgroundColor": "#a43927",
     "navigationBarTitleText": "刀塔传奇",
     "navigationBarTextStyle": "light"
   },
   "tabBar": {
-    "selectedColor": "#0099ff",
+    "selectedColor": "#a43927",
     "list": [
       {
         "pagePath": "pages/news/news",
-        "iconPath": "/sources/icons/hero.jpg",
-        "selectedIconPath": "/sources/icons/hero.jpg",
+        "iconPath": "/assets/icons/news.png",
+        "selectedIconPath": "/assets/icons/news_1.png",
         "text": "资讯"
       },
       {
         "pagePath": "pages/home/home",
-        "iconPath": "/sources/icons/hero.jpg",
-        "selectedIconPath": "/sources/icons/hero.jpg",
+        "iconPath": "/assets/icons/hero.png",
+        "selectedIconPath": "/assets/icons/hero_1.png",
         "text": "英雄"
       },
       {
         "pagePath": "pages/tools/tools",
-        "iconPath": "/sources/icons/tool.jpg",
-        "selectedIconPath": "/sources/icons/tool.jpg",
+        "iconPath": "/assets/icons/props.png",
+        "selectedIconPath": "/assets/icons/props_1.png",
         "text": "物品"
       },
       {
         "pagePath": "pages/my/my",
-        "iconPath": "/sources/icons/my.jpg",
-        "selectedIconPath": "/sources/icons/my.jpg",
+        "iconPath": "/assets/icons/people.png",
+        "selectedIconPath": "/assets/icons/people_fill.png",
         "text": "我的"
       }
     ]
