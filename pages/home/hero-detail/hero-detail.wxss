@@ -8,10 +8,9 @@
 
 .top-container {
   display: flex;
-  height: 250rpx;
-  align-items: center;
+  height: 280rpx;
   position: relative;
-  margin: 5rpx;
+  margin: 20rpx;
 }
 
 .image-container {
@@ -22,8 +21,8 @@
 
 .image-name{
   position: absolute;
-  bottom: 20rpx;
-  left: 20rpx;
+  bottom: 15rpx;
+  left: 15rpx;
   font-size: 28rpx;
   color: white;
 }

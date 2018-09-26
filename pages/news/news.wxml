@@ -1,0 +1,17 @@
+<!-- pages/news/news.wxml-->
+
+<view class='home-container'>
+  <block wx:for='{{newsArry}}'>
+    <view class='container-list'>
+      <view class='container-image'>
+        <image class='container-list-image' src='{{item.imagePath}}'></image>
+      </view>
+      <view class='contents-view'>
+        <text class='contents-title'>{{item.title}}</text>
+        <text class='contents-message'>{{item.message}}</text>
+        <text class='contents-time'>{{item.time}}</text>
+      </view>
+    </view>
+    <view class='line'></view>
+  </block>
+</view>

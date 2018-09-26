@@ -1,8 +1,10 @@
 {
   "pages": [
+    "pages/news/news",
+    
     "pages/home/home",
     "pages/home/hero-detail/hero-detail",
-    
+
     "pages/tools/tools",
     "pages/tools/tool-jianjie/tool-jianjie",
     "pages/tools/tool-maxImage/tool-maxImage",
@@ -14,17 +16,21 @@
     "pages/index/index",
     "pages/logs/logs"
   ],
-
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#0099ff",
     "navigationBarTitleText": "刀塔传奇",
     "navigationBarTextStyle": "light"
   },
-
   "tabBar": {
     "selectedColor": "#0099ff",
     "list": [
+      {
+        "pagePath": "pages/news/news",
+        "iconPath": "/sources/icons/hero.jpg",
+        "selectedIconPath": "/sources/icons/hero.jpg",
+        "text": "咨询"
+      },
       {
         "pagePath": "pages/home/home",
         "iconPath": "/sources/icons/hero.jpg",
