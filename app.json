@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/news/news",
-    
+    "pages/news/news-detail/news-detail",
+
     "pages/home/home",
     "pages/home/hero-detail/hero-detail",
 
@@ -29,7 +30,7 @@
         "pagePath": "pages/news/news",
         "iconPath": "/sources/icons/hero.jpg",
         "selectedIconPath": "/sources/icons/hero.jpg",
-        "text": "咨询"
+        "text": "资讯"
       },
       {
         "pagePath": "pages/home/home",

@@ -2,7 +2,7 @@
 
 <view class='home-container'>
   <block wx:for='{{newsArry}}'>
-    <view class='container-list'>
+    <view class='container-list' bindtap='enterNewsDetail' data-item='{{item}}'>
       <view class='container-image'>
         <image class='container-list-image' src='{{item.imagePath}}'></image>
       </view>

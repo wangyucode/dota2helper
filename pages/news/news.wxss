@@ -3,6 +3,7 @@
 .home-container {
   direction: flex;
   flex-direction: column;
+  margin-top: 30rpx;
 }
 
 .container-list {

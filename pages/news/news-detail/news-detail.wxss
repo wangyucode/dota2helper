@@ -1,0 +1,34 @@
+/* pages/news/news-detail.wxss */
+
+.view-container{
+  display: flex;
+  flex-direction: column;
+  margin: 30rpx;
+}
+
+.top-title{
+  font-size: 34rpx;
+  font-weight: bold;
+  line-height: 38rpx;
+}
+
+.top-time{
+  font-size: 28rpx;
+  margin-top: 5rpx;
+}
+
+.top-image{
+  margin: 45rpx;
+  margin-top: 1.2;
+}
+
+.image-view{
+  width: 100%;
+  height: 300rpx;
+  text-indent:20px; 
+}
+
+.message-view{
+  font-size: 30rpx;
+  text-indent:2px;
+}

@@ -1,0 +1,16 @@
+<!-- /pages/news/news-detail -->
+
+<view class='view-container'>
+  <view class='top-title'>
+    <text>{{title}}</text>
+  </view>
+  <view class='top-time'>
+    <text>{{time}}</text>
+  </view>
+  <view class='top-image'>
+    <image src='{{imagePath}}' class='image-view'></image>
+  </view>
+  <view class='top-message'>
+    <text class='message-view' decode='true'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{message}}</text>
+  </view>
+</view>

@@ -94,6 +94,22 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function() {
+    return {
+      title: '刀塔传奇小助手',
+      path: '/pages/news/news',
+      imageUrl:'/sources/icons/hero.jpg'
+    }
+  },
 
+  enterNewsDetail: function(e) {
+    console.log('enterNewsDetail->', e);
+    wx.navigateTo({
+      url: '/pages/news/news-detail/news-detail?title=' +
+        e.currentTarget.dataset.item.title + '&time=' +
+        e.currentTarget.dataset.item.time  + '&imagePath=' +
+        e.currentTarget.dataset.item.imagePath + '&message=' +
+        e.currentTarget.dataset.item.message ,
+    })
   }
+
 })

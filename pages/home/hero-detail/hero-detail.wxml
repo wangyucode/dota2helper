@@ -2,7 +2,7 @@
 
 <view class='view-container'>
   <view class='top-container'>
-    <image src='{{imagePath}}' class='image-container' mode='aspectFill'></image>
+    <image src='{{imagePath}}' class='image-container'></image>
     <view class='image-name'>{{name}}</view>
   </view>
 
