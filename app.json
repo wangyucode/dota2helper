@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/home/hero-detail/hero-detail",
+    
+    "pages/tools/tools",
+    "pages/tools/tool-jianjie/tool-jianjie",
+    "pages/tools/tool-maxImage/tool-maxImage",
+
+    "pages/my/my",
+    "pages/my/update-log/update-log",
+    "pages/my/support-operation/support-operation",
+
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0099ff",
+    "navigationBarTitleText": "刀塔传奇",
+    "navigationBarTextStyle": "light"
+  },
+
+  "tabBar": {
+    "selectedColor": "#0099ff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "/sources/icons/hero.jpg",
+        "selectedIconPath": "/sources/icons/hero.jpg",
+        "text": "英雄"
+      },
+      {
+        "pagePath": "pages/tools/tools",
+        "iconPath": "/sources/icons/tool.jpg",
+        "selectedIconPath": "/sources/icons/tool.jpg",
+        "text": "物品"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "/sources/icons/my.jpg",
+        "selectedIconPath": "/sources/icons/my.jpg",
+        "text": "我的"
+      }
+    ]
+  }
+}

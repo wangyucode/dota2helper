@@ -1,0 +1,23 @@
+<!-- /pages/my/update-log/update-log.wxml-->
+
+<view class='view-container'>
+
+  <view class='top-view-container'>
+    <text>更新日志</text>
+  </view>
+
+  <view class='list-item'>
+    <text class='list-item-version'>V1.0.0</text>
+    <view class='list-item-contents'>
+      <view class='back-dian'></view>
+      <text class='list-item-detail'>主功能模块：英雄、物品、我的。</text>
+    </view>
+
+    <view class='list-item-contents'>
+      <view class='back-dian'></view>
+      <text class='list-item-detail'>主功能模块：英雄、物品、我的。</text>
+    </view>
+
+  </view>
+
+</view>

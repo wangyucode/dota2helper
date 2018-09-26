@@ -1,0 +1,57 @@
+<!-- pages/home/home.wxml -->
+
+<view class='home-container'>
+
+  <view class='power-container'>
+    <view class='power-container-title'>
+      <text class='list-title'>力量型</text>
+      <view class='power-container-title-line'></view>
+    </view>
+  </view>
+
+  <view class='power-container-contents-list'>
+    <block wx:for='{{powerHeroArry}}'>
+      <view class='power-container-contents' bindtap='enterDetail' data-item='{{item}}'>
+        <image src='{{item.imagePath}}' class='power-container-contents-image'></image>
+        <text class='power-container-contents-name'>{{item.name}}</text>
+      </view>
+    </block>
+  </view>
+
+  <view class='line'></view>
+
+  <view class='power-container'>
+    <view class='power-container-title'>
+      <text class='list-title'>敏捷型</text>
+      <view class='minjie-container-title-line'></view>
+    </view>
+  </view>
+
+  <view class='power-container-contents-list'>
+    <block wx:for='{{minjieHeroArry}}'>
+      <view class='power-container-contents' bindtap='enterDetail' data-item='{{item}}'>
+        <image src='{{item.imagePath}}' class='power-container-contents-image'></image>
+        <text class='power-container-contents-name'>{{item.name}}</text>
+      </view>
+    </block>
+  </view>
+
+  <view class='line'></view>
+
+  <view class='power-container'>
+    <view class='power-container-title'>
+      <text class='list-title'>智力型</text>
+      <view class='zhili-container-title-line'></view>
+    </view>
+  </view>
+
+  <view class='power-container-contents-list'>
+    <block wx:for='{{zhiliHeroArry}}'>
+      <view class='power-container-contents' bindtap='enterDetail' data-item='{{item}}'>
+        <image src='{{item.imagePath}}' class='power-container-contents-image'></image>
+        <text class='power-container-contents-name'>{{item.name}}</text>
+      </view>
+    </block>
+  </view>
+
+</view>

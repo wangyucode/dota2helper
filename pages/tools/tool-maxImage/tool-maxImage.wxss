@@ -1,0 +1,19 @@
+.view-container{
+  display: flex;
+  flex-direction: column;
+   align-items: center; 
+  /* justify-content: center; */
+  margin-top: 20rpx;
+  position: relative;
+
+  border-radius: 10rpx;
+}
+
+.image-name{
+  position: absolute;
+  bottom: 10rpx;
+  left: 80rpx;
+  font-size: 28rpx;
+  color: white;
+}
+

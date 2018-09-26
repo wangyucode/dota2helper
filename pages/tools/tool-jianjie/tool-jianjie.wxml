@@ -1,0 +1,81 @@
+<!-- pages/tools/tool-jianjie/tool-jianjie.wxml-->
+
+<view class='view-container'>
+  <view class='top-view'>
+    <image src='/sources/icons/mozhang.png' class='top-image'></image>
+    <text class='top-name'>{{name}}</text>
+    <text class='top-text'>{{tipInfo}}</text>
+  </view>
+
+  <view class='line'></view>
+
+  <view class='view-contents'>
+
+    <view class='item-container'>
+      <text class='info-title'>{{infoTitle}}</text>
+      <view class='info-detail'>
+        <image class='dian'></image>
+        <text class='info-contents'>{{infoText1}}</text>
+      </view>
+      <view class='info-detail'>
+        <image class='dian'></image>
+        <text class='info-contents'>{{infoText2}}</text>
+      </view>
+      <view class='info-detail'>
+        <image class='dian'></image>
+        <text class='info-contents'>{{infoText3}}</text>
+      </view>
+    </view>
+
+    <view class='line'></view>
+
+    <view class='item-container'>
+      <text class='info-title'>{{skillTitle}}</text>
+
+      <view class='info-detail'>
+        <image class='dian-skill'></image>
+        <text class='info-contents'>立刻根据能量点数回复相应的生命和魔法，每点能量恢复15点生命和魔法。</text>
+      </view>
+      <view class='info-detail'>
+        <image class='dian-skill'></image>
+        <text class='info-contents'>每当周围1200视野范围内有敌人施放技能都会自动充能（最多20点能量）。</text>
+      </view>
+      <view class='info-detail'>
+        <image class='dian-skill'></image>
+        <text class='info-contents'>范围：1200</text>
+      </view>
+      <view class='info-detail'>
+        <image class='dian-skill'></image>
+        <text class='info-contents'>每次施法增加能量点数：1</text>
+      </view>
+      <view class='info-detail'>
+        <image class='dian-skill'></image>
+        <text class='info-contents'>最高能量点数：20</text>
+      </view>
+      <view class='info-detail'>
+        <image class='dian-skill'></image>
+        <text class='info-contents'>每点能量回复生命/魔法：15</text>
+      </view>
+<view class='line'></view>
+
+ <view class='item-container'>
+      <text class='info-title'>画廊</text>
+      <view class='imageinfo-detail'>
+      <view class='image-container'>
+      <image class='image-detail' src='/sources/icons/handle.png' bindtap='maxImage' data-imagepath='/sources/icons/handle.png' data-name='使用魔杖'></image>
+      <text class='image-info'>使用魔杖</text>
+      </view>
+      <view class='image-container'>
+      <image class='image-detail' src='/sources/icons/moxing.jpeg' bindtap='maxImage' data-imagepath='/sources/icons/moxing.jpeg' data-name='游戏中模型'></image>
+      <text class='image-info'>游戏中模型</text>
+      </view>
+      </view>
+    </view>
+
+
+    </view>
+
+
+  </view>
+
+</view>

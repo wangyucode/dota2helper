@@ -1,0 +1,31 @@
+<!-- /pages/my/my.wxml-->
+
+<view class='view-container'>
+  <view class='top-view-container'>
+    <image class='top-view-image' src='/sources/icons/mori.jpeg'></image>
+    <text class='top-view-title'>{{appName}}</text>
+    <text class='top-view-infodetail'>{{appTipInfo}}</text>
+  </view>
+
+  <view class='gray-view'></view>
+
+  <button class='list-item-button' bindtap='enterUpdateLog' hover-class='button-hover'>
+    <text class='list-item-text'>更新日志</text>
+    <image src='/sources/icons/arrow_down.png' class='list-item-image'></image>
+  </button>
+  <view class='line'></view>
+
+  <button class='list-item-button' open-type='feedback'>
+    <text class='list-item-text'>意见反馈</text>
+    <image src='/sources/icons/arrow_down.png' class='list-item-image'></image>
+  </button>
+  <view class='line'></view>
+
+  <button class='list-item-button' bindtap='enterSupportOoperation'>
+    <text class='list-item-text'>支持运营</text>
+    <image src='/sources/icons/arrow_down.png' class='list-item-image'></image>
+  </button>
+  
+  <view class='gray-view'></view>
+
+</view>

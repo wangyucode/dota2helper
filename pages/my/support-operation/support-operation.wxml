@@ -1,0 +1,45 @@
+<!-- /pages/my/support-operation/support-operation.wxml -->
+
+<view class='view-container'>
+
+  <view class='top-view-container'>
+    <image src='/sources/icons/mori.jpeg' class='top-view-image'></image>
+    <text class='top-view-text'>{{supportInfo}}</text>
+  </view>
+
+  <view class='gray-view'></view>
+
+  <view class='list-item' bindtap='toRoll' hover-class='list-item-hover'>
+    <image src='/sources/icons/roll.jpg' class='list-item-image'></image>
+    <view class='list-item-text-container'>
+      <text class='list-item-text-title'>3D滚蛋吧</text>
+      <text class='list-item-text-info'>一起来玩滚蛋吧，看谁滚的远。</text>
+    </view>
+    <image src='/sources/icons/arrow_down.png' class='list-item-enterimage'></image>
+  </view>
+
+  <view class='line'></view>
+
+  <view class='list-item' bindtap='toFishHelp'>
+    <image src='/sources/icons/fish_logo.jpg' class='list-item-image'></image>
+    <view class='list-item-text-container'>
+      <text class='list-item-text-title'>养鱼小助手</text>
+      <text class='list-item-text-info'>造福鱼友，这里有你想要的一切!</text>
+    </view>
+    <image src='/sources/icons/arrow_down.png' class='list-item-enterimage'></image>
+  </view>
+  
+  <view class='line'></view>
+
+  <view class='list-item' bindtap='toClipboard'>
+    <image src='/sources/icons/clipboard.jpg' class='list-item-image'></image>
+    <view class='list-item-text-container'>
+      <text class='list-item-text-title'>跨平台剪切板</text>
+      <text class='list-item-text-info'>无需登录，可跨平台，跨设备记录文字、网址。</text>
+    </view>
+    <image src='/sources/icons/arrow_down.png' class='list-item-enterimage'></image>
+  </view>
+
+  <view class='gray-view'></view>
+
+</view>

@@ -1,0 +1,44 @@
+/* pages/home/hero-detail/hero-detail.wxss */
+
+.view-container {
+  display: flex;
+  flex-direction: column;
+  margin: 10rpx;
+}
+
+.top-container {
+  display: flex;
+  height: 250rpx;
+  align-items: center;
+  position: relative;
+  margin: 5rpx;
+}
+
+.image-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 10rpx;
+}
+
+.image-name{
+  position: absolute;
+  bottom: 20rpx;
+  left: 20rpx;
+  font-size: 28rpx;
+  color: white;
+}
+
+.contents{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30rpx;
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+}
+
+.contents-text{
+  font-size: 24rpx;
+  color: #000033;
+  line-height: 40rpx;
+  /* text-indent: 2em; */
+}

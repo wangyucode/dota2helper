@@ -1,0 +1,81 @@
+.home-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.power-container{
+  display: flex;
+  flex-direction: column;
+  margin: 10rpx;
+}
+
+.power-container-title{
+  display: flex;
+  flex-direction: row;
+  font-size: 34rpx;
+  color: #000033;
+}
+
+.power-container-title-line{
+  background-color: red;
+  width: 10rpx;
+  height: 30rpx;
+  margin-left: 15rpx;
+  margin-top: 8rpx;
+}
+
+.power-container-contents-list{
+  display: flex;
+  flex-direction: row;
+  margin-top: 15rpx;
+  flex-wrap: wrap;
+}
+
+.power-container-contents{
+  width: 20%;
+ display: flex;
+ flex-direction: column; 
+ align-items: center;
+ margin-bottom: 15rpx;
+}
+
+.power-container-contents-image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 10px;
+}
+
+.power-container-contents-name{
+  margin-top: 15rpx;
+  font-size: 28rpx;
+  color: #000033;
+}
+
+.line{
+  height: 3rpx;
+  background-color: #a0a0a0;
+  margin-top: 15rpx;
+  margin-bottom: 15rpx;
+  width: 95%;
+  margin-left: 15rpx;
+}
+
+.minjie-container-title-line{
+  background-color: green;
+  width: 10rpx;
+  height: 30rpx;
+  margin-left: 15rpx;
+  margin-top: 8rpx;
+}
+
+.zhili-container-title-line{
+  background-color: #0099ff;
+  width: 10rpx;
+  height: 30rpx;
+  margin-left: 15rpx;
+  margin-top: 8rpx;
+}
+
+.list-title{
+margin-left: 10rpx;
+}

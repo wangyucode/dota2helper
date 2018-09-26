@@ -1,0 +1,12 @@
+<!-- pages/home/hero-detail.xml -->
+
+<view class='view-container'>
+  <view class='top-container'>
+    <image src='{{imagePath}}' class='image-container' mode='aspectFill'></image>
+    <view class='image-name'>{{name}}</view>
+  </view>
+
+  <view class='contents'>
+  <text class='contents-text' decode='true'>{{detailInfo}}</text>
+  </view>
+</view>

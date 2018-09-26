@@ -1,0 +1,6 @@
+<!-- /pages/tools/tool-maxImage/tool-maxImage.wxml-->
+
+<view class='view-container'>
+  <image src='{{imagePath}}' mode='aspectFill'></image>
+  <text class='image-name'>{{name}}</text>
+</view>
