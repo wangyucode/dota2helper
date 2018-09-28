@@ -117,7 +117,7 @@
           <text class='skill-contents-text1'>{{key}}：{{attr}}</text>
         </view>
       </block>
-      <text class='skill-contents-text1' style='margin-top:15rpx;' wx:if='{{item.annotation.length > 0}}'>{{item.annotation}}</text>
+      <text class='skill-annotation' wx:if='{{item.annotation.length > 0}}'>{{item.annotation}}</text>
       <view class='line' style='margin-top:10rpx;'></view>
     </block>
 

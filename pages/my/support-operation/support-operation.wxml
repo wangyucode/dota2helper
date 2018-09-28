@@ -12,22 +12,13 @@
   <button class="btn-share" hover-class="btn-share-hover" open-type="share">
     <view class='share-item'>
       <image class='share-left-image' src='/assets/icons/share.png'></image>
-      <text decode='ture' class='list-item-text-info'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;分享小程序给鱼友们</text>
+      <text decode='ture' class='list-item-text-info'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;分享小程序给刀友们</text>
       <image class='share-right-arrow' src='/assets/icons/arrow_down.png'></image>
     </view>
 
   </button>
 
   <view class='line'></view>
-
-  <!-- <view class='list-item' bindtap='toRoll' hover-class='list-item-hover'>
-    <image src='/assets/roll.jpg' class='list-item-image'></image>
-    <view class='list-item-text-container'>
-      <text class='list-item-text-title'>3D滚蛋吧</text>
-      <text class='list-item-text-info'>一起来玩滚蛋吧，看谁滚的远。</text>
-    </view>
-    <image src='/assets/icons/arrow_down.png' class='list-item-enterimage'></image>
-  </view> -->
 
   <navigator target="miniProgram" open-type="navigate" app-id="wxa6e870e9d665b10b" version="release">
     <view class='list-item' hover-class='list-item-hover'>

@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    supportInfo:'DOTA2小助手的维护更新离不开您的支持！您可以通过以下方式支持我们!!!',
+    supportInfo:'DOTA2小助手的维护更新离不开您的支持！您可以通过以下方式支持我们！',
   },
 
   /**
@@ -63,7 +63,7 @@ Page({
    */
   onShareAppMessage: function () {
     return {
-      title: "了解DOTA？用DOTA2小助手就够了！",
+      title: "查英雄、技能、物品、天梯、资讯？点这里！",
       path: "/pages/news/news",
       imageUrl: "/assets/logo.png"
     }

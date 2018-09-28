@@ -6,8 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    appName:'DOTA2小助手 V1.0',
-    appTipInfo: '玩DOTA2，查资讯，查询各个英雄属性、技能。用刀塔传奇小助手就够了！',
+    appName: 'DOTA2英雄技能物品天梯助手 V1.0',
+    appTipInfo: '玩DOTA2，查资讯，查询英雄属性、技能、物品、天梯排行。用“DOTA2英雄技能物品天梯助手”就够了！',
   },
 
   /**
@@ -64,7 +64,7 @@ Page({
    */
   onShareAppMessage: function () {
     return {
-      title: '刀塔传奇小助手',
+      title: 'DOTA2英雄技能物品天梯助手',
       path: '/pages/news/news',
       imageUrl: '/assets/logo.png'
     }
