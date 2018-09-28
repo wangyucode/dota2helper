@@ -8,7 +8,7 @@
     <text>{{time}}</text>
   </view>
   <view class='top-image'>
-    <image src='{{imagePath}}' class='image-view'></image>
+    <image src='{{imagePath}}' class='image-view' mode='aspectFill'></image>
   </view>
   <view class='top-message'>
     <text class='message-view' decode='true'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{message}}</text>

@@ -1,12 +1,126 @@
 <!-- pages/home/hero-detail.xml -->
 
 <view class='view-container'>
-  <view class='top-container'>
-    <image src='{{imagePath}}' class='image-container'></image>
-    <view class='image-name'>{{name}}</view>
+  <view class='image-container'>
+    <image src='{{imagePath}}' class='image-contents' mode='aspectFill'></image>
   </view>
 
-  <view class='contents'>
-  <text class='contents-text' decode='true'>{{detailInfo}}</text>
+  <view class='list-title'>{{heroName}}</view>
+  <view class='jianjie-detail'>
+    <text class='jianjie-detail-info' decode='true'>攻击类型&nbsp;:&nbsp;&nbsp;{{attackType}}</text>
+    <view class='jiange'></view>
+    <text class='jianjie-detail-info' decode='true'>其他简称&nbsp;:&nbsp;&nbsp;{{otherName}}</text>
   </view>
+
+  <view class='history-view'>
+    <view class='list-title-history'>故事背景</view>
+    <view class='jiange' style='margin-bottom:10rpx;'></view>
+    <view class='history-item'>
+      <text class='history-text' decode='true'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{heroStory}}</text>
+    </view>
+  </view>
+
+  <view class='history-view'>
+    <view class='list-title-history'>英雄属性</view>
+    <view class='jiange'></view>
+    <view class='shuxing-view'>
+
+      <view class='list'>
+        <view class='list-item'>
+          <image class='list-item-image1' src='/assets/icons/pro1.png'></image>
+          <text class='list-item-text'>{{strengthStart}} + {{strengthGrow}}</text>
+        </view>
+        <view class='list-item'>
+          <image class='list-item-image1' src='/assets/icons/pro2.png'></image>
+          <text class='list-item-text'>{{agilityStart}} + {{agilityGrow}}</text>
+        </view>
+        <view class='list-item'>
+          <image class='list-item-image1' src='/assets/icons/pro3.png'></image>
+          <text class='list-item-text'>{{intelligenceStart}} + {{intelligenceGrow}}</text>
+        </view>
+      </view>
+
+      <view class='list'>
+        <view class='list-item'>
+          <image class='list-item-image2' src='/assets/icons/pro4.png'></image>
+          <text class='list-item-text'>{{attackPower}}</text>
+        </view>
+        <view class='list-item'>
+          <image class='list-item-image2' src='/assets/icons/pro5.png'></image>
+          <text class='list-item-text'>{{armor}}</text>
+        </view>
+        <view class='list-item'>
+          <image class='list-item-image2' src='/assets/icons/pro6.png'></image>
+          <text class='list-item-text'>{{speed}}</text>
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+  <view class='shu-view'>
+    <view class='list-title-history'>天赋树</view>
+    <view class='jiange'></view>
+    <view class='shu-item'>
+      <text class='shu-text-left'>{{talent25Left}}</text>
+      <view class='shu-quan-view'>
+        <text class='shu-quan-text'>25</text>
+      </view>
+      <text class='shu-text-right'>{{talent25Right}}</text>
+    </view>
+    <view class='line'></view>
+    <view class='shu-item'>
+      <text class='shu-text-left'>{{talent20Left}}</text>
+      <view class='shu-quan-view'>
+        <text class='shu-quan-text'>20</text>
+      </view>
+      <text class='shu-text-right'>{{talent20Right}}</text>
+    </view>
+    <view class='line'></view>
+    <view class='shu-item'>
+      <text class='shu-text-left'>{{talent15Left}}</text>
+      <view class='shu-quan-view'>
+        <text class='shu-quan-text'>15</text>
+      </view>
+      <text class='shu-text-right'>{{talent15Right}}</text>
+    </view>
+    <view class='line'></view>
+    <view class='shu-item'>
+      <text class='shu-text-left'>{{talent10Left}}</text>
+      <view class='shu-quan-view'>
+        <text class='shu-quan-text'>10</text>
+      </view>
+      <text class='shu-text-right'>{{talent10Right}}</text>
+    </view>
+    <view class='line'></view>
+  </view>
+
+  <view class='history-view'>
+    <view class='list-title-history'>技能介绍</view>
+    <view class='jiange' style='margin-bottom: 15rpx;'></view>
+    <block wx:for='{{skillArray}}'>
+      <view class='jineng-contents'>
+        <image src='{{item.imageUrl}}' class='jineng-content-image' mode='scaleToFill'></image>
+        <view class='jineng-content-text-view'>
+          <text class='jineng-content-text-title'>{{item.name}}</text>
+          <text class='jineng-content-text'>{{item.description}}</text>
+        </view>
+      </view>
+      <view class='skill-contents-view'  style='margin-bottom:15rpx;'>
+        <text class='skill-contents-text' wx:if='{{item.tips.length > 0}}'>{{item.tips}}</text>
+        <text class='skill-contents-text1' wx:if='{{item.magicConsumption.length > 0}}'>魔法消耗：{{item.magicConsumption}}</text>
+        <text class='skill-contents-text1' wx:if='{{item.coolDown.length > 0}}'>冷却时间：{{item.coolDown}}</text>
+      </view>
+
+      <block wx:for='{{item.attributes}}' wx:for-index="key" wx:for-item="attr">
+        <view class='skill-contents-view'>
+          <text class='skill-contents-text1'>{{key}}：{{attr}}</text>
+        </view>
+      </block>
+      <text class='skill-contents-text1' style='margin-top:15rpx;' wx:if='{{item.annotation.length > 0}}'>{{item.annotation}}</text>
+      <view class='line' style='margin-top:10rpx;'></view>
+    </block>
+
+  </view>
+  <view class='bottom-view'></view>
 </view>

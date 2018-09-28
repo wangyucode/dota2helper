@@ -3,43 +3,83 @@
 <view class='view-container'>
 
   <view class='top-view-container'>
-    <image src='/sources/icons/mori.jpeg' class='top-view-image'></image>
+    <image src='/assets/icons/xiexie.jpg' class='top-view-image'></image>
     <text class='top-view-text'>{{supportInfo}}</text>
   </view>
 
   <view class='gray-view'></view>
 
-  <view class='list-item' bindtap='toRoll' hover-class='list-item-hover'>
-    <image src='/sources/icons/roll.jpg' class='list-item-image'></image>
+  <button class="btn-share" hover-class="btn-share-hover" open-type="share">
+    <view class='share-item'>
+      <image class='share-left-image' src='/assets/icons/share.png'></image>
+      <text decode='ture' class='list-item-text-info'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;分享小程序给鱼友们</text>
+      <image class='share-right-arrow' src='/assets/icons/arrow_down.png'></image>
+    </view>
+
+  </button>
+
+  <view class='line'></view>
+
+  <!-- <view class='list-item' bindtap='toRoll' hover-class='list-item-hover'>
+    <image src='/assets/roll.jpg' class='list-item-image'></image>
     <view class='list-item-text-container'>
       <text class='list-item-text-title'>3D滚蛋吧</text>
       <text class='list-item-text-info'>一起来玩滚蛋吧，看谁滚的远。</text>
     </view>
-    <image src='/sources/icons/arrow_down.png' class='list-item-enterimage'></image>
-  </view>
+    <image src='/assets/icons/arrow_down.png' class='list-item-enterimage'></image>
+  </view> -->
+
+  <navigator target="miniProgram" open-type="navigate" app-id="wxa6e870e9d665b10b" version="release">
+    <view class='list-item' hover-class='list-item-hover'>
+      <image src='/assets/roll.jpg' class='list-item-image'></image>
+      <view class='list-item-text-container'>
+        <text class='list-item-text-title'>3D滚蛋吧</text>
+        <text class='list-item-text-info'>一起来玩滚蛋吧，看谁滚的远。</text>
+      </view>
+      <image src='/assets/icons/arrow_down.png' class='list-item-enterimage'></image>
+    </view>
+  </navigator>
+
 
   <view class='line'></view>
 
   <view class='list-item' bindtap='toFishHelp'>
-    <image src='/sources/icons/fish_logo.jpg' class='list-item-image'></image>
+    <image src='/assets/fish_logo.jpg' class='list-item-image'></image>
     <view class='list-item-text-container'>
       <text class='list-item-text-title'>养鱼小助手</text>
       <text class='list-item-text-info'>造福鱼友，这里有你想要的一切!</text>
     </view>
-    <image src='/sources/icons/arrow_down.png' class='list-item-enterimage'></image>
+    <image src='/assets/icons/arrow_down.png' class='list-item-enterimage'></image>
   </view>
-  
+
   <view class='line'></view>
 
   <view class='list-item' bindtap='toClipboard'>
-    <image src='/sources/icons/clipboard.jpg' class='list-item-image'></image>
+    <image src='/assets/clipboard.jpg' class='list-item-image'></image>
     <view class='list-item-text-container'>
       <text class='list-item-text-title'>跨平台剪切板</text>
       <text class='list-item-text-info'>无需登录，可跨平台，跨设备记录文字、网址。</text>
     </view>
-    <image src='/sources/icons/arrow_down.png' class='list-item-enterimage'></image>
+    <image src='/assets/icons/arrow_down.png' class='list-item-enterimage'></image>
   </view>
 
+<view class='line'></view>
+
+  <view class='list-item' bindtap="toReward">
+    <text class='list-item-my'>打赏我</text>
+    <view class='flex-open'></view>
+    <image class='list-item-enterimage-my' src='/assets/icons/arrow_down.png'></image>
+  </view>
+
+<view class='line'></view>
+
+  <view class='list-item'>
+    <text class='list-item-lianxi'>联系我？请访问网址 wycode.cn</text>
+  </view>
+
+  
+
+  <view class='gray-view'></view>
   <view class='gray-view'></view>
 
 </view>

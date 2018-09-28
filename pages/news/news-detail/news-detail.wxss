@@ -18,13 +18,14 @@
 }
 
 .top-image{
-  margin: 45rpx;
-  margin-top: 1.2;
+  /* margin: 45rpx;
+  margin-top: 1.2; */
+  margin-top: 10rpx;
 }
 
 .image-view{
   width: 100%;
-  height: 300rpx;
+  height: 340rpx;
   text-indent:20px; 
 }
 

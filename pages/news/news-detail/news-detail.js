@@ -20,6 +20,7 @@ Page({
     this.setData({
       title:options.title,
       imagePath: options.imagePath,
+      // imagePath:'//www.dota2.com.cn/images/heroes/abilities/earthshaker_fissure_hp1.png',
       message:options.message,
       time:options.time
     })

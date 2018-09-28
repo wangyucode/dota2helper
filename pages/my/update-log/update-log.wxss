@@ -41,7 +41,7 @@
 }
 
 .list-item-detail {
-  font-size: 24rpx;
+  font-size: 30rpx;
   color: #003;
   margin-left: 15rpx;
 }

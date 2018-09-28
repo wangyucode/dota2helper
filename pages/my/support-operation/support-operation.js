@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    supportInfo:'您可以通过以下方式支持我们!!!',
+    supportInfo:'DOTA2小助手的维护更新离不开您的支持！您可以通过以下方式支持我们!!!',
   },
 
   /**
@@ -62,7 +62,11 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-    
+    return {
+      title: "了解DOTA？用DOTA2小助手就够了！",
+      path: "/pages/news/news",
+      imageUrl: "/assets/logo.png"
+    }
   },
 
   toRoll:function(e){
@@ -82,5 +86,11 @@ Page({
       appId: 'wx1d777be6c442da17',
     })
   },
+
+  toReward: function () {
+    wx.previewImage({
+      urls: ["https://wycode.cn/upload/image/fish/reward.jpg"],
+    })
+  }
 
 })

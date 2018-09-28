@@ -39,12 +39,6 @@
         "text": "英雄"
       },
       {
-        "pagePath": "pages/tools/tools",
-        "iconPath": "/assets/icons/props.png",
-        "selectedIconPath": "/assets/icons/props_1.png",
-        "text": "物品"
-      },
-      {
         "pagePath": "pages/my/my",
         "iconPath": "/assets/icons/people.png",
         "selectedIconPath": "/assets/icons/people_fill.png",

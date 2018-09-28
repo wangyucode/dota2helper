@@ -4,12 +4,12 @@
   <block wx:for='{{newsArry}}'>
     <view class='container-list' bindtap='enterNewsDetail' data-item='{{item}}'>
       <view class='container-image'>
-        <image class='container-list-image' src='{{item.imagePath}}'></image>
+        <image class='container-list-image' src='{{item.link}}' mode='aspectFill'></image>
       </view>
       <view class='contents-view'>
         <text class='contents-title'>{{item.title}}</text>
-        <text class='contents-message'>{{item.message}}</text>
-        <text class='contents-time'>{{item.time}}</text>
+        <text class='contents-message'>{{item.content}}</text>
+        <text class='contents-time'>{{item.newsDate}}</text>
       </view>
     </view>
     <view class='line'></view>

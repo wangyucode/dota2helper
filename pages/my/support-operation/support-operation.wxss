@@ -15,15 +15,17 @@
 }
 
 .top-view-image {
-  width: 150rpx;
-  height: 150rpx;
+  width: 300rpx;
+  height: 300rpx;
   border-radius: 10rpx;
 }
 
 .top-view-text {
   margin-top: 20rpx;
   margin-bottom: 20rpx;
-  font-size: 28rpx;
+  font-size: 30rpx;
+  margin: 15rpx;
+  font-weight: bold;
 }
 
 .gray-view {
@@ -48,6 +50,13 @@
   margin: 24rpx;
 }
 
+.list-item-image-share {
+  width: 68rpx;
+  height: 68rpx;
+  margin: 24rpx;
+  margin-left: 50rpx;
+}
+
 .list-item-text-container {
   display: flex;
   flex-direction: column;
@@ -55,12 +64,12 @@
 }
 
 .list-item-text-title{
-  font-size: 28rpx;
+  font-size: 30rpx;
   color: #003;
 }
 
 .list-item-text-info {
-  font-size: 24rpx;
+  font-size: 28rpx;
   color: #003;
 }
 
@@ -74,4 +83,57 @@
   width: 30rpx;
   height: 30rpx;
   margin-right: 30rpx;
+}
+
+.btn-share{
+  width: 100%;
+  background-color: white;
+  border: none;
+  border-radius: 0;
+  padding: 24rpx;
+  line-height: 1.5;
+}
+
+.btn-share-hover{
+  background-color: #eee;
+}
+
+.share-item{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.share-left-image{
+  width: 64rpx;
+  height: 64rpx;
+  padding-left: 35rpx;
+}
+
+.share-right-arrow{
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  right: 30rpx;
+}
+
+.list-item-my{
+  font-size: 28rpx;
+  margin-left: 50rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+.list-item-enterimage-my{
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  right: 30rpx;
+}
+
+.list-item-lianxi{
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  font-size: 28rpx;
+  margin-left: 50rpx;
 }

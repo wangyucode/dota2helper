@@ -1,22 +1,22 @@
-.home-container{
+.home-container {
   display: flex;
   flex-direction: column;
 }
 
-.power-container{
+.power-container {
   display: flex;
   flex-direction: column;
   margin: 10rpx;
 }
 
-.power-container-title{
+.power-container-title {
   display: flex;
   flex-direction: row;
   font-size: 34rpx;
-  color: #000033;
+  color: #003;
 }
 
-.power-container-title-line{
+.power-container-title-line {
   background-color: red;
   width: 10rpx;
   height: 30rpx;
@@ -24,33 +24,50 @@
   margin-top: 8rpx;
 }
 
-.power-container-contents-list{
+.power-container-contents-list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between; 
+  justify-content: space-between;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
 }
 
-.power-container-contents{
- display: flex;
- flex-direction: column; 
- align-items: center;
- margin: 7rpx;
- margin-top: 15rpx;
+.power-container-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 7rpx;
+  margin-top: 15rpx;
+  position: relative;
 }
 
-.power-container-contents-image{
+.power-container-contents-image {
   width: 220rpx;
   height: 120rpx;
-  border-radius: 10px;
+  border-radius: 10rpx;
 }
 
-.power-container-contents-name{
-  font-size: 28rpx;
-  color: #000033;
+.power-container-contents-name {
+  position: absolute;
+  bottom: 5rpx;
+  left: 5rpx;
+  font-size: 24rpx;
+  color: white;
 }
 
-.line{
+.bottom-container {
+  position: absolute;
+  bottom: 0rpx;
+  left: 0;
+  right: 0;
+  height: 50rpx;
+  border-bottom-left-radius: 12rpx;
+  border-bottom-right-radius: 12rpx;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.0));
+}
+
+.line {
   height: 3rpx;
   background-color: #a0a0a0;
   margin-top: 15rpx;
@@ -59,7 +76,7 @@
   margin-left: 15rpx;
 }
 
-.minjie-container-title-line{
+.minjie-container-title-line {
   background-color: green;
   width: 10rpx;
   height: 30rpx;
@@ -67,14 +84,14 @@
   margin-top: 8rpx;
 }
 
-.zhili-container-title-line{
-  background-color: #0099ff;
+.zhili-container-title-line {
+  background-color: #09f;
   width: 10rpx;
   height: 30rpx;
   margin-left: 15rpx;
   margin-top: 8rpx;
 }
 
-.list-title{
-margin-left: 10rpx;
+.list-title {
+  margin-left: 10rpx;
 }

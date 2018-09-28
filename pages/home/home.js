@@ -67,7 +67,7 @@ Page({
     return {
       title: '刀塔传奇小助手',
       path: '/pages/news/news',
-      imageUrl: '/sources/icons/hero.jpg'
+      imageUrl: '/assets/logo.png'
     }
   },
 
@@ -86,7 +86,6 @@ Page({
           var arryList2 = new Array();
           var arryList3 = new Array();
           for (var i = 0; i < that.data.totalArray.length; i++) {
-            console.log('array->', i);
             if (that.data.totalArray[i].type == '力量') {
               arryList1.unshift(that.data.totalArray[i]);
             } else if (that.data.totalArray[i].type == '敏捷') {

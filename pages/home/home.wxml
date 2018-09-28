@@ -13,7 +13,9 @@
     <block wx:for='{{powerHeroArry}}'>
       <view class='power-container-contents' bindtap='enterDetail' data-item='{{item}}'>
         <image src='{{item.imageUrl}}' class='power-container-contents-image'></image>
-        <text class='power-container-contents-name'>{{item.name}}</text>
+        <view class='bottom-container'>
+          <text class='power-container-contents-name'>{{item.name}}</text>
+        </view>
       </view>
     </block>
   </view>
@@ -31,7 +33,9 @@
     <block wx:for='{{minjieHeroArry}}'>
       <view class='power-container-contents' bindtap='enterDetail' data-item='{{item}}'>
         <image src='{{item.imageUrl}}' class='power-container-contents-image'></image>
-        <text class='power-container-contents-name'>{{item.name}}</text>
+        <view class='bottom-container'>
+          <text class='power-container-contents-name'>{{item.name}}</text>
+        </view>
       </view>
     </block>
   </view>
@@ -49,7 +53,9 @@
     <block wx:for='{{zhiliHeroArry}}'>
       <view class='power-container-contents' bindtap='enterDetail' data-item='{{item}}'>
         <image src='{{item.imageUrl}}' class='power-container-contents-image'></image>
-        <text class='power-container-contents-name'>{{item.name}}</text>
+        <view class='bottom-container'>
+          <text class='power-container-contents-name'>{{item.name}}</text>
+        </view>
       </view>
     </block>
   </view>
