@@ -14,6 +14,8 @@
     "pages/my/update-log/update-log",
     "pages/my/support-operation/support-operation",
 
+    "pages/rank/rank",
+
     "pages/index/index",
     "pages/logs/logs"
   ],
@@ -31,6 +33,12 @@
         "iconPath": "/assets/icons/news.png",
         "selectedIconPath": "/assets/icons/news_1.png",
         "text": "资讯"
+      },
+      {
+        "pagePath": "pages/rank/rank",
+        "iconPath": "/assets/icons/news.png",
+        "selectedIconPath": "/assets/icons/news_1.png",
+        "text": "天梯"
       },
       {
         "pagePath": "pages/home/home",
