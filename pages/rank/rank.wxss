@@ -11,17 +11,29 @@
 }
 
 .top-title {
-  width: 10%;
+  width: 15%;
   font-size: 34rpx;
   font-weight: bold;
+  text-align: center;
   color: black;
   border: 3rpx solid #a43927;
   padding-top:  10rpx;
   padding-bottom:  10rpx;
 }
 
-.top-contents {
-  width: 45%;
+.top-contents-1 {
+  width: 55%;
+  font-size: 34rpx;
+  font-weight: bold;
+  color: black;
+  border: 3rpx solid #a43927;
+  text-align: center;
+  padding-top:  10rpx;
+  padding-bottom:  10rpx;
+}
+
+.top-contents-2 {
+  width: 30%;
   font-size: 34rpx;
   font-weight: bold;
   color: black;
@@ -38,15 +50,23 @@
 }
 
 .list-title {
-  width: 10%;
+  width: 15%;
   font-size: 30rpx;
   color: black;
   border: 3rpx solid #a43927;
   text-align: center;
 }
 
-.list-contents {
-  width: 45%;
+.list-contents-1 {
+  width: 55%;
+  font-size: 30rpx;
+  color: black;
+  border: 3rpx solid #a43927;
+  text-align: center;
+}
+
+.list-contents-2 {
+  width: 30%;
   font-size: 30rpx;
   color: black;
   border: 3rpx solid #a43927;

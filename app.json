@@ -1,21 +1,16 @@
 {
   "pages": [
+    "pages/home/home",
     "pages/news/news",
     "pages/news/news-detail/news-detail",
-
-    "pages/home/home",
     "pages/home/hero-detail/hero-detail",
-
     "pages/tools/tools",
     "pages/tools/tool-jianjie/tool-jianjie",
     "pages/tools/tool-maxImage/tool-maxImage",
-
     "pages/my/my",
     "pages/my/update-log/update-log",
     "pages/my/support-operation/support-operation",
-
     "pages/rank/rank",
-
     "pages/index/index",
     "pages/logs/logs"
   ],
@@ -29,22 +24,16 @@
     "selectedColor": "#a43927",
     "list": [
       {
-        "pagePath": "pages/news/news",
-        "iconPath": "/assets/icons/news.png",
-        "selectedIconPath": "/assets/icons/news_1.png",
-        "text": "资讯"
-      },
-      {
-        "pagePath": "pages/rank/rank",
-        "iconPath": "/assets/icons/news.png",
-        "selectedIconPath": "/assets/icons/news_1.png",
-        "text": "天梯"
-      },
-      {
         "pagePath": "pages/home/home",
         "iconPath": "/assets/icons/hero.png",
         "selectedIconPath": "/assets/icons/hero_1.png",
         "text": "英雄"
+      },
+      {
+        "pagePath": "pages/rank/rank",
+        "iconPath": "/assets/icons/board.png",
+        "selectedIconPath": "/assets/icons/board_1.png",
+        "text": "天梯"
       },
       {
         "pagePath": "pages/my/my",

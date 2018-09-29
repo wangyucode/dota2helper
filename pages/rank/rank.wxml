@@ -3,15 +3,15 @@
 <view class='container-view'>
   <view class='top-view'>
     <text class='top-title'>排行</text>
-    <text class='top-contents'>玩家昵称</text>
-    <text class='top-contents'>战队</text>
+    <text class='top-contents-1'>玩家昵称</text>
+    <text class='top-contents-2'>战队</text>
   </view>
 
   <block wx:for='{{rankList}}'>
     <view class='list-view'>
       <text class='list-title'>{{item.rank}}</text>
-      <text class='list-contents'>{{item.name}}</text>
-      <text class='list-contents'>{{item.team_tag}}</text>
+      <text class='list-contents-1'>{{item.name}}</text>
+      <text class='list-contents-2'>{{item.team_tag}}</text>
     </view>
   </block>
 </view>
