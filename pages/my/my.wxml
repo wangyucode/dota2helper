@@ -1,31 +1,24 @@
-<!-- /pages/my/my.wxml-->
-
+<!-- /pages/my/my.wxml -->
 <view class='view-container'>
   <view class='top-view-container'>
     <image class='top-view-image' src='/assets/logo.png'></image>
-    <text class='top-view-title'>{{appName}}</text>
-    <text class='top-view-infodetail'>{{appTipInfo}}</text>
+    <text class='top-view-title'>DOTA2英雄技能物品天梯助手 V1.1</text>
+    <text class='top-view-infodetail'>玩DOTA2，查询英雄属性、技能、物品、天梯排行。用“DOTA2英雄技能物品天梯助手”就够了！</text>
   </view>
-
   <view class='gray-view'></view>
-
-  <button class='list-item-button' bindtap='enterUpdateLog' hover-class='button-hover'>
+  <button class='list-item-button' bindtap='enterUpdateLog' hover-class='list-item-button-hover'>
     <text class='list-item-text'>更新日志</text>
     <image src='/assets/icons/arrow_down.png' class='list-item-image'></image>
   </button>
   <view class='line'></view>
-
-  <button class='list-item-button' open-type='feedback'>
+  <button class='list-item-button' open-type='feedback' hover-class='list-item-button-hover'>
     <text class='list-item-text'>意见反馈</text>
     <image src='/assets/icons/arrow_down.png' class='list-item-image'></image>
   </button>
   <view class='line'></view>
-
-  <button class='list-item-button' bindtap='enterSupportOoperation'>
+  <button class='list-item-button' bindtap='enterSupportOoperation' hover-class='list-item-button-hover'>
     <text class='list-item-text'>支持运营</text>
     <image src='/assets/icons/arrow_down.png' class='list-item-image'></image>
   </button>
-  
   <view class='gray-view'></view>
-
 </view>

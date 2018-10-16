@@ -8,7 +8,6 @@
 .top-container {
   display: flex;
   flex-direction: column;
-  /* background-color: #a43927; */
 }
 
 .image-container {
@@ -298,4 +297,17 @@
   color: #555;
   margin-top: 16rpx;
   font-style: italic;
+}
+
+.list-contents1{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10rpx;
+}
+
+.list-contents1-image{
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 8rpx;
+  margin-right: 10rpx;
 }

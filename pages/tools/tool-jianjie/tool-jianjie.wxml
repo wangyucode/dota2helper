@@ -2,80 +2,42 @@
 
 <view class='view-container'>
   <view class='top-view'>
-    <image src='/sources/icons/mozhang.png' class='top-image'></image>
-    <text class='top-name'>{{name}}</text>
-    <text class='top-text'>{{tipInfo}}</text>
+    <image class='top-view-image' src='{{toolDetail.img}}'></image>
+    <view class='top-view-contents'>
+      <text class='top-view-contents-title'>{{toolDetail.name}}</text>
+      <view class='top-view-contents2'>
+        <image class='top-view-contents-image' src='/assets/icons/gold.png'></image>
+        <text class='top-view-contents-message'>{{toolDetail.cost}}</text>
+      </view>
+    </view>
   </view>
+  <view class='jiange' style='margin-top:15rpx;'></view>
 
-  <view class='line'></view>
-
-  <view class='view-contents'>
-
-    <view class='item-container'>
-      <text class='info-title'>{{infoTitle}}</text>
-      <view class='info-detail'>
-        <image class='dian'></image>
-        <text class='info-contents'>{{infoText1}}</text>
+  <view class='contents-view'>
+  <block wx:for='{{toolDetail.desc}}' wx:for-index="key" wx:for-item="desc">
+  <text class='contentview-text1'>{{key}}</text>
+  <text class='contentview-text5'>{{desc}}</text>
+  </block>
+    
+    <view class='jiange' wx:if='{{toolDetail.notes}}'></view>
+    <text wx:if='{{toolDetail.notes}}' class='contentview-text2'>{{toolDetail.notes}}</text>
+    <view class='jiange'  wx:if='{{toolDetail.attrs}}'></view>
+    <block wx:for='{{toolDetail.attrs}}' wx:for-index="key" wx:for-item="attr">
+      <view class='skill-contents-view1'>
+        <view class='skill-contents-view2'>
+          <text class='skill-contents-text2'>{{key}}：</text>
+          <text class='skill-contents-text6'>+{{attr}}</text>
+        </view>
       </view>
-      <view class='info-detail'>
-        <image class='dian'></image>
-        <text class='info-contents'>{{infoText2}}</text>
-      </view>
-      <view class='info-detail'>
-        <image class='dian'></image>
-        <text class='info-contents'>{{infoText3}}</text>
-      </view>
+    </block>
+    <view class='jiange'></view>
+    <view class='contents-view2'>
+      <image class='contents-view2-image1' src='/assets/icons/cooldown.png'></image>
+      <text class='contentview-text4'>{{toolDetail.cd}}</text>
+      <image class='contents-view2-image2' src='/assets/icons/mana.png'></image>
+      <text class='contentview-text4'>{{toolDetail.mc}}</text>
     </view>
-
-    <view class='line'></view>
-
-    <view class='item-container'>
-      <text class='info-title'>{{skillTitle}}</text>
-
-      <view class='info-detail'>
-        <image class='dian-skill'></image>
-        <text class='info-contents'>立刻根据能量点数回复相应的生命和魔法，每点能量恢复15点生命和魔法。</text>
-      </view>
-      <view class='info-detail'>
-        <image class='dian-skill'></image>
-        <text class='info-contents'>每当周围1200视野范围内有敌人施放技能都会自动充能（最多20点能量）。</text>
-      </view>
-      <view class='info-detail'>
-        <image class='dian-skill'></image>
-        <text class='info-contents'>范围：1200</text>
-      </view>
-      <view class='info-detail'>
-        <image class='dian-skill'></image>
-        <text class='info-contents'>每次施法增加能量点数：1</text>
-      </view>
-      <view class='info-detail'>
-        <image class='dian-skill'></image>
-        <text class='info-contents'>最高能量点数：20</text>
-      </view>
-      <view class='info-detail'>
-        <image class='dian-skill'></image>
-        <text class='info-contents'>每点能量回复生命/魔法：15</text>
-      </view>
-<view class='line'></view>
-
- <view class='item-container'>
-      <text class='info-title'>画廊</text>
-      <view class='imageinfo-detail'>
-      <view class='image-container'>
-      <image class='image-detail' src='/sources/icons/handle.png' bindtap='maxImage' data-imagepath='/sources/icons/handle.png' data-name='使用魔杖'></image>
-      <text class='image-info'>使用魔杖</text>
-      </view>
-      <view class='image-container'>
-      <image class='image-detail' src='/sources/icons/moxing.jpeg' bindtap='maxImage' data-imagepath='/sources/icons/moxing.jpeg' data-name='游戏中模型'></image>
-      <text class='image-info'>游戏中模型</text>
-      </view>
-      </view>
-    </view>
-
-
-    </view>
-
-
+    <view class='jiange'></view>
+    <text wx:if='{{toolDetail.lore}}' class='contentview-text3'>{{toolDetail.lore}}</text>
   </view>
-
 </view>

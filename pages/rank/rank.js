@@ -73,12 +73,13 @@ Page({
     wx.request({
       url: 'https://wycode.cn/upload/dota/leaderboard.json',
       success:function(res){
-        wx.hideLoading();
+        
         console.log('getRankList->',res);
         if (res.statusCode == 200){
           that.setData({
             rankList: res.data.leaderboard,
           })
+          setTimeout(()=>wx.hideLoading(),2000);
         }else{
           wx.showToast({
             title: '网络不佳，请稍后重试！',

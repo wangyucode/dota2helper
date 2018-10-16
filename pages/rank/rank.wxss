@@ -1,18 +1,35 @@
 .container-view {
   display: flex;
   flex-direction: column;
-  margin: 15rpx;
+}
+
+.text-tips{
+  color: #555;
+  text-align: right;
+  font-size: 22rpx;
+  padding-top: 12rpx;
+  padding-bottom: 12rpx;
+  margin-right: 24rpx;
+}
+
+.text-title{
+  font-size: 34rpx;
+  font-weight: bold;
+  text-align: center;
+  margin: 12rpx;
 }
 
 .top-view {
   display: flex;
   flex-direction: row;
   background-color: white;
+  margin-left: 24rpx;
+  margin-right: 24rpx;
 }
 
 .top-title {
   width: 15%;
-  font-size: 34rpx;
+  font-size: 30rpx;
   font-weight: bold;
   text-align: center;
   color: black;
@@ -23,7 +40,7 @@
 
 .top-contents-1 {
   width: 55%;
-  font-size: 34rpx;
+  font-size: 30rpx;
   font-weight: bold;
   color: black;
   border: 3rpx solid #a43927;
@@ -34,7 +51,7 @@
 
 .top-contents-2 {
   width: 30%;
-  font-size: 34rpx;
+  font-size: 30rpx;
   font-weight: bold;
   color: black;
   border: 3rpx solid #a43927;
@@ -47,6 +64,8 @@
   display: flex;
   flex-direction: row;
   background-color: white;
+  margin-left: 24rpx;
+  margin-right: 24rpx;
 }
 
 .list-title {

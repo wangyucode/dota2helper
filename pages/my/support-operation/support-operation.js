@@ -64,28 +64,12 @@ Page({
   onShareAppMessage: function () {
     return {
       title: "查英雄、技能、物品、天梯、资讯？点这里！",
-      path: "/pages/news/news",
+      path: "/pages/home/home",
       imageUrl: "/assets/logo.png"
     }
   },
 
-  toRoll:function(e){
-    wx.navigateToMiniProgram({
-      appId: 'wxa6e870e9d665b10b',
-    })
-  },
 
-  toClipboard: function (e) {
-    wx.navigateToMiniProgram({
-      appId: 'wx1977172112eb7b61',
-    })
-  },
-
-  toFishHelp: function (e) {
-    wx.navigateToMiniProgram({
-      appId: 'wx1d777be6c442da17',
-    })
-  },
 
   toReward: function () {
     wx.previewImage({

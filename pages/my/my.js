@@ -6,8 +6,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    appName: 'DOTA2英雄技能物品天梯助手 V1.0',
-    appTipInfo: '玩DOTA2，查询英雄属性、技能、物品、天梯排行。用“DOTA2英雄技能物品天梯助手”就够了！',
   },
 
   /**
@@ -63,11 +61,6 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-    return {
-      title: 'DOTA2英雄技能物品天梯助手',
-      path: '/pages/news/news',
-      imageUrl: '/assets/logo.png'
-    }
   },
 
   enterUpdateLog:function(e){

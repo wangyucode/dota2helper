@@ -5,7 +5,7 @@
   <view class='power-container'>
     <view class='power-container-title'>
       <text class='list-title'>力量型</text>
-      <view class='power-container-title-line'></view>
+      <image class='image-title' src="/assets/icons/pro1.png"></image>
     </view>
   </view>
 
@@ -25,7 +25,7 @@
   <view class='power-container'>
     <view class='power-container-title'>
       <text class='list-title'>敏捷型</text>
-      <view class='minjie-container-title-line'></view>
+      <image class='image-title' src="/assets/icons/pro2.png"></image>
     </view>
   </view>
 
@@ -45,7 +45,7 @@
   <view class='power-container'>
     <view class='power-container-title'>
       <text class='list-title'>智力型</text>
-      <view class='zhili-container-title-line'></view>
+      <image class='image-title' src="/assets/icons/pro3.png"></image>
     </view>
   </view>
 

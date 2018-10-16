@@ -16,14 +16,6 @@
   color: #003;
 }
 
-.power-container-title-line {
-  background-color: red;
-  width: 10rpx;
-  height: 30rpx;
-  margin-left: 15rpx;
-  margin-top: 8rpx;
-}
-
 .power-container-contents-list {
   display: flex;
   flex-direction: row;
@@ -76,22 +68,13 @@
   margin-left: 15rpx;
 }
 
-.minjie-container-title-line {
-  background-color: green;
-  width: 10rpx;
-  height: 30rpx;
-  margin-left: 15rpx;
-  margin-top: 8rpx;
-}
-
-.zhili-container-title-line {
-  background-color: #09f;
-  width: 10rpx;
-  height: 30rpx;
-  margin-left: 15rpx;
-  margin-top: 8rpx;
-}
-
 .list-title {
   margin-left: 10rpx;
+  font-weight: bold;
+}
+
+.image-title{
+  height: 48rpx;
+  width: 48rpx;
+  margin-left: 12rpx;
 }

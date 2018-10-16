@@ -5,14 +5,13 @@ button::after {
   border-radius:0;
 }
 
-/* button:hover{
-  background: #0099ff;
-} */
+.my-item-hover{
+  background-color: red;
+}
 
-/* button:disabled{
-  background: white;
-  color:#003;
-} */
+.list-item-default{
+  width: 100%;
+}
 
 .view-container {
   display: flex;
@@ -42,7 +41,8 @@ button::after {
 }
 
 .list-item-button-hover{
-  background: #0099ff;
+  background: #eee;
+  background-color: #eee;
 }
 
 .top-view-infodetail {
@@ -69,7 +69,6 @@ button::after {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background: white;
 }
 
 .list-item-text {
@@ -88,4 +87,22 @@ button::after {
   background-color: #ddd;
 }
 
+.my-item{
+  display: flex;
+  align-items: center;
+  padding: 24rpx;
+  padding-left:  36rpx;
+  padding-right:  36rpx;
+  background-color: #fff;
+  justify-content: space-between;
+}
+
+.my-item-text{
+  font-size: 32rpx;
+}
+
+.my-item-right-arrow{
+  width: 30rpx;
+  height: 30rpx;
+}
 

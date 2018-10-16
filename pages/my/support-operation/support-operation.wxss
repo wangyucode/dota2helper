@@ -41,7 +41,7 @@
 }
 
 .list-item-hover{
-  background: #0099ff;
+  background: #eee;
 }
 
 .list-item-image {
@@ -71,6 +71,7 @@
 .list-item-text-info {
   font-size: 28rpx;
   color: #003;
+  margin-left: 24rpx;
 }
 
 .line {
@@ -89,7 +90,6 @@
   width: 100%;
   background-color: white;
   border: none;
-  border-radius: 0;
   padding: 24rpx;
   line-height: 1.5;
 }

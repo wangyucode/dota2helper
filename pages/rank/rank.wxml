@@ -1,12 +1,12 @@
 <!-- /pages/rank/rank.wxml -->
-
 <view class='container-view'>
+  <text class="text-title">天梯顶尖玩家</text>
+  <text class="text-tips">每天凌晨3点更新</text>
   <view class='top-view'>
     <text class='top-title'>排行</text>
     <text class='top-contents-1'>玩家昵称</text>
     <text class='top-contents-2'>战队</text>
   </view>
-
   <block wx:for='{{rankList}}'>
     <view class='list-view'>
       <text class='list-title'>{{item.rank}}</text>

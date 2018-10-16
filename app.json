@@ -10,9 +10,7 @@
     "pages/my/my",
     "pages/my/update-log/update-log",
     "pages/my/support-operation/support-operation",
-    "pages/rank/rank",
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/rank/rank"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -28,6 +26,12 @@
         "iconPath": "/assets/icons/hero.png",
         "selectedIconPath": "/assets/icons/hero_1.png",
         "text": "英雄"
+      },
+      {
+        "pagePath": "pages/tools/tools",
+        "iconPath": "/assets/icons/props.png",
+        "selectedIconPath": "/assets/icons/props_1.png",
+        "text": "物品"
       },
       {
         "pagePath": "pages/rank/rank",
