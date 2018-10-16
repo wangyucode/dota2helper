@@ -2,6 +2,8 @@
 
 <view class='home-container'>
 
+  <text class="text-version">数据库版本：{{dataVersion}}</text>
+
   <view class='power-container'>
     <view class='power-container-title'>
       <text class='list-title'>力量型</text>
@@ -59,5 +61,7 @@
       </view>
     </block>
   </view>
+
+  
 
 </view>

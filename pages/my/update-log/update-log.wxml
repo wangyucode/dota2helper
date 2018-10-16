@@ -2,17 +2,28 @@
 
 <view class='view-container'>
   <view class='list-item'>
+    <text class='list-item-version'>V1.2</text>
+    <view class='list-item-contents'>
+      <view class='back-dian'></view>
+      <text class='list-item-detail'>新增消息模块。</text>
+    </view>
+    <view class='list-item-contents'>
+      <view class='back-dian'></view>
+      <text class='list-item-detail'>新增数据库版本提示。</text>
+    </view>
+  </view>
+  <view class='list-item'>
     <text class='list-item-version'>V1.1</text>
     <view class='list-item-contents'>
       <view class='back-dian'></view>
       <text class='list-item-detail'>新增物品模块。</text>
     </view>
   </view>
-    <text class='list-item-version'>V1.0</text>
-    <view class='list-item-contents'>
-      <view class='back-dian'></view>
-      <text class='list-item-detail'>主功能模块：英雄、天梯、我的。</text>
-    </view>
-    
+  <text class='list-item-version'>V1.0</text>
+  <view class='list-item-contents'>
+    <view class='back-dian'></view>
+    <text class='list-item-detail'>主功能模块：英雄、天梯、我的。</text>
+  </view>
+
 
 </view>

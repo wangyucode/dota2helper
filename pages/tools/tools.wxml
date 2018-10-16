@@ -2,6 +2,8 @@
 
 <view class='view-container'>
 
+  <text class="text-version">数据库版本：{{dataVersion}}</text>
+
   <view class='item-container'>
     <text class='first-level-title'>基础物品</text>
 
@@ -77,137 +79,137 @@
       </view>
     </view>
 
-  <view class='line'></view>
-
-  <view class='item-container'>
-    <text class='first-level-title'>升级物品</text>
+    <view class='line'></view>
 
     <view class='item-container'>
-      <view class='item-container-title'>
-        <image src='/assets/icons/itemcat_common.png' class='image-contents'></image>
-        <text class='second-level-title'>常用</text>
+      <text class='first-level-title'>升级物品</text>
+
+      <view class='item-container'>
+        <view class='item-container-title'>
+          <image src='/assets/icons/itemcat_common.png' class='image-contents'></image>
+          <text class='second-level-title'>常用</text>
+        </view>
+
+        <view class='list-item-view'>
+          <block wx:for='{{normalToolArry}}'>
+            <view class='list-item-contents' bindtap='itemClick' data-item='{{item}}'>
+              <image src='{{item.img}}' class='list-item-contents-image'></image>
+              <view class='bottom-container'>
+                <text class='list-item-contents-name'>{{item.name}}</text>
+              </view>
+            </view>
+          </block>
+        </view>
       </view>
 
-      <view class='list-item-view'>
-        <block wx:for='{{normalToolArry}}'>
-          <view class='list-item-contents' bindtap='itemClick' data-item='{{item}}'>
-            <image src='{{item.img}}' class='list-item-contents-image'></image>
-            <view class='bottom-container'>
-              <text class='list-item-contents-name'>{{item.name}}</text>
+      <view class='item-container'>
+        <view class='item-container-title'>
+          <image src='/assets/icons/itemcat_support.png' class='image-contents'></image>
+          <text class='second-level-title'>辅助</text>
+        </view>
+
+        <view class='list-item-view'>
+          <block wx:for='{{fuzhuToolArry}}'>
+            <view class='list-item-contents' bindtap='itemClick' data-item='{{item}}'>
+              <image src='{{item.img}}' class='list-item-contents-image'></image>
+              <view class='bottom-container'>
+                <text class='list-item-contents-name'>{{item.name}}</text>
+              </view>
             </view>
-          </view>
-        </block>
+          </block>
+        </view>
+      </view>
+
+      <view class='item-container'>
+        <view class='item-container-title'>
+          <image src='/assets/icons/itemcat_support.png' class='image-contents'></image>
+          <text class='second-level-title'>法器</text>
+        </view>
+
+        <view class='list-item-view'>
+          <block wx:for='{{faqiToolArry}}'>
+            <view class='list-item-contents' bindtap='itemClick' data-item='{{item}}'>
+              <image src='{{item.img}}' class='list-item-contents-image'></image>
+              <view class='bottom-container'>
+                <text class='list-item-contents-name'>{{item.name}}</text>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+
+      <view class='item-container'>
+        <view class='item-container-title'>
+          <image src='/assets/icons/itemcat_armor.png' class='image-contents'></image>
+          <text class='second-level-title'>防具</text>
+        </view>
+
+        <view class='list-item-view'>
+          <block wx:for='{{fangjuToolArry}}'>
+            <view class='list-item-contents' bindtap='itemClick' data-item='{{item}}'>
+              <image src='{{item.img}}' class='list-item-contents-image'></image>
+              <view class='bottom-container'>
+                <text class='list-item-contents-name'>{{item.name}}</text>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+
+      <view class='item-container'>
+        <view class='item-container-title'>
+          <image src='/assets/icons/itemcat_armor.png' class='image-contents'></image>
+          <text class='second-level-title'>武器</text>
+        </view>
+
+        <view class='list-item-view'>
+          <block wx:for='{{wuqiToolArry}}'>
+            <view class='list-item-contents' bindtap='itemClick' data-item='{{item}}'>
+              <image src='{{item.img}}' class='list-item-contents-image'></image>
+              <view class='bottom-container'>
+                <text class='list-item-contents-name'>{{item.name}}</text>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+
+      <view class='item-container'>
+        <view class='item-container-title'>
+          <image src='/assets/icons/itemcat_artifacts.png' class='image-contents'></image>
+          <text class='second-level-title'>圣物</text>
+        </view>
+
+        <view class='list-item-view'>
+          <block wx:for='{{shengwuToolArry}}'>
+            <view class='list-item-contents' bindtap='itemClick' data-item='{{item}}'>
+              <image src='{{item.img}}' class='list-item-contents-image'></image>
+              <view class='bottom-container'>
+                <text class='list-item-contents-name'>{{item.name}}</text>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+
+      <view class='item-container'>
+        <view class='item-container-title'>
+          <image src='/assets/icons/itemcat_secret.png' class='image-contents'></image>
+          <text class='second-level-title'>神秘商店</text>
+        </view>
+
+        <view class='list-item-view'>
+          <block wx:for='{{storeToolArry}}'>
+            <view class='list-item-contents' bindtap='itemClick' data-item='{{item}}'>
+              <image src='{{item.img}}' class='list-item-contents-image'></image>
+              <view class='bottom-container'>
+                <text class='list-item-contents-name'>{{item.name}}</text>
+              </view>
+            </view>
+          </block>
+        </view>
       </view>
     </view>
-
-    <view class='item-container'>
-      <view class='item-container-title'>
-        <image src='/assets/icons/itemcat_support.png' class='image-contents'></image>
-        <text class='second-level-title'>辅助</text>
-      </view>
-
-      <view class='list-item-view'>
-        <block wx:for='{{fuzhuToolArry}}'>
-          <view class='list-item-contents' bindtap='itemClick' data-item='{{item}}'>
-            <image src='{{item.img}}' class='list-item-contents-image'></image>
-            <view class='bottom-container'>
-              <text class='list-item-contents-name'>{{item.name}}</text>
-            </view>
-          </view>
-        </block>
-      </view>
-    </view>
-
-    <view class='item-container'>
-      <view class='item-container-title'>
-        <image src='/assets/icons/itemcat_support.png' class='image-contents'></image>
-        <text class='second-level-title'>法器</text>
-      </view>
-
-      <view class='list-item-view'>
-        <block wx:for='{{faqiToolArry}}'>
-          <view class='list-item-contents' bindtap='itemClick' data-item='{{item}}'>
-            <image src='{{item.img}}' class='list-item-contents-image'></image>
-            <view class='bottom-container'>
-              <text class='list-item-contents-name'>{{item.name}}</text>
-            </view>
-          </view>
-        </block>
-      </view>
-    </view>
-
-    <view class='item-container'>
-      <view class='item-container-title'>
-        <image src='/assets/icons/itemcat_armor.png' class='image-contents'></image>
-        <text class='second-level-title'>防具</text>
-      </view>
-
-      <view class='list-item-view'>
-        <block wx:for='{{fangjuToolArry}}'>
-          <view class='list-item-contents' bindtap='itemClick' data-item='{{item}}'>
-            <image src='{{item.img}}' class='list-item-contents-image'></image>
-            <view class='bottom-container'>
-              <text class='list-item-contents-name'>{{item.name}}</text>
-            </view>
-          </view>
-        </block>
-      </view>
-    </view>
-
-    <view class='item-container'>
-      <view class='item-container-title'>
-        <image src='/assets/icons/itemcat_armor.png' class='image-contents'></image>
-        <text class='second-level-title'>武器</text>
-      </view>
-
-      <view class='list-item-view'>
-        <block wx:for='{{wuqiToolArry}}'>
-          <view class='list-item-contents' bindtap='itemClick' data-item='{{item}}'>
-            <image src='{{item.img}}' class='list-item-contents-image'></image>
-            <view class='bottom-container'>
-              <text class='list-item-contents-name'>{{item.name}}</text>
-            </view>
-          </view>
-        </block>
-      </view>
-    </view>
-
-    <view class='item-container'>
-      <view class='item-container-title'>
-        <image src='/assets/icons/itemcat_artifacts.png' class='image-contents'></image>
-        <text class='second-level-title'>圣物</text>
-      </view>
-
-      <view class='list-item-view'>
-        <block wx:for='{{shengwuToolArry}}'>
-          <view class='list-item-contents' bindtap='itemClick' data-item='{{item}}'>
-            <image src='{{item.img}}' class='list-item-contents-image'></image>
-            <view class='bottom-container'>
-              <text class='list-item-contents-name'>{{item.name}}</text>
-            </view>
-          </view>
-        </block>
-      </view>
-    </view>
-
-        <view class='item-container'>
-      <view class='item-container-title'>
-        <image src='/assets/icons/itemcat_secret.png' class='image-contents'></image>
-        <text class='second-level-title'>神秘商店</text>
-      </view>
-
-      <view class='list-item-view'>
-        <block wx:for='{{storeToolArry}}'>
-          <view class='list-item-contents' bindtap='itemClick' data-item='{{item}}'>
-            <image src='{{item.img}}' class='list-item-contents-image'></image>
-            <view class='bottom-container'>
-              <text class='list-item-contents-name'>{{item.name}}</text>
-            </view>
-          </view>
-        </block>
-      </view>
-    </view>
-  </view>
 
   </view>
 

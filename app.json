@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/home/home",
     "pages/news/news",
+    "pages/home/home",
     "pages/news/news-detail/news-detail",
     "pages/home/hero-detail/hero-detail",
     "pages/tools/tools",
@@ -21,6 +21,12 @@
   "tabBar": {
     "selectedColor": "#a43927",
     "list": [
+      {
+        "pagePath": "pages/news/news",
+        "iconPath": "/assets/icons/news.png",
+        "selectedIconPath": "/assets/icons/news_1.png",
+        "text": "消息"
+      },
       {
         "pagePath": "pages/home/home",
         "iconPath": "/assets/icons/hero.png",

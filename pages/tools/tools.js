@@ -1,10 +1,12 @@
 //pages/tools/tool.js
+var app=getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    dataVersion: app.globalData.dataVersion,
     totalArray: {},
     xiaohaopinToolArry: [],
     shuxingToolArry: [],
@@ -141,6 +143,7 @@ Page({
               }
             }
           that.setData({
+            dataVersion: app.globalData.dataVersion,
             xiaohaopinToolArry: arryList1,
             shuxingToolArry: arryList2,
             junbeiToolArry: arryList3,

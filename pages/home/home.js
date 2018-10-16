@@ -1,10 +1,12 @@
 //pages/home/home.js
+var app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    dataVersion: app.globalData.dataVersion,
     powerHeroArry: [],
     minjieHeroArry: [],
     zhiliHeroArry: [],
@@ -90,6 +92,7 @@ Page({
             }
           }
           that.setData({
+            dataVersion: app.globalData.dataVersion,
             powerHeroArry: arryList1,
             minjieHeroArry: arryList2,
             zhiliHeroArry: arryList3,
