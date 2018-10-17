@@ -75,11 +75,6 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function() {
-    return {
-      title: '刀塔传奇小助手',
-      path: '/pages/news/news',
-      imageUrl: '/assets/logo.png'
-    }
   },
 
   itemClick: function(e) {
@@ -99,7 +94,7 @@ Page({
       success: function(res) {
         console.log('getToolsList->', res);
         if (res.data.success) {
-          wx.hideLoading();
+          
           that.data.totalArray = res.data.data;
           var arryList1 = new Array();
           var arryList2 = new Array();
@@ -157,6 +152,7 @@ Page({
             shengwuToolArry: arryList10,
             storeToolArry: arryList11,
           })
+          wx.hideLoading();
         } else {
           wx.hideLoading();
           wx.showToast({
