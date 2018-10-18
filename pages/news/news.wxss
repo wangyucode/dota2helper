@@ -3,24 +3,23 @@
 .home-container {
   direction: flex;
   flex-direction: column;
-  margin-top: 30rpx;
+  margin-top: 14rpx;
 }
 
 .container-list {
   display: flex;
   flex-direction: row;
-  margin: 20rpx;
+  margin: 10rpx 20rpx 10rpx 20rpx;
 }
 
 .container-image {
-  margin-right: 20rpx;
+  margin-right: 16rpx;
 }
 
 .container-list-image {
-  width: 300rpx;
+  width: 272rpx;
   height: 160rpx;
-  border-radius: 10rpx;
-  min-width: 300rpx;
+  border-radius: 8rpx;
 }
 
 .contents-view {
@@ -30,7 +29,7 @@
 
 .contents-title {
   font-weight: bold;
-  font-size: 34rpx;
+  font-size: 32rpx;
   color: black;
   display: -webkit-box;
   overflow: hidden;
@@ -43,6 +42,7 @@
 
 .contents-message {
   font-size: 22rpx;
+  margin-top: 4rpx;
   color: #555;
   display: -webkit-box;
   overflow: hidden;
@@ -55,6 +55,7 @@
 
 .contents-time {
   font-size: 20rpx;
+  margin-top: 4rpx;
   color: #888;
 }
 
