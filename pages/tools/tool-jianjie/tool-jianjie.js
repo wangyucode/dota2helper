@@ -5,8 +5,7 @@ Page({
    */
   data: {
     key:'',
-    toolDetail:[],
-    desc:''
+    toolDetail:{}
   },
 
   /**
@@ -14,7 +13,9 @@ Page({
    */
   onLoad: function (options) {
     console.log('onLoad->', options);
-    this.data.key = options.infoKey;
+    this.setData({
+      key:options.infoKey
+    })
     this.getToolsDetail();
   },
 
@@ -67,18 +68,11 @@ Page({
     
   },
 
-  maxImage:function(e){
-    console.log(e);
-    wx.navigateTo({
-      url: '/pages/tools/tool-maxImage/tool-maxImage' + '?imagePath=' + e.currentTarget.dataset.imagepath + '&name=' + e.currentTarget.dataset.name,
-    })
-
-  },
-
   getToolsDetail: function () {
     var that = this;
     wx.showLoading({
       title: '请稍后...',
+      mask:true
     })
     wx.request({
       url: 'https://wycode.cn/web/api/public/dota/itemDetail',
@@ -112,5 +106,11 @@ Page({
       },
     })
   },
+
+  toAzhang:function(){
+    wx.navigateTo({
+      url: '/pages/tools/tool-jianjie/a-zhang/a-zhang'
+    })
+  }
 
 })

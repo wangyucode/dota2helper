@@ -14,14 +14,14 @@
   <view class='jiange' style='margin-top:15rpx;'></view>
 
   <view class='contents-view'>
-  <block wx:for='{{toolDetail.desc}}' wx:for-index="key" wx:for-item="desc">
-  <text class='contentview-text1'>{{key}}</text>
-  <text class='contentview-text5'>{{desc}}</text>
-  </block>
-    
+    <block wx:for='{{toolDetail.desc}}' wx:for-index="key" wx:for-item="desc">
+      <text class='contentview-text1'>{{key}}</text>
+      <text class='contentview-text5'>{{desc}}</text>
+    </block>
+
     <view class='jiange' wx:if='{{toolDetail.notes}}'></view>
     <text wx:if='{{toolDetail.notes}}' class='contentview-text2'>{{toolDetail.notes}}</text>
-    <view class='jiange'  wx:if='{{toolDetail.attrs}}'></view>
+    <view class='jiange' wx:if='{{toolDetail.attrs}}'></view>
     <block wx:for='{{toolDetail.attrs}}' wx:for-index="key" wx:for-item="attr">
       <view class='skill-contents-view1'>
         <view class='skill-contents-view2'>
@@ -40,4 +40,6 @@
     <view class='jiange'></view>
     <text wx:if='{{toolDetail.lore}}' class='contentview-text3'>{{toolDetail.lore}}</text>
   </view>
+
+    <button wx:if="{{key=='ultimate_scepter'}}" class="toAzhang" type="primary" bindtap="toAzhang">查看所有加成效果</button>
 </view>

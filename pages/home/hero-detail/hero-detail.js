@@ -7,6 +7,7 @@ Page({
    */
   data: {
     imagePath: '',
+    icon: '',
     heroName: '',
     attackType:'',
     otherName:'',
@@ -36,9 +37,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    console.log(options)
     this.setData({
       heroName: options.name,
-      imagePath: options.imagePath,
+      imagePath: decodeURIComponent(options.imagePath),
+      icon: decodeURIComponent(options.icon),
     })
     this.getNewsDetail();
   },

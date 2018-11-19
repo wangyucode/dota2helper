@@ -6,6 +6,7 @@ App({
   globalData: {
     serverUrl: 'https://wycode.cn/web',
     dataVersion: '',
+    transferData:{}
   },
 
   getDataVersion: function () {

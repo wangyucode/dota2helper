@@ -6,11 +6,11 @@
     "pages/home/hero-detail/hero-detail",
     "pages/tools/tools",
     "pages/tools/tool-jianjie/tool-jianjie",
-    "pages/tools/tool-maxImage/tool-maxImage",
     "pages/my/my",
     "pages/my/update-log/update-log",
     "pages/my/support-operation/support-operation",
-    "pages/rank/rank"
+    "pages/rank/rank",
+    "pages/tools/tool-jianjie/a-zhang/a-zhang"
   ],
   "window": {
     "backgroundTextStyle": "light",

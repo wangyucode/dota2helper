@@ -8,3 +8,14 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+
+
+button[type=primary] {
+  color: #fff;
+  background-color: #a43927;
+}
+
+.button-hover[type=primary] {
+  color: #eee;
+  background-color: #963324;
+}

@@ -16,66 +16,66 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
+  onLoad: function (options) {
     this.getHerosList();
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function() {
+  onReady: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
-    
+  onShow: function () {
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function() {
+  onHide: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function() {
+  onUnload: function () {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function () {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function() {
+  onReachBottom: function () {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
   },
 
-  getHerosList: function() {
+  getHerosList: function () {
     var that = this;
     wx.showLoading({
       title: '请稍后...',
     })
     wx.request({
       url: 'https://wycode.cn/web/api/public/dota/heroes',
-      success: function(res) {
+      success: function (res) {
         console.log('getHerosList->', res);
         if (res.data.success) {
           that.data.totalArray = res.data.data;
@@ -100,23 +100,25 @@ Page({
           wx.hideLoading();
         }
       },
-      fail: function(res) {
+      fail: function (res) {
         wx.hideLoading();
         wx.showToast({
           title: '网速不佳,请稍后重试!',
-          duration:1500,
-          icon:'none'
+          duration: 1500,
+          icon: 'none'
         })
         console.log('获取列表失败!');
       },
     })
   },
 
-  enterDetail: function(e) {
+  enterDetail: function (e) {
+    console.log("enterDetail->",e)
     wx.navigateTo({
       url: '/pages/home/hero-detail/hero-detail' +
         '?name=' + e.currentTarget.dataset.item.name +
-        '&imagePath=' + e.currentTarget.dataset.item.imageUrl,
+        '&imagePath=' + encodeURIComponent(e.currentTarget.dataset.item.imageUrl) +
+        '&icon=' + encodeURIComponent(e.currentTarget.dataset.item.icon)
     })
   },
 

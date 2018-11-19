@@ -158,3 +158,8 @@
   background-color: #ddd;
   height: 1px;
 }
+
+.toAzhang{
+  width: 96%;
+  margin-top: 24rpx;
+}
