@@ -19,3 +19,15 @@ button[type=primary] {
   color: #eee;
   background-color: #963324;
 }
+
+.dividing-line {
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.gray-gap {
+  width: 100%;
+  height: 36rpx;
+  background: #ddd;
+}

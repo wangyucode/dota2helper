@@ -1,1 +1,74 @@
 /* pages/tools/tool-jianjie/a-zhang/a-zhang.wxss */
+.view-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+.title{
+    font-size: 34rpx;
+    font-weight: bold;
+    margin: 16rpx;
+}
+
+.hero-link{
+    font-size: 32rpx;
+    color: #3f51b5;
+    text-decoration: underline;
+    margin-right: 24rpx;
+}
+
+.hero-icon{
+    width:36rpx;
+    height:36rpx;
+    margin-right: 4rpx;
+}
+
+.no-effect-container{
+    display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  margin-left: 16rpx;
+  margin-right: 16rpx;
+  margin-bottom: 16rpx;
+}
+
+.effect-item{
+    /* border: 1px solid #a43927; */
+    margin-left: 16rpx;
+    margin-right: 16rpx;
+    padding: 12rpx;
+}
+
+.effect-top{
+    display: flex;
+    flex-direction: row;
+}
+
+.img-skill{
+    width: 128rpx;
+    height: 128rpx;
+}
+
+.effect-right{
+    display: flex;
+    flex-direction: column;
+    margin-left: 12rpx;
+}
+
+.effect-skill-name{
+    color: #a43927;
+    font-size: 30rpx;
+}
+
+.effect-hero-name{
+    margin-top: 8rpx;
+    color: #333;
+    font-size: 26rpx;
+}
+
+.effect-desc{
+    color: #555;
+    font-size: 24rpx;
+    font-style: italic;
+}
