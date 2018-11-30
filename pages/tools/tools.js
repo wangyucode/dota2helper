@@ -96,6 +96,7 @@ Page({
         if (res.data.success) {
           
           that.data.totalArray = res.data.data;
+          app.globalData.transferData = res.data.data;
           var arryList1 = new Array();
           var arryList2 = new Array();
           var arryList3 = new Array();

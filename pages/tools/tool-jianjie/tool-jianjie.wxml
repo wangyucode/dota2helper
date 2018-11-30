@@ -41,5 +41,20 @@
     <text wx:if='{{toolDetail.lore}}' class='contentview-text3'>{{toolDetail.lore}}</text>
   </view>
 
-    <button wx:if="{{key=='ultimate_scepter'}}" class="toAzhang" type="primary" bindtap="toAzhang">查看所有加成效果</button>
+  <view class='jiange'></view>
+
+  <text wx:if="{{components.length>0}}" class="text-component-title">合成配方</text>
+  <view wx:if="{{components.length>0}}" class='components-container'>
+    <view class="component-link" wx:for='{{components}}' hover-class="component-link-hover" bindtap="clickComponent" data-item='{{item}}'>
+      <image class="component-icon" src='{{item.img}}' mode='aspectFill' />
+      <text>{{item.name}}</text>
+    </view>
+    <view class="component-link-juanzhou" wx:if='{{juanZhouCost>0}}'>
+      <image class="component-icon" src='https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/thumb/7/73/Default_recipe_icon.png/40px-Default_recipe_icon.png?version=65563bcfd76b6f7861474923b347a1c5' mode='aspectFill' />
+      <text>卷轴：{{juanZhouCost}}</text>
+    </view>
+  </view>
+
+  <button wx:if="{{key=='ultimate_scepter'}}" class="toAzhang" type="primary" bindtap="toAzhang">查看所有加成效果</button>
+
 </view>

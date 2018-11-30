@@ -1,6 +1,6 @@
-  page{
-    /* background-color: #222; */
-  }
+page {
+  /* background-color: #222; */
+}
 
 .view-container {
   display: flex;
@@ -52,12 +52,12 @@
   margin-left: 15rpx;
 }
 
-.contents-view{
+.contents-view {
   display: flex;
   flex-direction: column;
 }
 
-.contentview-text1{
+.contentview-text1 {
   font-size: 34rpx;
   margin-top: 5rpx;
   margin-bottom: 5rpx;
@@ -67,34 +67,35 @@
   font-weight: bold;
 }
 
-.contentview-text5{
+.contentview-text5 {
   font-size: 28rpx;
   margin-top: 10rpx;
   margin-bottom: 10rpx;
   margin-left: 10rpx;
   margin-right: 10rpx;
-  color:black;
+  color: black;
 }
-.contentview-text2{
+
+.contentview-text2 {
   font-size: 28rpx;
-  color: green; 
+  color: green;
   margin-left: 10rpx;
   margin-right: 10rpx;
   margin-top: 15rpx;
   margin-bottom: 15rpx;
 }
 
-.contentview-text3{
+.contentview-text3 {
   font-size: 28rpx;
   margin-top: 15rpx;
   margin-bottom: 15rpx;
-   margin-left: 10rpx;
+  margin-left: 10rpx;
   margin-right: 10rpx;
   font-style: italic;
   color: #333;
 }
 
-.contents-view2{
+.contents-view2 {
   display: flex;
   flex-direction: row;
   margin-top: 5rpx;
@@ -102,20 +103,20 @@
   margin-left: 10rpx;
 }
 
-.contents-view2-image1{
+.contents-view2-image1 {
   width: 45rpx;
   height: 45rpx;
   border-radius: 8rpx;
 }
 
-.contents-view2-image2{
+.contents-view2-image2 {
   width: 45rpx;
   height: 45rpx;
   margin-left: 160rpx;
   border-radius: 8rpx;
 }
 
-.contentview-text4{
+.contentview-text4 {
   font-size: 32rpx;
   color: #a43927;
   font-weight: bolder;
@@ -130,8 +131,8 @@
   margin-bottom: 10rpx;
 }
 
-.skill-contents-view2{
-   display: flex;
+.skill-contents-view2 {
+  display: flex;
   flex-direction: row;
 }
 
@@ -159,7 +160,46 @@
   height: 1px;
 }
 
-.toAzhang{
+.toAzhang {
   width: 96%;
   margin-top: 24rpx;
+}
+
+.text-component-title {
+  font-size: 34rpx;
+  font-weight: bold;
+  margin-top: 24rpx;
+  margin-bottom: 24rpx;
+}
+
+.components-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  margin-left: 16rpx;
+  margin-right: 16rpx;
+  margin-bottom: 16rpx;
+}
+
+.component-link {
+  font-size: 32rpx;
+  color: #3f51b5;
+  margin-right: 24rpx;
+}
+
+.component-link-hover{
+  text-decoration: underline;
+}
+
+.component-link-juanzhou{
+  font-size: 32rpx;
+  color: #333;
+  margin-right: 24rpx;
+}
+
+.component-icon {
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 4rpx;
 }
