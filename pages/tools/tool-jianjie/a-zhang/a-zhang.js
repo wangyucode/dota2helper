@@ -13,6 +13,7 @@ Page({
    */
   onLoad: function (options) {
     this.getNoEffectHero();
+    this.getEffectAbility();
   },
 
   /**
@@ -66,26 +67,25 @@ Page({
 
   getNoEffectHero:function(){
     var that = this;
-    wx.showLoading({
-      title: '请稍后...',
-      mask: true
-    })
+    
     wx.request({
       url: 'https://wycode.cn/web/api/public/dota/noAzhangHeros',
       success: function(res) {
         console.log('getNoEffectHero->', res);
         if (res.data.success) {
-          wx.hideLoading();
           that.setData({
             heros: res.data.data
           })
-        } else {
-          wx.hideLoading();
         }
-      },
-      fail: function(res) {
-        wx.hideLoading();
-      },
+      }
+    })
+  },
+
+  getEffectAbility:function(){
+    var that = this;
+    wx.showLoading({
+      title: '请稍后...',
+      mask: true
     })
   },
 
