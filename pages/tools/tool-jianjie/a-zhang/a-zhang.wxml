@@ -9,80 +9,56 @@
   </view>
   <view class='gray-gap' />
   <text class="title">加强的技能：</text>
+  <view class='dividing-line' />
   <view class='effect-skill-container'>
-    <view class='effect-item'>
-      <view class='effect-top'>
-        <image class="img-skill" src='https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/thumb/7/78/Borrowed_Time_icon.png/64px-Borrowed_Time_icon.png?version=8ebd2cd329265f66b2ac0a3d1bdc29b7' />
-        <view class="effect-right">
-          <text class='effect-skill-name'>回光返照</text>
-          <text class='effect-hero-name'>亚巴顿</text>
+    <block wx:for='{{upgradeSkill}}'>
+      <view class='effect-item' hover-class="effect-item-hover" bindtap='skillClick' data-hero='{{item.hero}}'>
+        <view class='effect-top'>
+          <image class="img-skill" src='{{item.icon}}' />
+          <view class="effect-right">
+            <text class='effect-skill-name'>{{item.ability}}</text>
+            <text class='effect-hero-name'>{{item.hero.name}}</text>
+          </view>
         </view>
+        <text class="effect-desc">{{item.desc}}</text>
       </view>
-      <text class="effect-desc">提升持续时间。启动回光返照后，周围900范围内友方英雄所受的伤害中50%将会转移到亚巴顿身上。</text>
-    </view>
-    <view class='dividing-line' />
-    <view class='effect-item'>
-      <view class='effect-top'>
-        <image class="img-skill" src='https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/thumb/7/78/Borrowed_Time_icon.png/64px-Borrowed_Time_icon.png?version=8ebd2cd329265f66b2ac0a3d1bdc29b7' />
-        <view class="effect-right">
-          <text class='effect-skill-name'>回光返照</text>
-          <text class='effect-hero-name'>亚巴顿</text>
-        </view>
-      </view>
-      <text class="effect-desc">提升持续时间。启动回光返照后，周围900范围内友方英雄所受的伤害中50%将会转移到亚巴顿身上。</text>
-    </view>
-    <view class='dividing-line' />
+      <view class='dividing-line' />
+    </block>
   </view>
   <view class='gray-gap' />
   <text class="title">增加的技能：</text>
+  <view class='dividing-line' />
   <view class='effect-skill-container'>
-    <view class='effect-item'>
-      <view class='effect-top'>
-        <image class="img-skill" src='https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/thumb/7/78/Borrowed_Time_icon.png/64px-Borrowed_Time_icon.png?version=8ebd2cd329265f66b2ac0a3d1bdc29b7' />
-        <view class="effect-right">
-          <text class='effect-skill-name'>回光返照</text>
-          <text class='effect-hero-name'>亚巴顿</text>
+    <block wx:for='{{addSkill}}'>
+      <view class='effect-item' hover-class="effect-item-hover" bindtap='skillClick' data-hero='{{item.hero}}'>
+        <view class='effect-top'>
+          <image class="img-skill" src='{{item.icon}}' />
+          <view class="effect-right">
+            <text class='effect-skill-name'>{{item.ability}}</text>
+            <text class='effect-hero-name'>{{item.hero.name}}</text>
+          </view>
         </view>
+        <text class="effect-desc">{{item.desc}}</text>
       </view>
-      <text class="effect-desc">提升持续时间。启动回光返照后，周围900范围内友方英雄所受的伤害中50%将会转移到亚巴顿身上。</text>
-    </view>
-    <view class='dividing-line' />
-    <view class='effect-item'>
-      <view class='effect-top'>
-        <image class="img-skill" src='https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/thumb/7/78/Borrowed_Time_icon.png/64px-Borrowed_Time_icon.png?version=8ebd2cd329265f66b2ac0a3d1bdc29b7' />
-        <view class="effect-right">
-          <text class='effect-skill-name'>回光返照</text>
-          <text class='effect-hero-name'>亚巴顿</text>
-        </view>
-      </view>
-      <text class="effect-desc">提升持续时间。启动回光返照后，周围900范围内友方英雄所受的伤害中50%将会转移到亚巴顿身上。</text>
-    </view>
-    <view class='dividing-line' />
+      <view class='dividing-line' />
+    </block>
   </view>
   <view class='gray-gap' />
   <text class="title">其它：</text>
+  <view class='dividing-line' />
   <view class='effect-skill-container'>
-    <view class='effect-item'>
-      <view class='effect-top'>
-        <image class="img-skill" src='https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/thumb/7/78/Borrowed_Time_icon.png/64px-Borrowed_Time_icon.png?version=8ebd2cd329265f66b2ac0a3d1bdc29b7' />
-        <view class="effect-right">
-          <text class='effect-skill-name'>回光返照</text>
-          <text class='effect-hero-name'>亚巴顿</text>
+    <block wx:for='{{otherSkill}}'>
+      <view class='effect-item' hover-class="effect-item-hover" bindtap='skillClick' data-hero='{{item.hero}}'>
+        <view class='effect-top'>
+          <image class="img-skill" src='{{item.icon}}' />
+          <view class="effect-right">
+            <text class='effect-skill-name'>{{item.ability}}</text>
+            <text class='effect-hero-name'>{{item.hero.name}}</text>
+          </view>
         </view>
+        <text class="effect-desc">{{item.desc}}</text>
       </view>
-      <text class="effect-desc">提升持续时间。启动回光返照后，周围900范围内友方英雄所受的伤害中50%将会转移到亚巴顿身上。</text>
-    </view>
-    <view class='dividing-line' />
-    <view class='effect-item'>
-      <view class='effect-top'>
-        <image class="img-skill" src='https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/thumb/7/78/Borrowed_Time_icon.png/64px-Borrowed_Time_icon.png?version=8ebd2cd329265f66b2ac0a3d1bdc29b7' />
-        <view class="effect-right">
-          <text class='effect-skill-name'>回光返照</text>
-          <text class='effect-hero-name'>亚巴顿</text>
-        </view>
-      </view>
-      <text class="effect-desc">提升持续时间。启动回光返照后，周围900范围内友方英雄所受的伤害中50%将会转移到亚巴顿身上。</text>
-    </view>
-    <view class='dividing-line' />
+      <view class='dividing-line' />
+    </block>
   </view>
 </view>

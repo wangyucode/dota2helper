@@ -2,21 +2,36 @@
 
 <view class='view-container'>
   <view class='list-item'>
-    <text class='list-item-version'>V1.2</text>
+    <text class='list-item-version'>V1.3</text>
     <view class='list-item-contents'>
       <view class='back-dian'></view>
-      <text class='list-item-detail'>新增消息模块。</text>
+      <text class='list-item-detail'>感谢“三笠大佬”的意见反馈。新增：阿哈利姆神杖物品详情内可以查看所有A杖效果</text>
     </view>
     <view class='list-item-contents'>
       <view class='back-dian'></view>
-      <text class='list-item-detail'>新增数据库版本提示。</text>
+      <text class='list-item-detail'>新增：物品合成配方</text>
+    </view>
+    <view class='list-item-contents'>
+      <view class='back-dian'></view>
+      <text class='list-item-detail'>改进：增加消息详情</text>
+    </view>
+  </view>
+  <view class='list-item'>
+    <text class='list-item-version'>V1.2</text>
+    <view class='list-item-contents'>
+      <view class='back-dian'></view>
+      <text class='list-item-detail'>新增：消息模块。</text>
+    </view>
+    <view class='list-item-contents'>
+      <view class='back-dian'></view>
+      <text class='list-item-detail'>新增：数据库版本提示。</text>
     </view>
   </view>
   <view class='list-item'>
     <text class='list-item-version'>V1.1</text>
     <view class='list-item-contents'>
       <view class='back-dian'></view>
-      <text class='list-item-detail'>新增物品模块。</text>
+      <text class='list-item-detail'>新增：物品模块。</text>
     </view>
   </view>
   <text class='list-item-version'>V1.0</text>

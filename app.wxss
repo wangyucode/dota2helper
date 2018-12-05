@@ -3,11 +3,21 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
-  box-sizing: border-box;
 } 
+
+.vbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.hbox{
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-open {
+  flex: 1;
+}
 
 
 button[type=primary] {

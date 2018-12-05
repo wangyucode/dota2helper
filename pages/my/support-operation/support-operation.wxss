@@ -1,9 +1,13 @@
 /* /pages/my/support-operation/support-operation.wxss */
 
+page{
+  height: 100%;
+}
+
 .view-container {
   display: flex;
   flex-direction: column;
-  margin-top: 15rpx;
+  height: 100%
 }
 
 .top-view-container {
@@ -17,19 +21,16 @@
 .top-view-image {
   width: 300rpx;
   height: 300rpx;
-  border-radius: 10rpx;
+  margin-top: 24rpx;
 }
 
 .top-view-text {
-  margin-top: 20rpx;
-  margin-bottom: 20rpx;
   font-size: 30rpx;
-  margin: 15rpx;
+    margin: 32rpx;
   font-weight: bold;
 }
 
 .gray-view {
-  flex: 1;
   background: #ddd;
   height: 45rpx;
 }
@@ -38,6 +39,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  height: 96rpx;
 }
 
 .list-item-hover{
@@ -86,12 +88,19 @@
   margin-right: 30rpx;
 }
 
-.btn-share{
-  width: 100%;
-  background-color: white;
+button::after {
   border: none;
-  padding: 24rpx;
-  line-height: 1.5;
+  border-radius:0;
+}
+
+.btn-share{
+  display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    height: 96rpx;
 }
 
 .btn-share-hover{
@@ -107,33 +116,11 @@
 .share-left-image{
   width: 64rpx;
   height: 64rpx;
-  padding-left: 35rpx;
 }
 
-.share-right-arrow{
+.right-arrow {
   width: 30rpx;
   height: 30rpx;
   position: absolute;
-  right: 30rpx;
-}
-
-.list-item-my{
-  font-size: 28rpx;
-  margin-left: 50rpx;
-  margin-top: 20rpx;
-  margin-bottom: 20rpx;
-}
-
-.list-item-enterimage-my{
-  width: 30rpx;
-  height: 30rpx;
-  position: absolute;
-  right: 30rpx;
-}
-
-.list-item-lianxi{
-  margin-top: 30rpx;
-  margin-bottom: 30rpx;
-  font-size: 28rpx;
-  margin-left: 50rpx;
+  right: 32rpx;
 }

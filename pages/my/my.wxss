@@ -1,5 +1,9 @@
 /*pages/my/my.wxss */
 
+page{
+  height: 100%;
+}
+
 button::after {
   border: none;
   border-radius:0;
@@ -16,7 +20,7 @@ button::after {
 .view-container {
   display: flex;
   flex-direction: column;
-  /* margin: 15rpx; */
+  height: 100%;
 }
 
 .top-view-container {
@@ -40,10 +44,7 @@ button::after {
   font-weight: bold;
 }
 
-.list-item-button-hover{
-  background: #eee;
-  background-color: #eee;
-}
+
 
 .top-view-infodetail {
   font-size: 32rpx;
@@ -51,7 +52,6 @@ button::after {
 }
 
 .gray-view {
-  flex: 1;
   background: #ddd;
   height: 45rpx;
 }
@@ -69,6 +69,12 @@ button::after {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  background: white;
+}
+
+
+.list-item-button-hover{
+  background: #eee;
 }
 
 .list-item-text {
