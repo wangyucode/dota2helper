@@ -14,7 +14,7 @@
     "pages/tools/tool-jianjie/a-zhang/a-zhang"
   ],
   "window": {
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#a43927",
     "navigationBarTitleText": "DOTA2小助手",
     "navigationBarTextStyle": "light"

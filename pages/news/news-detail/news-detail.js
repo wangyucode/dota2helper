@@ -1,5 +1,5 @@
 //pages/news/news-detail/news-detail.js
-
+var app = getApp()
 Page({
 
   /**
@@ -9,21 +9,21 @@ Page({
     title:'',
     imagePath:'',
     message:'',
-    time:''
+    time:'',
+    detail:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log('news-detail->onload',options);
     this.setData({
-      title:options.title,
-      imagePath: options.imagePath,
-      message:options.message,
-      time:options.time
+      title:app.globalData.transferData.title,
+      imagePath: app.globalData.transferData.image,
+      message:app.globalData.transferData.content,
+      time:app.globalData.transferData.date
     })
-    
+    this.getNewsDetail()
   },
 
   /**
@@ -73,5 +73,24 @@ Page({
    */
   onShareAppMessage: function () {
     
+  },
+
+  getNewsDetail:function(){
+    wx.showLoading({
+      title: '请稍后...',
+    })
+    var that = this;
+    wx.request({
+      url: 'https://wycode.cn/upload/dota/news/'+app.globalData.transferData.detail+".txt",
+      success:function(res){
+        console.log('getNewsDetail->',res);
+        that.setData({
+          detail:res.data
+        })
+      },
+      complete: () => {
+        wx.hideLoading()
+      }
+    })
   }
 })

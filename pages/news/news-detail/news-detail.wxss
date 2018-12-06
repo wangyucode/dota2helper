@@ -29,6 +29,15 @@
 }
 
 .message-view{
-  font-size: 30rpx;
+  font-size: 26rpx;
   text-indent:2px;
+  font-style: italic;
+  background: #ddd;
+  padding: 12rpx;
 }
+
+.text-detail{
+  margin-top: 24rpx;
+  font-size: 30rpx;
+}
+
