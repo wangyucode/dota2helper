@@ -2,8 +2,8 @@
 <view class='view-container'>
   <view class='top-view-container'>
     <image class='top-view-image' src='/assets/logo.png'></image>
-    <text class='top-view-title'>DOTA2英雄技能物品天梯助手 V1.3</text>
-    <text class='top-view-infodetail'>玩DOTA2，查询英雄属性、技能、物品、天梯排行。用“DOTA2英雄技能物品天梯助手”就够了！</text>
+    <text class='top-view-title'>DOTA2英雄技能物品天梯助手 V1.4</text>
+    <text class='top-view-infodetail'>玩DOTA2，查询英雄属性、技能、物品、赛事、天梯排行。用“DOTA2英雄技能物品天梯助手”就够了！</text>
   </view>
   <view class='gray-view'></view>
   <button class='list-item-button' bindtap='enterUpdateLog' hover-class='list-item-button-hover'>

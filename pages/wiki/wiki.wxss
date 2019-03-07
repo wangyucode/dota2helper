@@ -1,0 +1,236 @@
+/* pages/wiki/wiki.wxss */
+.baike-top{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 0rpx 2rpx 3px #aaaaaa;
+    background: white;
+}
+
+.top-item{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.top-center-line{
+    height: 30rpx;
+    width: 3rpx;
+    background: #ddd;
+}
+
+.baike-top-select{
+    font-size: 30rpx;
+    text-align: center;
+    color: #a43927;
+    font-weight: bold;
+    margin-bottom: 16rpx;
+}
+
+.baike-top-nomal{
+    font-size: 30rpx;
+    text-align: center;
+    color: #000;
+    font-weight: normal;
+    margin-bottom: 24rpx;
+}
+
+.top-bottom-line{
+    width: 100%;
+    height: 8rpx;
+    background: #a43927;
+}
+
+.text-version{
+    text-align: center;
+    width: 100%;
+    background-color: #eee;
+    color: #555;
+    font-size: 24rpx;
+    padding: 12rpx;
+    margin-top: 80rpx;
+  }
+
+.power-container {
+  display: flex;
+  flex-direction: column;
+  margin: 10rpx;
+}
+
+.power-container-title {
+  display: flex;
+  flex-direction: row;
+  font-size: 34rpx;
+  color: #003;
+}
+
+.power-container-contents-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-left: 12rpx;
+  margin-right: 12rpx;
+}
+
+.power-container-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8rpx;
+  margin-top: 10rpx;
+  position: relative;
+}
+
+.power-container-contents-image {
+  width: 30vw;
+  height: 16.4vw;
+  border-radius: 10rpx;
+}
+
+.power-container-contents-name {
+  position: absolute;
+  bottom: 5rpx;
+  left: 5rpx;
+  font-size: 24rpx;
+  color: white;
+}
+
+.bottom-container {
+  position: absolute;
+  bottom: 0rpx;
+  left: 0;
+  right: 0;
+  height: 50rpx;
+  border-bottom-left-radius: 12rpx;
+  border-bottom-right-radius: 12rpx;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.0));
+}
+
+.line {
+  height: 3rpx;
+  background-color: #a0a0a0;
+  margin-top: 15rpx;
+  margin-bottom: 15rpx;
+  width: 95%;
+  margin-left: 15rpx;
+}
+
+.list-title {
+  margin-left: 10rpx;
+  font-weight: bold;
+}
+
+.image-title{
+  height: 48rpx;
+  width: 48rpx;
+  margin-left: 12rpx;
+}
+
+.item-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .item-container-title {
+    display: flex;
+    flex-direction: row;
+    margin-top: 15rpx;
+    margin-left: 14rpx;
+  }
+  
+  .first-level-title {
+    font-size: 32rpx;
+    font-weight: bold;
+    margin-left: 12rpx;
+  }
+  
+  .second-level-title {
+    font-size: 30rpx;
+    margin-left: 15rpx;
+  }
+  
+  .item-container-contents {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 15rpx;
+    color: #0099ff;
+    /* width: 100%; */
+    align-items: center;
+  }
+  
+  .contents-title-hover{
+    border-bottom: 3rpx;
+    border-bottom-color: #0099ff;
+  }
+  
+  .contents-title {
+    font-size: 26rpx;
+    margin: 5rpx;
+    /* border-bottom: 3rpx; */
+    /* border-bottom-color: #0099ff; */
+    /* border:1px solid #ffc351; */
+    border-bottom: 1px solid #0099ff;
+  }
+  
+  .image-contents {
+    width: 40rpx;
+    height: 40rpx;
+    border-radius: 8rpx;
+  }
+  
+  .line{
+    margin-top: 15rpx;
+    margin-bottom: 15rpx;
+    height: 3rpx;
+    width: 95%;
+    background: #a0a0a0;
+  }
+  
+  .list-item-view {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  
+  .list-item-contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.4%;
+    position: relative;
+    width: 22%;
+  }
+  
+  .list-item-contents-image {
+    width: 100%;
+    height: 16vw;
+    border-radius: 10rpx;
+  }
+  
+  .bottom-container {
+    position: absolute;
+    bottom: 3rpx;
+    left: 3rpx;
+    right: 0;
+    height: 50rpx;
+    border-bottom-left-radius: 12rpx;
+    border-bottom-right-radius: 12rpx;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.0));
+  }
+  
+  .list-item-contents-name {
+    position: absolute;
+    bottom: 5rpx;
+    left: 5rpx;
+    font-size: 24rpx;
+    color: white;
+  }

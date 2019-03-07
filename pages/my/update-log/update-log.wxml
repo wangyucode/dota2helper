@@ -2,6 +2,21 @@
 
 <view class='view-container'>
   <view class='list-item'>
+    <text class='list-item-version'>V1.4</text>
+    <view class='list-item-contents'>
+      <view class='back-dian'></view>
+      <text class='list-item-detail'>感谢“夕林 笙”的意见反馈。新增：赛事预告模块</text>
+    </view>
+    <view class='list-item-contents'>
+      <view class='back-dian'></view>
+      <text class='list-item-detail'>英雄和物品合并为百科模块</text>
+    </view>
+    <view class='list-item-contents'>
+      <view class='back-dian'></view>
+      <text class='list-item-detail'>改进：英雄详情体现主属性</text>
+    </view>
+  </view>
+  <view class='list-item'>
     <text class='list-item-version'>V1.3</text>
     <view class='list-item-contents'>
       <view class='back-dian'></view>

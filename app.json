@@ -1,23 +1,23 @@
 {
   "pages": [
     "pages/news/news",
-    "pages/home/home",
     "pages/news/news-detail/news-detail",
-    "pages/home/hero-detail/hero-detail",
-    "pages/tools/tools",
-    "pages/tools/tool-jianjie/tool-jianjie",
+    "pages/match/match",
+    "pages/wiki/wiki",
+    "pages/wiki/hero-detail/hero-detail",
+    "pages/wiki/tool-jianjie/tool-jianjie",
+    "pages/wiki/tool-jianjie/a-zhang/a-zhang",
+    "pages/rank/rank",
     "pages/my/my",
     "pages/my/update-log/update-log",
     "pages/my/support-operation/support-operation",
-    "pages/my/support-operation/more-app/more-app",
-    "pages/rank/rank",
-    "pages/tools/tool-jianjie/a-zhang/a-zhang"
+    "pages/my/support-operation/more-app/more-app"
   ],
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#a43927",
     "navigationBarTitleText": "DOTA2小助手",
-    "navigationBarTextStyle": "light"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "selectedColor": "#a43927",
@@ -29,16 +29,16 @@
         "text": "消息"
       },
       {
-        "pagePath": "pages/home/home",
-        "iconPath": "/assets/icons/hero.png",
-        "selectedIconPath": "/assets/icons/hero_1.png",
-        "text": "英雄"
+        "pagePath": "pages/match/match",
+        "iconPath": "/assets/icons/match.png",
+        "selectedIconPath": "/assets/icons/match_1.png",
+        "text": "赛事"
       },
       {
-        "pagePath": "pages/tools/tools",
-        "iconPath": "/assets/icons/props.png",
-        "selectedIconPath": "/assets/icons/props_1.png",
-        "text": "物品"
+        "pagePath": "pages/wiki/wiki",
+        "iconPath": "/assets/icons/baike.png",
+        "selectedIconPath": "/assets/icons/baike_1.png",
+        "text": "百科"
       },
       {
         "pagePath": "pages/rank/rank",

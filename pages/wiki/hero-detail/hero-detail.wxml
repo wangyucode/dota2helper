@@ -8,14 +8,14 @@
     <text class="text-name">{{heroName}}</text>
   </view>
   <view class='jianjie-detail'>
-    <text class='jianjie-detail-info' decode='true'>攻击类型&nbsp;:&nbsp;&nbsp;{{attackType}}</text>
-    <text class='jianjie-detail-info' decode='true'>其他简称&nbsp;:&nbsp;&nbsp;{{otherName}}</text>
+    <text class='jianjie-detail-info' decode='true'>攻击类型&nbsp;:&nbsp;&nbsp;{{hero.attackType}}</text>
+    <text class='jianjie-detail-info' decode='true'>其他简称&nbsp;:&nbsp;&nbsp;{{hero.otherName}}</text>
   </view>
   <view class='history-view'>
     <view class='list-title-history'>故事背景</view>
     <view class='jiange' style='margin-bottom:10rpx;'></view>
     <view class='history-item'>
-      <text class='history-text' decode='true'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{heroStory}}</text>
+      <text class='history-text' decode='true'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{hero.story}}</text>
     </view>
   </view>
   <view class='history-view'>
@@ -24,30 +24,30 @@
     <view class='shuxing-view'>
       <view class='list'>
         <view class='list-item'>
-          <image class='list-item-image1' src='/assets/icons/pro1.png'></image>
-          <text class='list-item-text'>{{strengthStart}} + {{strengthGrow}}</text>
+          <image class='list-item-image1' src="{{type=='力量'?'/assets/icons/strength_1.png':'/assets/icons/pro1.png'}}"></image>
+          <text class='list-item-text'>{{hero.strengthStart}} + {{hero.strengthGrow}}</text>
         </view>
         <view class='list-item'>
-          <image class='list-item-image1' src='/assets/icons/pro2.png'></image>
-          <text class='list-item-text'>{{agilityStart}} + {{agilityGrow}}</text>
+          <image class='list-item-image1' src="{{type=='敏捷'?'/assets/icons/agility_1.png':'/assets/icons/pro2.png'}}"></image>
+          <text class='list-item-text'>{{hero.agilityStart}} + {{hero.agilityGrow}}</text>
         </view>
         <view class='list-item'>
-          <image class='list-item-image1' src='/assets/icons/pro3.png'></image>
-          <text class='list-item-text'>{{intelligenceStart}} + {{intelligenceGrow}}</text>
+          <image class='list-item-image1' src="{{type=='智力'?'/assets/icons/intelligence_1.png':'/assets/icons/pro3.png'}}"></image>
+          <text class='list-item-text'>{{hero.intelligenceStart}} + {{hero.intelligenceGrow}}</text>
         </view>
       </view>
       <view class='list'>
         <view class='list-item'>
           <image class='list-item-image2' src='/assets/icons/pro4.png'></image>
-          <text class='list-item-text'>{{attackPower}}</text>
+          <text class='list-item-text'>{{hero.attackPower}}</text>
         </view>
         <view class='list-item'>
           <image class='list-item-image2' src='/assets/icons/pro5.png'></image>
-          <text class='list-item-text'>{{armor}}</text>
+          <text class='list-item-text'>{{hero.armor}}</text>
         </view>
         <view class='list-item'>
           <image class='list-item-image2' src='/assets/icons/pro6.png'></image>
-          <text class='list-item-text'>{{speed}}</text>
+          <text class='list-item-text'>{{hero.speed}}</text>
         </view>
       </view>
     </view>
@@ -56,42 +56,42 @@
     <view class='list-title-history'>天赋树</view>
     <view class='jiange'></view>
     <view class='shu-item'>
-      <text class='shu-text-left'>{{talent25Left}}</text>
+      <text class='shu-text-left'>{{hero.talent25Left}}</text>
       <view class='shu-quan-view'>
         <text class='shu-quan-text'>25</text>
       </view>
-      <text class='shu-text-right'>{{talent25Right}}</text>
+      <text class='shu-text-right'>{{hero.talent25Right}}</text>
     </view>
     <view class='line'></view>
     <view class='shu-item'>
-      <text class='shu-text-left'>{{talent20Left}}</text>
+      <text class='shu-text-left'>{{hero.talent20Left}}</text>
       <view class='shu-quan-view'>
         <text class='shu-quan-text'>20</text>
       </view>
-      <text class='shu-text-right'>{{talent20Right}}</text>
+      <text class='shu-text-right'>{{hero.talent20Right}}</text>
     </view>
     <view class='line'></view>
     <view class='shu-item'>
-      <text class='shu-text-left'>{{talent15Left}}</text>
+      <text class='shu-text-left'>{{hero.talent15Left}}</text>
       <view class='shu-quan-view'>
         <text class='shu-quan-text'>15</text>
       </view>
-      <text class='shu-text-right'>{{talent15Right}}</text>
+      <text class='shu-text-right'>{{hero.talent15Right}}</text>
     </view>
     <view class='line'></view>
     <view class='shu-item'>
-      <text class='shu-text-left'>{{talent10Left}}</text>
+      <text class='shu-text-left'>{{hero.talent10Left}}</text>
       <view class='shu-quan-view'>
         <text class='shu-quan-text'>10</text>
       </view>
-      <text class='shu-text-right'>{{talent10Right}}</text>
+      <text class='shu-text-right'>{{hero.talent10Right}}</text>
     </view>
     <view class='line'></view>
   </view>
   <view class='history-view'>
     <view class='list-title-history'>技能介绍</view>
     <view class='jiange' style='margin-bottom: 15rpx;'></view>
-    <block wx:for='{{skillArray}}'>
+    <block wx:for='{{hero.abilities}}'>
       <view class='jineng-contents'>
         <image src='{{item.imageUrl}}' class='jineng-content-image' mode='scaleToFill'></image>
         <view class='jineng-content-text-view'>
