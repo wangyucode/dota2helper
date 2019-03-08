@@ -193,10 +193,6 @@
   background-color: #a0a0a0;
 }
 
-.bottom-view {
-  height: 100rpx;
-}
-
 .jineng-top {
   display: flex;
   flex-direction: row;

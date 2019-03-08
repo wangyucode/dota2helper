@@ -1,2 +1,23 @@
-<!--pages/match/match.wxml-->
-<text>pages/match/match.wxml</text>
+<!-- pages/match/match.wxml -->
+<view class="view-container">
+    <view class="date-container">
+        <view class="date-hbox">
+            <image class="date-icon" src="/assets/icons/date.png"></image>
+            <text class="date">2019-03-08</text>
+        </view>
+        <view class="match-vbox">
+            <text class="match-name">2019国际邀请赛</text>
+            <view class="match-hbox">
+                <text class="time">16:00</text>
+                <text class="bo">BO3</text>
+                <view class="team-box">
+                    <text class="team-name">LGD</text>
+                    <image class="team-logo"></image>
+                    <text class="vs">VS</text>
+                    <image class="team-logo"></image>
+                    <text class="team-name">OG</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -11,4 +11,5 @@
   </view>
   <text class='message-view' decode='true'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{message}}</text>
   <text class='text-detail'>{{detail}}</text>
+  <ad unit-id="adunit-80139f59872d3984"></ad>
 </view>
