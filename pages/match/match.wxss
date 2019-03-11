@@ -5,6 +5,23 @@
     flex-direction: column;
 }
 
+.no-match-container{
+    align-self: center;
+}
+
+.img-ta{
+    width: 474rpx;
+    height: 334rpx;
+    margin-top: 200rpx;
+}
+
+.text-no-match{
+    display: block;
+    font-size: 28rpx;
+    color:#555;
+    text-align: center;
+}
+
 .date-container{
     display: flex;
     flex-direction: column;
@@ -15,15 +32,77 @@
     align-items: center;
     width: 100%;
     background: #ddd;
-    padding: 12rpx;
+    padding: 8rpx;
 }
 
 .date{
-    font-size: 30rpx;
+    font-size: 26rpx;
 }
 
 .date-icon{
-    width: 48rpx;
-    height: 48rpx;
+    width: 40rpx;
+    height: 40rpx;
     margin-right: 12rpx;
+}
+
+
+.match-name{
+    display: block;
+    text-align: center;
+    font-size: 22rpx;
+    color: #555;
+    margin-top: 8rpx;
+}
+
+.match-hbox{
+    display: flex;
+    padding: 12rpx;
+    align-items: center;
+}
+
+.time{
+    font-size: 24rpx;
+    color: #333;
+}
+
+.bo{
+    margin-top: 8rpx;
+    font-size: 24rpx;
+    color: #333;
+}
+
+.vbox{
+    width: 120rpx;
+    align-items: center;
+}
+
+.dividing-line-v{
+    height: 80rpx;
+    margin-left: 12rpx;
+    margin-right: 12rpx; 
+}
+
+.team-box{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-logo{
+    width: 105rpx;
+    height: 63rpx;
+    margin: 12rpx;
+}
+
+.team-name{
+    font-size: 26rpx;
+    min-width: 140rpx;
+    max-width: 140rpx;
+    text-align: center;
+}
+
+.vs{
+    font-size: 20rpx;
+    color: #a43927;
 }

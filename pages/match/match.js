@@ -5,14 +5,36 @@ Page({
    * 页面的初始数据
    */
   data: {
+    matchDateArray:[]
+  },
 
+
+  getMatches:function(){
+    wx.showLoading({
+      title: '请稍后...',
+    })
+
+    wx.request({
+      url: 'https://wycode.cn/web/api/public/dota/matches',
+      success: (res)=> {
+        console.log('getMatches->', res);
+        if (res.data.success) {
+          this.setData({
+            matchDateArray: res.data.data
+          })
+        }
+      },
+      complete: () => {
+        wx.hideLoading()
+      }
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getMatches();
   },
 
   /**

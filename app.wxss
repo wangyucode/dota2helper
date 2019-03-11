@@ -36,6 +36,13 @@ button[type=primary] {
   background-color: #ddd;
 }
 
+.dividing-line-v {
+  display: inline-block;
+  width: 1px;
+  height: inhert;
+  background-color: #ddd;
+}
+
 .gray-gap {
   width: 100%;
   height: 36rpx;

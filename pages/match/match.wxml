@@ -1,23 +1,33 @@
 <!-- pages/match/match.wxml -->
 <view class="view-container">
-    <view class="date-container">
-        <view class="date-hbox">
-            <image class="date-icon" src="/assets/icons/date.png"></image>
-            <text class="date">2019-03-08</text>
-        </view>
-        <view class="match-vbox">
-            <text class="match-name">2019国际邀请赛</text>
-            <view class="match-hbox">
-                <text class="time">16:00</text>
-                <text class="bo">BO3</text>
-                <view class="team-box">
-                    <text class="team-name">LGD</text>
-                    <image class="team-logo"></image>
-                    <text class="vs">VS</text>
-                    <image class="team-logo"></image>
-                    <text class="team-name">OG</text>
+    <view class="no-match-container" wx:if="{{matchDateArray==null||matchDateArray.length==0}}">
+        <image class="img-ta" src="/assets/icons/ta.jpg" />
+        <text class="text-no-match">暂无比赛！</text>
+    </view>
+    <block wx:else>
+        <view class="date-container" wx:for="{{matchDateArray}}" wx:for-item="date">
+            <view class="date-hbox">
+                <image class="date-icon" src="/assets/icons/date.png"></image>
+                <text class="date">{{date.date}}</text>
+            </view>
+            <view class="match-vbox" wx:for="{{date.matchs}}" wx:for-item="match">
+                <text class="match-name">{{match.match}}</text>
+                <view class="match-hbox">
+                    <view class="vbox">
+                        <text class="time">{{match.time}}</text>
+                        <text class="bo">{{match.bestOf}}</text>
+                    </view>
+                    <view class="dividing-line-v"></view>
+                    <view class="team-box">
+                        <text class="team-name">{{match.teamNameA}}</text>
+                        <image class="team-logo" src="{{match.teamLogoA}}"></image>
+                        <text class="vs">VS</text>
+                        <image class="team-logo" src="{{match.teamLogoB}}"></image>
+                        <text class="team-name">{{match.teamNameB}}</text>
+                    </view>
                 </view>
+                <view class="dividing-line"></view>
             </view>
         </view>
-    </view>
+    </block>
 </view>
