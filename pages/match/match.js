@@ -5,7 +5,20 @@ Page({
    * 页面的初始数据
    */
   data: {
+    selectDate: true,
     matchDateArray:[]
+  },
+
+  dateClick: function() {
+    this.setData({
+      selectDate: true
+    })
+  },
+
+  tiClick: function() {
+    this.setData({
+      selectDate: false
+    })
   },
 
 
@@ -16,6 +29,7 @@ Page({
 
     wx.request({
       url: 'https://wycode.cn/web/api/public/dota/matches',
+      // url: 'https://wycode.cn/upload/dota/test',
       success: (res)=> {
         console.log('getMatches->', res);
         if (res.data.success) {

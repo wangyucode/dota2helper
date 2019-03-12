@@ -113,7 +113,7 @@ Page({
 
   toAzhang: function() {
     wx.navigateTo({
-      url: '/pages/tools/tool-jianjie/a-zhang/a-zhang'
+      url: 'a-zhang/a-zhang'
     })
   },
 

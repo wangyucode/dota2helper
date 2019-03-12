@@ -1,8 +1,9 @@
 <!-- pages/match/match.wxml -->
 <view class="view-container">
+    <view class="date-match-container" hidden="{{!selectDate}}">
     <view class="no-match-container" wx:if="{{matchDateArray==null||matchDateArray.length==0}}">
         <image class="img-ta" src="/assets/icons/ta.jpg" />
-        <text class="text-no-match">暂无比赛！</text>
+        <text class="text-no-match">今日暂无比赛！</text>
     </view>
     <block wx:else>
         <view class="date-container" wx:for="{{matchDateArray}}" wx:for-item="date">
@@ -30,4 +31,19 @@
             </view>
         </view>
     </block>
+</view>
+<view class="ti-container" hidden="{{selectDate}}">
+
+   </view> 
+    <view class='match-top'>
+    <view class="top-item" bindtap='dateClick'>
+      <text class="{{selectDate?'baike-top-select':'baike-top-nomal'}}">今日赛事</text>
+      <view class="top-bottom-line" hidden="{{!selectDate}}"></view>
+    </view>
+    <view class='top-center-line'></view>
+    <view class="top-item" bindtap='tiClick'>
+      <text class="{{selectDate?'baike-top-nomal':'baike-top-select'}}">TI9巡回赛</text>
+      <view class="top-bottom-line" hidden="{{selectDate}}"></view>
+    </view>
+  </view>
 </view>
