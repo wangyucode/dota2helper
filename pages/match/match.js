@@ -29,7 +29,6 @@ Page({
 
     wx.request({
       url: 'https://wycode.cn/web/api/public/dota/matches',
-      // url: 'https://wycode.cn/upload/dota/test',
       success: (res)=> {
         console.log('getMatches->', res);
         if (res.data.success) {

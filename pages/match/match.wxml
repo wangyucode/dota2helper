@@ -1,49 +1,63 @@
 <!-- pages/match/match.wxml -->
 <view class="view-container">
     <view class="date-match-container" hidden="{{!selectDate}}">
-    <view class="no-match-container" wx:if="{{matchDateArray==null||matchDateArray.length==0}}">
-        <image class="img-ta" src="/assets/icons/ta.jpg" />
-        <text class="text-no-match">今日暂无比赛！</text>
-    </view>
-    <block wx:else>
-        <view class="date-container" wx:for="{{matchDateArray}}" wx:for-item="date">
-            <view class="date-hbox">
-                <image class="date-icon" src="/assets/icons/date.png"></image>
-                <text class="date">{{date.date}}</text>
-            </view>
-            <view class="match-vbox" wx:for="{{date.matchs}}" wx:for-item="match">
-                <text class="match-name">{{match.match}}</text>
-                <view class="match-hbox">
-                    <view class="vbox">
-                        <text class="time">{{match.time}}</text>
-                        <text class="bo">{{match.bestOf}}</text>
-                    </view>
-                    <view class="dividing-line-v"></view>
-                    <view class="team-box">
-                        <text class="team-name">{{match.teamNameA}}</text>
-                        <image class="team-logo" src="{{match.teamLogoA}}"></image>
-                        <text class="vs">VS</text>
-                        <image class="team-logo" src="{{match.teamLogoB}}"></image>
-                        <text class="team-name">{{match.teamNameB}}</text>
-                    </view>
-                </view>
-                <view class="dividing-line"></view>
-            </view>
+        <view class="no-match-container" wx:if="{{matchDateArray==null||matchDateArray.length==0}}">
+            <image class="img-ta" src="/assets/icons/ta.jpg" />
+            <text class="text-no-match">今日暂无比赛！</text>
         </view>
-    </block>
-</view>
-<view class="ti-container" hidden="{{selectDate}}">
-
-   </view> 
+        <block wx:else>
+            <view class="date-container" wx:for="{{matchDateArray}}" wx:for-item="date">
+                <view class="date-hbox">
+                    <image class="date-icon" src="/assets/icons/date.png"></image>
+                    <text class="date">{{date.date}}</text>
+                </view>
+                <block wx:for="{{date.matchs}}" wx:for-item="match">
+                    <view class="match-hbox">
+                        <view class="vbox">
+                            <text class="time">{{match.time}}</text>
+                            <text class="bo">{{match.bestOf}}</text>
+                        </view>
+                        <view class="dividing-line-v"></view>
+                        <view class="match-name-team-box">
+                            <text class="match-name">{{match.name}}</text>
+                            <view class="team-box">
+                                <text class="team-name">{{match.teamNameA}}</text>
+                                <image class="team-logo" src="{{match.teamLogoA}}"></image>
+                                <text class="vs">VS</text>
+                                <image class="team-logo" src="{{match.teamLogoB}}"></image>
+                                <text class="team-name">{{match.teamNameB}}</text>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="dividing-line"></view>
+                </block>
+            </view>
+        </block>
+    </view>
+    <view class="ti-container" hidden="{{selectDate}}">
+        <view class="ti-match-container">
+            <image class="ti-match-logo" src="https://resource-sec.vpgame.com/league/15519538005180450739?x-oss-process=image/crop,w_252,h_174,g_center/resize,h_25"></image>
+            <view class="ti-name-date-box">
+                <text class="ti-match-name">SL-i国际邀请赛S6 预选赛</text>
+                <text class="ti-match-date">2019/05/04—2019/05/12</text>
+            </view>
+            <view class="ti-type-bonus-box">
+                <text class="ti-match-type">Major预选赛</text>
+                <text class="ti-match-bonus">$1,000,000</text>
+            </view>
+            <text class="ti-match-status">未开始</text>
+        </view>
+        <view class="dividing-line"></view>
+    </view>
     <view class='match-top'>
-    <view class="top-item" bindtap='dateClick'>
-      <text class="{{selectDate?'baike-top-select':'baike-top-nomal'}}">今日赛事</text>
-      <view class="top-bottom-line" hidden="{{!selectDate}}"></view>
+        <view class="top-item" bindtap='dateClick'>
+            <text class="{{selectDate?'baike-top-select':'baike-top-nomal'}}">今日赛事</text>
+            <view class="top-bottom-line" hidden="{{!selectDate}}"></view>
+        </view>
+        <view class='top-center-line'></view>
+        <view class="top-item" bindtap='tiClick'>
+            <text class="{{selectDate?'baike-top-nomal':'baike-top-select'}}">TI9巡回赛</text>
+            <view class="top-bottom-line" hidden="{{selectDate}}"></view>
+        </view>
     </view>
-    <view class='top-center-line'></view>
-    <view class="top-item" bindtap='tiClick'>
-      <text class="{{selectDate?'baike-top-nomal':'baike-top-select'}}">TI9巡回赛</text>
-      <view class="top-bottom-line" hidden="{{selectDate}}"></view>
-    </view>
-  </view>
 </view>
