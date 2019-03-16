@@ -35,19 +35,21 @@
         </block>
     </view>
     <view class="ti-container" hidden="{{selectDate}}">
+    <block wx:for="{{tiArray}}">
         <view class="ti-match-container">
-            <image class="ti-match-logo" src="https://resource-sec.vpgame.com/league/15519538005180450739?x-oss-process=image/crop,w_252,h_174,g_center/resize,h_25"></image>
+            <image class="ti-match-logo" src="{{item.image}}"></image>
             <view class="ti-name-date-box">
-                <text class="ti-match-name">SL-i国际邀请赛S6 预选赛</text>
-                <text class="ti-match-date">2019/05/04—2019/05/12</text>
+                <text class="ti-match-name">{{item.name}}</text>
+                <text class="ti-match-date">{{item.date}}</text>
             </view>
             <view class="ti-type-bonus-box">
-                <text class="ti-match-type">Major预选赛</text>
-                <text class="ti-match-bonus">$1,000,000</text>
+                <text class="ti-match-type">{{item.type}}</text>
+                <text class="ti-match-bonus">{{item.bonus}}</text>
             </view>
-            <text class="ti-match-status">未开始</text>
+            <text class="{{'已结束'==item.status?'ti-match-status-over':'进行中'==item.status?'ti-match-status-start':'ti-match-status'}}">{{item.status}}</text>
         </view>
         <view class="dividing-line"></view>
+        </block>
     </view>
     <view class='match-top'>
         <view class="top-item" bindtap='dateClick'>

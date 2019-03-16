@@ -2,6 +2,17 @@
 
 <view class='view-container'>
   <view class='list-item'>
+    <text class='list-item-version'>V1.5</text>
+    <view class='list-item-contents'>
+      <view class='back-dian'></view>
+      <text class='list-item-detail'>新增：TI职业巡回赛安排</text>
+    </view>
+    <view class='list-item-contents'>
+      <view class='back-dian'></view>
+      <text class='list-item-detail'>修复一些bug</text>
+    </view>
+  </view>
+  <view class='list-item'>
     <text class='list-item-version'>V1.4</text>
     <view class='list-item-contents'>
       <view class='back-dian'></view>

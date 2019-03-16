@@ -6,7 +6,8 @@ Page({
    */
   data: {
     selectDate: true,
-    matchDateArray:[]
+    matchDateArray:[],
+    tiArray:[]
   },
 
   dateClick: function() {
@@ -43,11 +44,27 @@ Page({
     })
   },
 
+  getTi:function(){
+
+    wx.request({
+      url: 'https://wycode.cn/web/api/public/dota/ti',
+      success: (res)=> {
+        console.log('getTi->', res);
+        if (res.data.success) {
+          this.setData({
+            tiArray: res.data.data
+          })
+        }
+      }
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     this.getMatches();
+    this.getTi();
   },
 
   /**
