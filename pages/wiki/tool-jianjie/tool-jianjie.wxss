@@ -160,11 +160,6 @@ page {
   height: 1px;
 }
 
-.toAzhang {
-  width: 96%;
-  margin-top: 24rpx;
-}
-
 .text-component-title {
   font-size: 34rpx;
   font-weight: bold;

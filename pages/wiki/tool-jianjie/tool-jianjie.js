@@ -111,12 +111,6 @@ Page({
     })
   },
 
-  toAzhang: function() {
-    wx.navigateTo({
-      url: 'a-zhang/a-zhang'
-    })
-  },
-
   setComponents: function() {
     let components = []
     let juanZhouCost = this.data.toolDetail.cost;

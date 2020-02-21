@@ -81,7 +81,7 @@ Page({
     })
     var that = this;
     wx.request({
-      url: 'https://wycode.cn/upload/dota/news/'+app.globalData.transferData.detail+".txt",
+      url: 'https://wycode.cn/upload/dota/news/'+app.globalData.transferData.detail+".json",
       success:function(res){
         console.log('getNewsDetail->',res);
         that.setData({

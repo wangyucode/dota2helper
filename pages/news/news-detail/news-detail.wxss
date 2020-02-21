@@ -17,17 +17,6 @@
   margin-top: 5rpx;
 }
 
-.top-image{
-  /* margin: 45rpx;
-  margin-top: 1.2; */
-  margin-top: 10rpx;
-}
-
-.image-view{
-  width: 100%;
-  text-indent:20px; 
-}
-
 .message-view{
   font-size: 26rpx;
   text-indent:2px;
@@ -36,9 +25,16 @@
   padding: 12rpx;
 }
 
-.text-detail{
-  margin-top: 24rpx;
-  margin-bottom: 24rpx;
+.detail-p{
+  margin: 12rpx 0;
   font-size: 30rpx;
+}
+
+.detail-img{
+  width: 100%;
+}
+
+.detail-br{
+  height: 12rpx;
 }
 

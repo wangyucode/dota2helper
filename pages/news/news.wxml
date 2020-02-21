@@ -1,7 +1,7 @@
 <!-- pages/news/news.wxml-->
 
 <view class='home-container'>
-  <block wx:for='{{newsArry}}'>
+  <block wx:for='{{newsArry}}' wx:key='detail'>
     <view class='container-list' bindtap='enterNewsDetail' data-item='{{item}}'>
       <view class='container-image'>
         <image class='container-list-image' src='{{item.image}}' mode='aspectFill'></image>

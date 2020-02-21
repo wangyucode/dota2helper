@@ -2,7 +2,7 @@
 <view class='view-container'>
   <view class='top-view-container'>
     <image class='top-view-image' src='/assets/logo.png'></image>
-    <text class='top-view-title'>DOTA2英雄技能物品天梯助手 V1.5</text>
+    <text class='top-view-title'>DOTA2英雄技能物品天梯助手 V1.6</text>
     <text class='top-view-infodetail'>玩DOTA2，查询英雄属性、技能、物品、赛事、天梯排行。用“DOTA2英雄技能物品天梯助手”就够了！</text>
   </view>
   <view class='gray-view'></view>

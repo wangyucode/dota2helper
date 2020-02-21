@@ -6,10 +6,11 @@
   <view class='top-time'>
     <text>{{time}}</text>
   </view>
-  <view class='top-image'>
-    <image src='{{imagePath}}' class='image-view' mode='aspectFill'></image>
-  </view>
   <text class='message-view' decode='true'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{message}}</text>
-  <text class='text-detail'>{{detail}}</text>
+  <block wx:for='{{detail}}'>
+    <text class='detail-p' wx:if="{{item.type==='p'}}">{{item.content}}</text>
+    <image class='detail-img' wx:elif="{{item.type==='img'}}" src='{{item.content}}' mode='aspectFit'></image>
+    <view class='detail-br'></view>
+  </block>
   <ad unit-id="adunit-80139f59872d3984"></ad>
 </view>

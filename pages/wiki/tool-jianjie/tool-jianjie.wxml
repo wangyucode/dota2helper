@@ -54,7 +54,5 @@
       <text>卷轴：{{juanZhouCost}}</text>
     </view>
   </view>
-
-  <button wx:if="{{key=='ultimate_scepter'}}" class="toAzhang" type="primary" bindtap="toAzhang">查看所有加成效果</button>
   <ad unit-id="adunit-d432eb59296fbcd6"></ad>
 </view>
