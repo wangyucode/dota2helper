@@ -7,7 +7,8 @@ Page({
   data: {
     selectDate: true,
     matchDateArray:[],
-    tiArray:[]
+    teams:[],
+    hotMatches:[]
   },
 
   dateClick: function() {
@@ -44,15 +45,30 @@ Page({
     })
   },
 
-  getTi:function(){
+  getTeams:function(){
 
     wx.request({
-      url: 'https://wycode.cn/web/api/public/dota/ti',
+      url: 'https://wycode.cn/web/api/public/dota/teams',
       success: (res)=> {
-        console.log('getTi->', res);
+        console.log('getTeams->', res);
         if (res.data.success) {
           this.setData({
-            tiArray: res.data.data
+            teams: res.data.data
+          })
+        }
+      }
+    })
+  },
+
+  getHotMatches:function(){
+
+    wx.request({
+      url: 'https://wycode.cn/web/api/public/dota/hot-matches',
+      success: (res)=> {
+        console.log('getHotMatches->', res);
+        if (res.data.success) {
+          this.setData({
+            hotMatches: res.data.data
           })
         }
       }
@@ -64,7 +80,8 @@ Page({
    */
   onLoad: function (options) {
     this.getMatches();
-    this.getTi();
+    this.getTeams();
+    this.getHotMatches();
   },
 
   /**

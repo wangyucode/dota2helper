@@ -9,7 +9,7 @@
       </view>
     </view>
     <view class='power-container-contents-list'>
-      <block wx:for='{{powerHeroArry}}'>
+      <block wx:for='{{powerHeroArry}}' wx:key="name">
         <view class='power-container-contents' bindtap='heroDetail' data-item='{{item}}'>
           <image src='{{item.imageUrl}}' class='power-container-contents-image'></image>
           <view class='bottom-container'>
@@ -26,7 +26,7 @@
       </view>
     </view>
     <view class='power-container-contents-list'>
-      <block wx:for='{{minjieHeroArry}}'>
+      <block wx:for='{{minjieHeroArry}}' wx:key="name">
         <view class='power-container-contents' bindtap='heroDetail' data-item='{{item}}'>
           <image src='{{item.imageUrl}}' class='power-container-contents-image'></image>
           <view class='bottom-container'>
@@ -43,7 +43,7 @@
       </view>
     </view>
     <view class='power-container-contents-list'>
-      <block wx:for='{{zhiliHeroArry}}'>
+      <block wx:for='{{zhiliHeroArry}}' wx:key="name">
         <view class='power-container-contents' bindtap='heroDetail' data-item='{{item}}'>
           <image src='{{item.imageUrl}}' class='power-container-contents-image'></image>
           <view class='bottom-container'>
@@ -61,7 +61,7 @@
         <text class='second-level-title'>消耗品</text>
       </view>
       <view class='list-item-view'>
-        <block wx:for='{{xiaohaopinToolArry}}'>
+        <block wx:for='{{xiaohaopinToolArry}}' wx:key="key">
           <view class='list-item-contents' bindtap='itemDetail' data-item='{{item}}'>
             <image src='{{item.img}}' class='list-item-contents-image'></image>
             <view class='bottom-container'>
@@ -77,7 +77,7 @@
         <text class='second-level-title'>属性</text>
       </view>
       <view class='list-item-view'>
-        <block wx:for='{{shuxingToolArry}}'>
+        <block wx:for='{{shuxingToolArry}}' wx:key="key">
           <view class='list-item-contents' bindtap='itemDetail' data-item='{{item}}'>
             <image src='{{item.img}}' class='list-item-contents-image'></image>
             <view class='bottom-container'>
@@ -93,7 +93,7 @@
         <text class='second-level-title'>军备</text>
       </view>
       <view class='list-item-view'>
-        <block wx:for='{{junbeiToolArry}}'>
+        <block wx:for='{{junbeiToolArry}}' wx:key="key">
           <view class='list-item-contents' bindtap='itemDetail' data-item='{{item}}'>
             <image src='{{item.img}}' class='list-item-contents-image'></image>
             <view class='bottom-container'>
@@ -109,7 +109,7 @@
         <text class='second-level-title'>奥术</text>
       </view>
       <view class='list-item-view'>
-        <block wx:for='{{aoshuToolArry}}'>
+        <block wx:for='{{aoshuToolArry}}' wx:key="key">
           <view class='list-item-contents' bindtap='itemDetail' data-item='{{item}}'>
             <image src='{{item.img}}' class='list-item-contents-image'></image>
             <view class='bottom-container'>
@@ -128,7 +128,7 @@
           <text class='second-level-title'>常用</text>
         </view>
         <view class='list-item-view'>
-          <block wx:for='{{normalToolArry}}'>
+          <block wx:for='{{normalToolArry}}' wx:key="key">
             <view class='list-item-contents' bindtap='itemDetail' data-item='{{item}}'>
               <image src='{{item.img}}' class='list-item-contents-image'></image>
               <view class='bottom-container'>
@@ -144,7 +144,7 @@
           <text class='second-level-title'>辅助</text>
         </view>
         <view class='list-item-view'>
-          <block wx:for='{{fuzhuToolArry}}'>
+          <block wx:for='{{fuzhuToolArry}}' wx:key="key">
             <view class='list-item-contents' bindtap='itemDetail' data-item='{{item}}'>
               <image src='{{item.img}}' class='list-item-contents-image'></image>
               <view class='bottom-container'>
@@ -160,7 +160,7 @@
           <text class='second-level-title'>法器</text>
         </view>
         <view class='list-item-view'>
-          <block wx:for='{{faqiToolArry}}'>
+          <block wx:for='{{faqiToolArry}}' wx:key="key">
             <view class='list-item-contents' bindtap='itemDetail' data-item='{{item}}'>
               <image src='{{item.img}}' class='list-item-contents-image'></image>
               <view class='bottom-container'>
@@ -176,7 +176,7 @@
           <text class='second-level-title'>防具</text>
         </view>
         <view class='list-item-view'>
-          <block wx:for='{{fangjuToolArry}}'>
+          <block wx:for='{{fangjuToolArry}}' wx:key="key">
             <view class='list-item-contents' bindtap='itemDetail' data-item='{{item}}'>
               <image src='{{item.img}}' class='list-item-contents-image'></image>
               <view class='bottom-container'>
@@ -192,7 +192,7 @@
           <text class='second-level-title'>武器</text>
         </view>
         <view class='list-item-view'>
-          <block wx:for='{{wuqiToolArry}}'>
+          <block wx:for='{{wuqiToolArry}}' wx:key="key">
             <view class='list-item-contents' bindtap='itemDetail' data-item='{{item}}'>
               <image src='{{item.img}}' class='list-item-contents-image'></image>
               <view class='bottom-container'>
@@ -208,7 +208,7 @@
           <text class='second-level-title'>圣物</text>
         </view>
         <view class='list-item-view'>
-          <block wx:for='{{shengwuToolArry}}'>
+          <block wx:for='{{shengwuToolArry}}' wx:key="key">
             <view class='list-item-contents' bindtap='itemDetail' data-item='{{item}}'>
               <image src='{{item.img}}' class='list-item-contents-image'></image>
               <view class='bottom-container'>
@@ -224,7 +224,7 @@
           <text class='second-level-title'>神秘商店</text>
         </view>
         <view class='list-item-view'>
-          <block wx:for='{{storeToolArry}}'>
+          <block wx:for='{{storeToolArry}}' wx:key="key">
             <view class='list-item-contents' bindtap='itemDetail' data-item='{{item}}'>
               <image src='{{item.img}}' class='list-item-contents-image'></image>
               <view class='bottom-container'>

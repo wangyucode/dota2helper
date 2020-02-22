@@ -1,1 +1,5 @@
-{}
+{
+    "usingComponents": {
+        "rating-bar": "/components/ratingbar/rating-bar"
+    }
+}

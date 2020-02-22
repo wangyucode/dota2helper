@@ -11,7 +11,7 @@
     <image src='/assets/icons/arrow_down.png' class='list-item-image'></image>
   </button>
   <view class='line'></view>
-  <button class='list-item-button' open-type='feedback' hover-class='list-item-button-hover'>
+  <button class='list-item-button' bindtap='enterFeedback' hover-class='list-item-button-hover'>
     <text class='list-item-text'>意见反馈</text>
     <image src='/assets/icons/arrow_down.png' class='list-item-image'></image>
   </button>

@@ -1,17 +1,35 @@
 <!-- pages/match/match.wxml -->
 <view class="view-container">
     <view class="date-match-container" hidden="{{!selectDate}}">
+        <swiper autoplay="true" interval="4000" duration="300"circular="true">
+            <block wx:for="{{hotMatches}}" wx:key="league_name">
+                <swiper-item>
+                    <image class="banner-image" src="{{item.logo}}" mode="aspectFill"></image>
+                    <text class="banner-name">{{item.league_name}}</text>
+                    <image class="status-image" src="/assets/icons/{{item.status}}.png"></image>
+                    <view class="banner-left-bottom">
+                        <text class="banner-organizer">{{item.organizer}}</text>
+                        <text wx:if="{{item.prize_poll}}" class="banner-prize">{{item.prize_poll}}</text>
+                    </view>
+                    <view class="banner-right-bottom">
+                        <text class="banner-time">{{item.start_time}}-{{item.end_time}}</text>
+                        <text class="banner-location">{{item.location}}</text>
+                    </view>
+                    <rating-bar count="{{item.league_level}}"></rating-bar>
+                </swiper-item>
+            </block>
+        </swiper>
         <view class="no-match-container" wx:if="{{matchDateArray==null||matchDateArray.length==0}}">
             <image class="img-ta" src="/assets/icons/ta.jpg" />
             <text class="text-no-match">近期暂无比赛！</text>
         </view>
         <block wx:else>
-            <view class="date-container" wx:for="{{matchDateArray}}" wx:for-item="date">
+            <view class="date-container" wx:for="{{matchDateArray}}" wx:for-item="date" wx:key="date">
                 <view class="date-hbox">
                     <image class="date-icon" src="/assets/icons/date.png"></image>
                     <text class="date">{{date.date}}</text>
                 </view>
-                <block wx:for="{{date.matchs}}" wx:for-item="match">
+                <block wx:for="{{date.matchs}}" wx:for-item="match" wx:key="name">
                     <view class="match-hbox">
                         <view class="vbox">
                             <text class="time">{{match.time}}</text>
@@ -34,21 +52,26 @@
             </view>
         </block>
     </view>
-    <view class="ti-container" hidden="{{selectDate}}">
-    <block wx:for="{{tiArray}}">
-        <view class="ti-match-container">
-            <image class="ti-match-logo" src="{{item.image}}"></image>
-            <view class="ti-name-date-box">
-                <text class="ti-match-name">{{item.name}}</text>
-                <text class="ti-match-date">{{item.date}}</text>
-            </view>
-            <view class="ti-type-bonus-box">
-                <text class="ti-match-type">{{item.type}}</text>
-                <text class="ti-match-bonus">{{item.bonus}}</text>
-            </view>
-            <text class="{{'已结束'==item.status?'ti-match-status-over':'进行中'==item.status?'ti-match-status-start':'ti-match-status'}}">{{item.status}}</text>
+    <view class="team-container" hidden="{{selectDate}}">
+        <view class="team-header">
+            <text class="header-rank-text">排名</text>
+            <view class="top-center-line"></view>
+            <text class="header-team-text">战队</text>
+            <view class="top-center-line"></view>
+            <text class="header-nation-text">国家/地区</text>
+            <view class="top-center-line"></view>
+            <text class="header-integral-text">积分</text>
         </view>
         <view class="dividing-line"></view>
+        <block wx:for="{{teams}}" wx:key="name">
+            <view class="team-score-container">
+                <text class="body-rank-text">{{item.rank}}</text>
+                <image class="team-score-logo" src="{{item.logo}}"></image>
+                <text class="body-name-text">{{item.name}}</text>
+                <image class="team-nation" src="{{item.nation}}"></image>
+                <text class="body-integral-text">{{item.integral}}</text>
+            </view>
+            <view class="dividing-line"></view>
         </block>
     </view>
     <view class='match-top'>

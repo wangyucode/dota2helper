@@ -6,6 +6,62 @@
   flex-direction: column;
 }
 
+swiper {
+  width: 100%;
+  height: 400rpx;
+}
+
+.banner-image{
+  height: 100%;
+  width: 100%;
+}
+
+.banner-name{
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 8rpx;
+  font-size: 24rpx;
+  color: #eeeeee;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.0));
+}
+
+.banner-left-bottom{
+  position: absolute;
+  padding: 8rpx;
+  bottom: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.0));
+}
+
+.banner-right-bottom{
+  position: absolute;
+  padding: 8rpx;
+  bottom: 0;
+  right: 0;
+  text-align: right;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.0));
+}
+
+.banner-organizer,.banner-prize ,.banner-time,.banner-location{
+  font-size: 20rpx;
+  color: #eeeeee;
+  display: block;
+}
+
+rating-bar{
+  position: absolute;
+  bottom: 12rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.status-image{
+  position: absolute;
+  height: 128rpx;
+  width: 128rpx;
+  right: 0;
+}
+
 .date-match-container {
   align-self: center;
   width: 100%;
@@ -168,71 +224,76 @@
   margin-top: 80rpx;
 }
 
-.ti-container {
+.team-container {
   margin-top: 80rpx;
 }
 
-.ti-match-container {
+.team-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24rpx 12rpx;
+}
+
+.header-rank-text{
+  width: 96rpx;
+  text-align: center;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.header-team-text{
+  width: 384rpx;
+  text-align: center;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.header-nation-text{
+  width: 178rpx;
+  text-align: center;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.header-integral-text{
+  width: 96rpx;
+  text-align: center;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.team-score-container{
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 12rpx;
 }
 
-.ti-match-status {
-  font-size: 24rpx;
-  color: rgb(27, 127, 209);
-  border: 2rpx solid rgb(27, 127, 209);
-  border-radius: 16rpx;
-  padding: 4rpx;
-  margin-right: 12rpx;
+.body-rank-text{
+  width: 96rpx;
+  text-align: center;
+  font-size: 28rpx;
 }
 
-.ti-match-status-over {
-  font-size: 24rpx;
-  color: rgb(150, 150, 150);
-  border: 2rpx solid rgb(150, 150, 150);
-  border-radius: 16rpx;
-  padding: 4rpx;
-  margin-right: 12rpx;
+.team-score-logo{
+  width: 128rpx;
+  height: 76rpx;
 }
 
-.ti-match-status-start {
-  font-size: 24rpx;
-  color: rgb(27, 209, 109);
-  border: 2rpx solid rgb(27, 209, 109);
-  border-radius: 16rpx;
-  padding: 4rpx;
-  margin-right: 12rpx;
+.body-name-text{
+  width: 240rpx;
+  font-size: 28rpx;
 }
 
-.ti-name-date-box {
-  display: flex;
-  flex-direction: column;
-  flex: 2;
-  margin-left: 12rpx;
+.team-nation{
+  width: 56rpx;
+  height: 36rpx;
 }
 
-.ti-type-bonus-box {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  margin-right: 12rpx;
-}
-
-.ti-match-type, .ti-match-name {
-  font-size: 22rpx;
-  color: #555;
-}
-
-.ti-match-date, .ti-match-bonus {
-  font-size: 22rpx;
-  color: #555;
-  margin-top: 8rpx;
-}
-
-.ti-match-logo {
-  width: 108rpx;
-  height: 75rpx;
-  margin-left: 12rpx;
+.body-integral-text{
+  width: 128rpx;
+  display: inline-block;
+  text-align: center;
+  font-size: 28rpx;
 }

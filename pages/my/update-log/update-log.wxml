@@ -5,7 +5,7 @@
     <text class='list-item-version'>V1.6</text>
     <view class='list-item-contents'>
       <view class='back-dian'></view>
-      <text class='list-item-detail'>优化：消息支持图片</text>
+      <text class='list-item-detail'>改进：消息支持图片</text>
     </view>
     <view class='list-item-contents'>
       <view class='back-dian'></view>
@@ -18,6 +18,10 @@
     <view class='list-item-contents'>
       <view class='back-dian'></view>
       <text class='list-item-detail'>百科：去除A杖详情页的所有A杖效果链接</text>
+    </view>
+    <view class='list-item-contents'>
+      <view class='back-dian'></view>
+      <text class='list-item-detail'>改进：意见反馈可以更快的到达作者</text>
     </view>
   </view>
   <view class='list-item'>

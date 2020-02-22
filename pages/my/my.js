@@ -75,4 +75,10 @@ Page({
     })
   },
 
+  enterFeedback: function (e) {
+    wx.navigateTo({
+      url: 'feedback/feedback',
+    })
+  },
+
 })

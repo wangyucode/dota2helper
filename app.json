@@ -9,6 +9,7 @@
     "pages/rank/rank",
     "pages/my/my",
     "pages/my/update-log/update-log",
+    "pages/my/feedback/feedback",
     "pages/my/support-operation/support-operation",
     "pages/my/support-operation/more-app/more-app"
   ],
