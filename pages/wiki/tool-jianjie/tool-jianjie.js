@@ -78,7 +78,7 @@ Page({
       mask: true
     })
     wx.request({
-      url: 'https://wycode.cn/web/api/public/dota/itemDetail',
+      url: app.globalData.serverHost + '/web/api/public/dota/itemDetail',
       data: {
         itemKey: that.data.key,
       },

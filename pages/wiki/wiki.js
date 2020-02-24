@@ -28,23 +28,11 @@ Page({
   },
 
 
-  getDataVersion: function() {
-    wx.request({
-      url: app.globalData.serverUrl + '/api/public/dota/version',
-      success: (res) => {
-        console.log('getDataVersion->', res);
-        if (res.data.success) {
-          this.setData({
-            dataVersion: res.data.data.version
-          })
-        }
-      }
-    })
-  },
+  
 
   getHeroList: function() {
     wx.request({
-      url: app.globalData.serverUrl + '/api/public/dota/heroes',
+      url: app.globalData.serverHost + '/web/api/public/dota/heroes',
       success: (res) => {
         console.log('getHerosList->', res);
         if (res.data.success) {
@@ -74,7 +62,7 @@ Page({
 
   getToolsList: function() {
     wx.request({
-      url: app.globalData.serverUrl + '/api/public/dota/items',
+      url: app.globalData.serverHost + '/web/api/public/dota/items',
       success: (res) => {
         console.log('getToolsList->', res);
         if (res.data.success) {
@@ -167,7 +155,9 @@ Page({
       title: '请稍后...',
     });
 
-    this.getDataVersion();
+    this.setData({
+      dataVersion: app.globalData.dataVersion
+    });
     this.getHeroList();
     this.getToolsList();
   },

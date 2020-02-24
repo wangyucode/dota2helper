@@ -1,4 +1,5 @@
 // pages/match/match.js
+const app = getApp();
 Page({
 
   /**
@@ -6,32 +7,33 @@ Page({
    */
   data: {
     selectDate: true,
-    matchDateArray:[],
-    teams:[],
-    hotMatches:[]
+    dev: true,
+    matchDateArray: [],
+    teams: [],
+    hotMatches: []
   },
 
-  dateClick: function() {
+  dateClick: function () {
     this.setData({
       selectDate: true
     })
   },
 
-  tiClick: function() {
+  tiClick: function () {
     this.setData({
       selectDate: false
     })
   },
 
 
-  getMatches:function(){
+  getMatches: function () {
     wx.showLoading({
       title: '请稍后...',
     })
 
     wx.request({
-      url: 'https://wycode.cn/web/api/public/dota/matches',
-      success: (res)=> {
+      url: app.globalData.serverHost + '/web/api/public/dota/matches',
+      success: (res) => {
         console.log('getMatches->', res);
         if (res.data.success) {
           this.setData({
@@ -45,11 +47,11 @@ Page({
     })
   },
 
-  getTeams:function(){
+  getTeams: function () {
 
     wx.request({
-      url: 'https://wycode.cn/web/api/public/dota/teams',
-      success: (res)=> {
+      url: app.globalData.serverHost + '/web/api/public/dota/teams',
+      success: (res) => {
         console.log('getTeams->', res);
         if (res.data.success) {
           this.setData({
@@ -60,11 +62,10 @@ Page({
     })
   },
 
-  getHotMatches:function(){
-
+  getHotMatches: function () {
     wx.request({
-      url: 'https://wycode.cn/web/api/public/dota/hot-matches',
-      success: (res)=> {
+      url: app.globalData.serverHost + '/web/api/public/dota/hot-matches',
+      success: (res) => {
         console.log('getHotMatches->', res);
         if (res.data.success) {
           this.setData({
@@ -81,7 +82,12 @@ Page({
   onLoad: function (options) {
     this.getMatches();
     this.getTeams();
-    this.getHotMatches();
+    if (app.globalData.dataVersion !== 'dev') {
+      this.getHotMatches();
+    }
+    this.setData({
+      dev: app.globalData.dataVersion === 'dev'
+    });
   },
 
   /**

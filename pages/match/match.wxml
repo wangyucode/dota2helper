@@ -1,7 +1,7 @@
 <!-- pages/match/match.wxml -->
 <view class="view-container">
     <view class="date-match-container" hidden="{{!selectDate}}">
-        <swiper autoplay="true" interval="4000" duration="300"circular="true">
+        <swiper wx:if="{{!dev}}" autoplay="true" interval="4000" duration="300"circular="true">
             <block wx:for="{{hotMatches}}" wx:key="league_name">
                 <swiper-item>
                     <image class="banner-image" src="{{item.logo}}" mode="aspectFill"></image>

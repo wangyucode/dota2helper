@@ -1,6 +1,7 @@
 // pages/about/feedback/feedback.js
 var contact = ''
 var content = ''
+const app = getApp();
 Page({
 
   /**
@@ -88,7 +89,7 @@ Page({
       title: '请稍后...',
     })
     wx.request({
-      url: 'https://wycode.cn/web/api/public/comment/newComment',
+      url: app.globalData.serverHost + '/web/api/public/comment/newComment',
       method: 'POST',
       data: {
         accessKey: '6l2xpvnbuza8mn9idepvfl35nhoi2twv',

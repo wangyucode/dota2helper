@@ -1,5 +1,5 @@
 //pages/my/support-operation/support-operation.js
-
+const app = getApp()
 Page({
 
   /**
@@ -72,7 +72,7 @@ Page({
 
   toReward: function () {
     wx.previewImage({
-      urls: ["https://wycode.cn/upload/image/fish/reward.jpg"],
+      urls: [app.globalData.serverHost + '/upload/image/fish/reward.jpg'],
     })
   }
 

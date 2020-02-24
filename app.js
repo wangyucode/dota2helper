@@ -3,7 +3,8 @@ App({
   onLaunch: function() {
   },
   globalData: {
-    serverUrl: 'https://wycode.cn/web',
+    serverHost: 'https://wycode.cn',
+    dataVersion: 'dev',
     transferData:{}
   }
 })

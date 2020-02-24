@@ -1,5 +1,5 @@
 //pages/home/hero-detail.js
-
+const app = getApp();
 Page({
 
   /**
@@ -80,7 +80,7 @@ Page({
   getHeroDetail: function() {
     var that = this;
     wx.request({
-      url: 'https://wycode.cn/web/api/public/dota/heroDetail',
+      url: app.globalData.serverHost + '/web/api/public/dota/heroDetail',
       data: {
         heroName: that.data.heroName,
       },

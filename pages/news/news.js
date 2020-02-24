@@ -1,5 +1,6 @@
 // pages/news/news.js
 var app = getApp()
+var page = -1;
 Page({
 
   /**
@@ -7,7 +8,6 @@ Page({
    */
   data: {
     newsArry: [],
-    page: 1,
     last: false,
   },
 
@@ -15,7 +15,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.startPullDownRefresh()
+    this.getDataVersion();
   },
 
   /**
@@ -50,7 +50,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    this.data.page = 1;
+    page = app.globalData.dataVersion === 'dev' ? -1 : 1;
     this.getNewsInfo();
   },
 
@@ -59,7 +59,7 @@ Page({
    */
   onReachBottom: function () {
     if (!this.data.last) {
-      this.data.page++;
+      page++;
       this.getNewsInfo();
     }
   },
@@ -69,6 +69,20 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+
+  getDataVersion: function () {
+    wx.request({
+      url: app.globalData.serverHost + '/web/api/public/dota/version',
+      success: (res) => {
+        console.log('getDataVersion->', res);
+        if (res.data.success) {
+          app.globalData.dataVersion = res.data.data.version;
+          wx.startPullDownRefresh();
+        }
+      }
+    })
   },
 
   enterNewsDetail: function (e) {
@@ -85,24 +99,24 @@ Page({
       title: '请稍后...',
     })
     wx.request({
-      url: 'https://wycode.cn/upload/dota/news/news' + this.data.page,
+      url: `${app.globalData.serverHost}/upload/dota/news/news${page > 0 ? page : 'dev'}`,
       success: function (res) {
         console.log('getNewsInfo->', res);
         if (res.data != null) {
           var items = [];
-          if (that.data.page == 1) {
+          if (page === 1 || page === -1) {
             items = res.data;
           } else {
             items = that.data.newsArry.concat(res.data);
           }
           that.setData({
             newsArry: items,
-            last: that.data.page == 9
+            last: page === 5 || page === -1
           })
         } else {
           that.setData({
             last: true
-          })
+          });
         }
       },
       complete: () => {

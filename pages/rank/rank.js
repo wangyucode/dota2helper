@@ -1,5 +1,5 @@
 // pages/rank/rank.js
-
+const app = getApp();
 Page({
 
   /**
@@ -71,7 +71,7 @@ Page({
     })
     var that = this;
     wx.request({
-      url: 'https://wycode.cn/upload/dota/leaderboard.json',
+      url: app.globalData.serverHost + '/upload/dota/leaderboard.json',
       success:function(res){
         
         console.log('getRankList->',res);
