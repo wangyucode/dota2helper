@@ -5,7 +5,7 @@
     <text class='list-item-version'>V1.6</text>
     <view class='list-item-contents'>
       <view class='back-dian'></view>
-      <text class='list-item-detail'>改进：消息支持图片</text>
+      <text class='list-item-detail'>改进：文章支持图片</text>
     </view>
     <view class='list-item-contents'>
       <view class='back-dian'></view>

@@ -26,13 +26,13 @@
         "pagePath": "pages/news/news",
         "iconPath": "/assets/icons/news.png",
         "selectedIconPath": "/assets/icons/news_1.png",
-        "text": "消息"
+        "text": "文章"
       },
       {
         "pagePath": "pages/match/match",
         "iconPath": "/assets/icons/match.png",
         "selectedIconPath": "/assets/icons/match_1.png",
-        "text": "赛事"
+        "text": "比赛"
       },
       {
         "pagePath": "pages/wiki/wiki",
