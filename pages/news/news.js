@@ -1,13 +1,13 @@
 // pages/news/news.js
 var app = getApp()
-var page = -1;
+var page = 1;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    newsArry: [],
+    newsArray: [],
     last: false,
   },
 
@@ -16,42 +16,6 @@ Page({
    */
   onLoad: function (options) {
     this.getDataVersion();
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-    page = app.globalData.dataVersion === 'dev' ? -1 : 1;
-    this.getNewsInfo();
   },
 
   /**
@@ -64,22 +28,24 @@ Page({
     }
   },
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  },
-
 
   getDataVersion: function () {
+    wx.showLoading({
+      title: '加载中...',
+    });
     wx.request({
       url: app.globalData.serverHost + '/web/api/public/dota/version',
       success: (res) => {
         console.log('getDataVersion->', res);
         if (res.data.success) {
           app.globalData.dataVersion = res.data.data.version;
-          wx.startPullDownRefresh();
+          if (app.globalData.dataVersion === 'dev') {
+            this.setData({
+              last: true
+            });
+          } else {
+            this.getNewsInfo();
+          }
         }
       }
     })
@@ -94,35 +60,25 @@ Page({
   },
 
   getNewsInfo: function () {
-    var that = this;
     wx.showLoading({
-      title: '请稍后...',
-    })
+      title: '加载中...',
+    });
     wx.request({
-      url: `${app.globalData.serverHost}/upload/dota/news/news${page > 0 ? page : 'dev'}`,
-      success: function (res) {
+      url: `${app.globalData.serverHost}/node/dota/news?page=${page}&size=8`,
+      success:  (res) => {
         console.log('getNewsInfo->', res);
-        if (res.data != null) {
-          var items = [];
-          if (page === 1 || page === -1) {
-            items = res.data;
-          } else {
-            items = that.data.newsArry.concat(res.data);
-          }
-          that.setData({
-            newsArry: items,
-            last: page === 5 || page === -1
-          })
+        if (res.data.success) {
+          this.setData({
+            newsArray: this.data.newsArray.concat(res.data.data.data),
+            last: this.data.newsArray.length >= res.data.total
+          });
         } else {
-          that.setData({
+          this.setData({
             last: true
           });
         }
       },
-      complete: () => {
-        wx.stopPullDownRefresh()
-        wx.hideLoading()
-      }
+      complete: wx.hideLoading
     })
   }
 
