@@ -34,11 +34,11 @@ Page({
       title: '加载中...',
     });
     wx.request({
-      url: app.globalData.serverHost + '/web/api/public/dota/version',
+      url: app.globalData.serverHost + '/node/config?k=CONFIG_DOTA_VERSION',
       success: (res) => {
         console.log('getDataVersion->', res);
         if (res.data.success) {
-          app.globalData.dataVersion = res.data.data.version;
+          app.globalData.dataVersion = res.data.payload.value;
           if (app.globalData.dataVersion === 'dev') {
             this.setData({
               last: true
