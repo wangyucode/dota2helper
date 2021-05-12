@@ -3,8 +3,8 @@
 <view class='home-container'>
   <block wx:for='{{newsArray}}' wx:key='href'>
     <view class='container-list' bindtap='enterNewsDetail' data-item='{{item}}'>
-      <view class='container-image'>
-        <image class='container-list-image' src='{{item.img}}' mode='aspectFill'></image>
+     <view class='container-image'>
+        <image class='container-list-image' src='{{item.img}}' mode='aspectFill' lazy-load="true"></image>
       </view>
       <view class='contents-view'>
         <text class='contents-title'>{{item.title}}</text>

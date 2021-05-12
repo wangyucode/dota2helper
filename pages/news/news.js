@@ -8,7 +8,7 @@ Page({
    */
   data: {
     newsArray: [],
-    last: false,
+    last: false
   },
 
   /**
@@ -53,7 +53,7 @@ Page({
 
   enterNewsDetail: function (e) {
     console.log('enterNewsDetail->', e);
-    app.globalData.transferData = e.currentTarget.dataset.item
+    app.globalData.transferData = e.currentTarget.dataset.item;
     wx.navigateTo({
       url: '/pages/news/news-detail/news-detail'
     })
@@ -65,12 +65,12 @@ Page({
     });
     wx.request({
       url: `${app.globalData.serverHost}/node/dota/news?page=${page}&size=8`,
-      success:  (res) => {
+      success: (res) => {
         console.log('getNewsInfo->', res);
         if (res.data.success) {
           this.setData({
-            newsArray: this.data.newsArray.concat(res.data.data.data),
-            last: this.data.newsArray.length >= res.data.total
+            newsArray: this.data.newsArray.concat(res.data.payload.items),
+            last: res.data.payload.items.length === 0 || this.data.newsArray.length >= res.data.payload.total
           });
         } else {
           this.setData({

@@ -1,16 +1,18 @@
 <!-- /pages/news/news-detail -->
 <view class='view-container'>
   <view class='top-title'>
-    <text>{{title}}</text>
+    <text>{{news.title}}</text>
   </view>
   <view class='top-time'>
-    <text>{{time}}</text>
+    <text>{{news.date}}</text>
   </view>
-  <text class='message-view' decode='true'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{message}}</text>
+  <text class='message-view' decode='true'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{news.content}}</text>
+  <image class='top-image' mode="widthFix" src="{{news.img}}"></image>
   <block wx:for='{{detail}}'>
     <text class='detail-p' wx:if="{{item.type==='p'}}">{{item.content}}</text>
-    <image class='detail-img' wx:elif="{{item.type==='img'}}" src='{{item.content}}' mode='aspectFit'></image>
-    <view class='detail-br'></view>
+    <image class='detail-img' wx:elif="{{item.type==='img'}}" src='{{item.content}}' mode='widthFix'></image>
+    <text class='detail-b' wx:elif="{{item.type==='b'}}">{{item.content}}</text>
+    <view class='detail-br' wx:else>{{item.content}}</view>
   </block>
-  <ad unit-id="adunit-80139f59872d3984"></ad>
+  <ad unit-id="adunit-80139f59872d3984" ad-intervals="30"></ad>
 </view>

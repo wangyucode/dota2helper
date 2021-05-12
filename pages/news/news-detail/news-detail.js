@@ -6,11 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    title:'',
-    imagePath:'',
-    message:'',
-    time:'',
-    detail:''
+    news: {}
   },
 
   /**
@@ -18,74 +14,32 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      title:app.globalData.transferData.title,
-      imagePath: app.globalData.transferData.image,
-      message:app.globalData.transferData.content,
-      time:app.globalData.transferData.date
+      news: app.globalData.transferData
     })
     this.getNewsDetail()
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-    
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-    
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-    
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-    
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-    
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-    
+    return {
+      title: app.globalData.transferData.title,
+      imageUrl: app.globalData.transferData.img,
+      path: '/pages/news/news'
+    };
   },
 
-  getNewsDetail:function(){
+  getNewsDetail: function () {
     wx.showLoading({
       title: '请稍后...',
     })
-    var that = this;
     wx.request({
-      url: `${app.globalData.serverHost}/upload/dota/news/${app.globalData.transferData.detail}.json`,
-      success:function(res){
-        console.log('getNewsDetail->',res);
-        that.setData({
-          detail:res.data
+      url: `${app.globalData.serverHost}/node/dota/news/${app.globalData.transferData.href}`,
+      success: (res) => {
+        console.log('getNewsDetail->', res);
+        this.setData({
+          detail: res.data.payload
         })
       },
       complete: () => {
