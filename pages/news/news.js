@@ -32,6 +32,7 @@ Page({
   getDataVersion: function () {
     wx.showLoading({
       title: '加载中...',
+      mask: true
     });
     wx.request({
       url: app.globalData.serverHost + '/node/config?k=CONFIG_DOTA_VERSION',

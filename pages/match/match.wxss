@@ -21,7 +21,7 @@ swiper {
   left: 0;
   right: 0;
   padding: 8rpx;
-  font-size: 24rpx;
+  font-size: 32rpx;
   color: #eeeeee;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.0));
 }
@@ -43,7 +43,7 @@ swiper {
 }
 
 .banner-organizer,.banner-prize ,.banner-time,.banner-location{
-  font-size: 20rpx;
+  font-size: 24rpx;
   color: #eeeeee;
   display: block;
 }
