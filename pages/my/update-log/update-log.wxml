@@ -1,6 +1,20 @@
-<!-- /pages/my/update-log/update-log.wxml-->
-
+<!-- /pages/my/update-log/update-log.wxml -->
 <view class='view-container'>
+  <view class='list-item'>
+    <text class='list-item-version'>V1.7</text>
+    <view class='list-item-contents'>
+      <view class='back-dian'></view>
+      <text class='list-item-detail'>新增：支持中立物品</text>
+    </view>
+    <view class='list-item-contents'>
+      <view class='back-dian'></view>
+      <text class='list-item-detail'>新增：文章，英雄，物品支持分享</text>
+    </view>
+    <view class='list-item-contents'>
+      <view class='back-dian'></view>
+      <text class='list-item-detail'>改进：排行榜分页显示，提升性能</text>
+    </view>
+  </view>
   <view class='list-item'>
     <text class='list-item-version'>V1.6</text>
     <view class='list-item-contents'>
@@ -88,6 +102,4 @@
     <view class='back-dian'></view>
     <text class='list-item-detail'>主功能模块：英雄、天梯、我的。</text>
   </view>
-
-
 </view>

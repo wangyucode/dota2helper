@@ -1,6 +1,6 @@
 // pages/news/news.js
-var app = getApp()
-var page = 0;
+const app = getApp()
+let page = 0;
 Page({
 
   /**
@@ -47,19 +47,19 @@ Page({
   },
 
   enterNewsDetail: function (e) {
-    console.log('enterNewsDetail->', e);
-    app.globalData.transferData = e.currentTarget.dataset.item;
+    const news = e.currentTarget.dataset.item;
+    console.log('enterNewsDetail->', news);
     wx.navigateTo({
-      url: '/pages/news/news-detail/news-detail'
-    })
+      url: `/pages/news/news-detail/news-detail?href=${news.href}&date=${news.date}&title=${encodeURIComponent(news.title)}&img=${encodeURIComponent(news.img)}&content=${encodeURIComponent(news.content)}`
+    });
   },
 
-  getNewsInfo: function (version) {
+  getNewsInfo: function () {
     wx.showLoading({
       title: '加载中...',
     });
     wx.request({
-      url: `${app.globalData.serverHost}/node/dota/news?page=${page}&size=8&verison=${version}`,
+      url: `${app.globalData.serverHost}/node/dota/news?page=${page}&size=8`,
       success: (res) => {
         console.log('getNewsInfo->', res);
         if (res.data.success) {

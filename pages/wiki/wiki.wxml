@@ -13,7 +13,7 @@
         <view class='power-container-contents' bindtap='heroDetail' data-item='{{item}}'>
           <image src='{{item.imageUrl}}' class='power-container-contents-image'></image>
           <view class='bottom-container'>
-            <text class='power-container-contents-name'>{{item.name}}</text>
+            <text class='power-container-contents-name'>{{item._id}}</text>
           </view>
         </view>
       </block>
@@ -30,7 +30,7 @@
         <view class='power-container-contents' bindtap='heroDetail' data-item='{{item}}'>
           <image src='{{item.imageUrl}}' class='power-container-contents-image'></image>
           <view class='bottom-container'>
-            <text class='power-container-contents-name'>{{item.name}}</text>
+            <text class='power-container-contents-name'>{{item._id}}</text>
           </view>
         </view>
       </block>
@@ -47,7 +47,7 @@
         <view class='power-container-contents' bindtap='heroDetail' data-item='{{item}}'>
           <image src='{{item.imageUrl}}' class='power-container-contents-image'></image>
           <view class='bottom-container'>
-            <text class='power-container-contents-name'>{{item.name}}</text>
+            <text class='power-container-contents-name'>{{item._id}}</text>
           </view>
         </view>
       </block>
@@ -233,6 +233,80 @@
             </view>
           </block>
         </view>
+      </view>
+    </view>
+    <view class='line'></view>
+    <view class='item-container'>
+      <text class='first-level-title'>中立物品</text>
+      <view class='item-container-title'>
+        <image src='/assets/icons/itemcat_secret.png' class='image-contents'></image>
+        <text class='second-level-title'>第1级</text>
+      </view>
+      <view class='list-item-view'>
+        <block wx:for='{{midTool1Arry}}' wx:key="key">
+          <view class='list-item-contents' bindtap='itemDetail' data-item='{{item}}'>
+            <image src='{{item.img}}' class='list-item-contents-image'></image>
+            <view class='bottom-container'>
+              <text class='list-item-contents-name'>{{item.name}}</text>
+            </view>
+          </view>
+        </block>
+      </view>
+      <view class='item-container-title'>
+        <image src='/assets/icons/itemcat_secret.png' class='image-contents'></image>
+        <text class='second-level-title'>第2级</text>
+      </view>
+      <view class='list-item-view'>
+        <block wx:for='{{midTool2Arry}}' wx:key="key">
+          <view class='list-item-contents' bindtap='itemDetail' data-item='{{item}}'>
+            <image src='{{item.img}}' class='list-item-contents-image'></image>
+            <view class='bottom-container'>
+              <text class='list-item-contents-name'>{{item.name}}</text>
+            </view>
+          </view>
+        </block>
+      </view>
+      <view class='item-container-title'>
+        <image src='/assets/icons/itemcat_secret.png' class='image-contents'></image>
+        <text class='second-level-title'>第3级</text>
+      </view>
+      <view class='list-item-view'>
+        <block wx:for='{{midTool3Arry}}' wx:key="key">
+          <view class='list-item-contents' bindtap='itemDetail' data-item='{{item}}'>
+            <image src='{{item.img}}' class='list-item-contents-image'></image>
+            <view class='bottom-container'>
+              <text class='list-item-contents-name'>{{item.name}}</text>
+            </view>
+          </view>
+        </block>
+      </view>
+      <view class='item-container-title'>
+        <image src='/assets/icons/itemcat_secret.png' class='image-contents'></image>
+        <text class='second-level-title'>第4级</text>
+      </view>
+      <view class='list-item-view'>
+        <block wx:for='{{midTool4Arry}}' wx:key="key">
+          <view class='list-item-contents' bindtap='itemDetail' data-item='{{item}}'>
+            <image src='{{item.img}}' class='list-item-contents-image'></image>
+            <view class='bottom-container'>
+              <text class='list-item-contents-name'>{{item.name}}</text>
+            </view>
+          </view>
+        </block>
+      </view>
+      <view class='item-container-title'>
+        <image src='/assets/icons/itemcat_secret.png' class='image-contents'></image>
+        <text class='second-level-title'>第5级</text>
+      </view>
+      <view class='list-item-view'>
+        <block wx:for='{{midTool5Arry}}' wx:key="key">
+          <view class='list-item-contents' bindtap='itemDetail' data-item='{{item}}'>
+            <image src='{{item.img}}' class='list-item-contents-image'></image>
+            <view class='bottom-container'>
+              <text class='list-item-contents-name'>{{item.name}}</text>
+            </view>
+          </view>
+        </block>
       </view>
     </view>
   </view>

@@ -3,18 +3,15 @@ var app = getApp()
 Page({
 
   /**
-   * 页面的初始数据
-   */
-  data: {
-    news: {}
-  },
-
-  /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     this.setData({
-      news: app.globalData.transferData
+      title: decodeURIComponent(options.title),
+      img: decodeURIComponent(options.img),
+      content: decodeURIComponent(options.content),
+      date: options.date,
+      href: options.href
     })
     this.getNewsDetail()
   },
@@ -24,9 +21,9 @@ Page({
    */
   onShareAppMessage: function () {
     return {
-      title: app.globalData.transferData.title,
-      imageUrl: app.globalData.transferData.img,
-      path: '/pages/news/news'
+      title: this.data.title,
+      imageUrl: this.data.img,
+      path: `/pages/news/news-detail/news-detail?href=${this.data.href}&date=${this.data.date}&title=${encodeURIComponent(this.data.title)}&img=${encodeURIComponent(this.data.img)}&content=${encodeURIComponent(this.data.content)}`
     };
   },
 
@@ -35,7 +32,7 @@ Page({
       title: '请稍后...',
     })
     wx.request({
-      url: `${app.globalData.serverHost}/node/dota/news/${app.globalData.transferData.href}`,
+      url: `${app.globalData.serverHost}/node/dota/news/${this.data.href}`,
       success: (res) => {
         console.log('getNewsDetail->', res);
         this.setData({

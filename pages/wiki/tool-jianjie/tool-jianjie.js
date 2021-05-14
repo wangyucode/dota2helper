@@ -14,82 +14,38 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
+  onLoad: function (options) {
     console.log('onLoad->', options);
-    this.setData({
-      key: options.infoKey
-    })
+    this.data.key = options.key;
     this.getToolsDetail();
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function() {
-
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
-
+  onShareAppMessage: function () {
+    return {
+      title: this.data.toolDetail.name,
+      imageUrl: this.data.toolDetail.img,
+      path: '/pages/wiki/tool-jianjie/tool-jianjie?key=' + this.data.key
+    };
   },
 
-  getToolsDetail: function() {
-    var that = this;
+  getToolsDetail: function () {
     wx.showLoading({
       title: '请稍后...',
       mask: true
     })
     wx.request({
-      url: app.globalData.serverHost + '/web/api/public/dota/itemDetail',
-      data: {
-        itemKey: that.data.key,
-      },
-      success: function(res) {
+      url: app.globalData.serverHost + '/node/dota/items/' + this.data.key,
+      success: (res) => {
         console.log('getToolsDetail->', res);
         if (res.data.success) {
           wx.hideLoading();
-          that.setData({
-            toolDetail: res.data.data
+          this.setData({
+            toolDetail: res.data.payload
           })
-          that.setComponents();
+          this.setComponents();
 
         } else {
           wx.hideLoading();
@@ -100,7 +56,7 @@ Page({
           })
         }
       },
-      fail: function(res) {
+      fail: function (res) {
         wx.hideLoading();
         wx.showToast({
           title: '网速不佳,请稍后重试!',
@@ -111,12 +67,12 @@ Page({
     })
   },
 
-  setComponents: function() {
-    let components = []
+  setComponents: function () {
+    const components = []
     let juanZhouCost = this.data.toolDetail.cost;
-    app.globalData.transferData.forEach(i => {
+    app.globalData.items.forEach(i => {
       this.data.toolDetail.components.forEach(c => {
-        if (c == i.key) {
+        if (c == i._id) {
           components.push(i)
           juanZhouCost -= i.cost;
         }
@@ -124,14 +80,14 @@ Page({
     });
 
     this.setData({
-      components: components,
+      components,
       juanZhouCost: juanZhouCost
     })
   },
 
-  clickComponent:function(e){
+  clickComponent: function (e) {
     this.setData({
-      key: e.currentTarget.dataset.item.key
+      key: e.currentTarget.dataset.item._id
     })
     this.getToolsDetail();
   }

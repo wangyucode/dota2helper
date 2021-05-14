@@ -54,5 +54,5 @@
       <text>卷轴：{{juanZhouCost}}</text>
     </view>
   </view>
-  <ad unit-id="adunit-d432eb59296fbcd6"></ad>
+  <ad unit-id="adunit-d432eb59296fbcd6" ad-intervals="30"></ad>
 </view>

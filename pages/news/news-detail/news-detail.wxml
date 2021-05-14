@@ -1,13 +1,13 @@
 <!-- /pages/news/news-detail -->
 <view class='view-container'>
   <view class='top-title'>
-    <text>{{news.title}}</text>
+    <text>{{title}}</text>
   </view>
   <view class='top-time'>
-    <text>{{news.date}}</text>
+    <text>{{date}}</text>
   </view>
-  <text class='message-view' decode='true'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{news.content}}</text>
-  <image class='top-image' mode="widthFix" src="{{news.img}}"></image>
+  <text class='message-view' decode='true'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{content}}</text>
+  <image class='top-image' mode="widthFix" src="{{img}}"></image>
   <block wx:for='{{detail}}'>
     <text class='detail-p' wx:if="{{item.type==='p'}}">{{item.content}}</text>
     <image class='detail-img' wx:elif="{{item.type==='img'}}" src='{{item.content}}' mode='widthFix'></image>

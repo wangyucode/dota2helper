@@ -1,11 +1,11 @@
 <!-- pages/home/hero-detail.xml -->
 <view class='view-container'>
   <view class='image-container'>
-    <image src='{{imagePath}}' class='image-contents' mode='aspectFill'></image>
+    <image src='{{img}}' class='image-contents' mode='widthFix'></image>
   </view>
   <view class='list-title'>
     <image src='{{icon}}' class='image-icon'></image>
-    <text class="text-name">{{heroName}}</text>
+    <text class="text-name">{{name}}</text>
   </view>
   <view class='jianjie-detail'>
     <text class='jianjie-detail-info' decode='true'>攻击类型&nbsp;:&nbsp;&nbsp;{{hero.attackType}}</text>
@@ -119,5 +119,5 @@
       <view class='line' style='margin-top:10rpx;'></view>
     </block>
   </view>
-  <ad unit-id="adunit-d7eea91abbeb122d"></ad>
+  <ad unit-id="adunit-d7eea91abbeb122d" ad-intervals="30"></ad>
 </view>

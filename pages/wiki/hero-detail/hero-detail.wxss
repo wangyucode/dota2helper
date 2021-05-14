@@ -11,11 +11,9 @@
 }
 
 .image-container {
-  height: 280rpx;
   margin-left: 25rpx;
   margin-right: 25rpx;
   margin-top: 10rpx;
-  border: 3rpx solid black;
 }
 
 .image-icon{
@@ -181,6 +179,7 @@
 .shu-text-left {
   font-size: 28rpx;
   width: 45%;
+  text-align: right;
 }
 
 .shu-text-right {
