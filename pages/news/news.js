@@ -1,6 +1,6 @@
 // pages/news/news.js
 var app = getApp()
-var page = 1;
+var page = 0;
 Page({
 
   /**
@@ -39,13 +39,7 @@ Page({
         console.log('getDataVersion->', res);
         if (res.data.success) {
           app.globalData.dataVersion = res.data.payload.value;
-          if (app.globalData.dataVersion === 'dev') {
-            this.setData({
-              last: true
-            });
-          } else {
-            this.getNewsInfo();
-          }
+          this.getNewsInfo(app.globalData.dataVersion);
         }
       }
     })
@@ -59,12 +53,12 @@ Page({
     })
   },
 
-  getNewsInfo: function () {
+  getNewsInfo: function (version) {
     wx.showLoading({
       title: '加载中...',
     });
     wx.request({
-      url: `${app.globalData.serverHost}/node/dota/news?page=${page}&size=8`,
+      url: `${app.globalData.serverHost}/node/dota/news?page=${page}&size=8&verison=${version}`,
       success: (res) => {
         console.log('getNewsInfo->', res);
         if (res.data.success) {
