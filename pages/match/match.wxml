@@ -2,20 +2,20 @@
 <view class="view-container">
     <view class="date-match-container" hidden="{{!selectDate || dev}}">
         <swiper wx:if="{{!dev}}" autoplay="true" interval="4000" duration="300"circular="true">
-            <block wx:for="{{hotMatches}}" wx:key="league_name">
+            <block wx:for="{{hotMatches}}">
                 <swiper-item>
-                    <image class="banner-image" src="{{item.logo}}" mode="aspectFill"></image>
-                    <text class="banner-name">{{item.league_name}}</text>
+                    <image class="banner-image" src="{{item.img}}" mode="aspectFill"></image>
+                    <text class="banner-name">{{item.title}}</text>
                     <image class="status-image" src="/assets/icons/{{item.status}}.png"></image>
                     <view class="banner-left-bottom">
                         <text class="banner-organizer">{{item.organizer}}</text>
-                        <text wx:if="{{item.prize_poll}}" class="banner-prize">{{item.prize_poll}}</text>
+                        <text wx:if="{{item.prize}}" class="banner-prize">{{item.prize}}</text>
                     </view>
                     <view class="banner-right-bottom">
-                        <text class="banner-time">{{item.start_time}}-{{item.end_time}}</text>
+                        <text class="banner-time">{{item.start}}-{{item.end}}</text>
                         <text class="banner-location">{{item.location}}</text>
                     </view>
-                    <rating-bar count="{{item.league_level}}"></rating-bar>
+                    <rating-bar count="{{item.star}}"></rating-bar>
                 </swiper-item>
             </block>
         </swiper>
@@ -29,7 +29,7 @@
                     <image class="date-icon" src="/assets/icons/date.png"></image>
                     <text class="date">{{date.date}}</text>
                 </view>
-                <block wx:for="{{date.matchs}}" wx:for-item="match" wx:key="name">
+                <block wx:for="{{date.matchs}}" wx:for-item="match">
                     <view class="match-hbox">
                         <view class="vbox">
                             <text class="time">{{match.time}}</text>
