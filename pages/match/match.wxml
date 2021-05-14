@@ -33,17 +33,17 @@
                     <view class="match-hbox">
                         <view class="vbox">
                             <text class="time">{{match.time}}</text>
-                            <text class="bo">{{match.bestOf}}</text>
+                            <text class="bo">{{match.bo}}</text>
                         </view>
                         <view class="dividing-line-v"></view>
                         <view class="match-name-team-box">
                             <text class="match-name">{{match.name}}</text>
                             <view class="team-box">
-                                <text class="team-name">{{match.teamNameA}}</text>
-                                <image class="team-logo" src="{{match.teamLogoA}}"></image>
+                                <text class="team-name">{{match.teamA}}</text>
+                                <image class="team-logo" src="{{match.logoA}}"></image>
                                 <text class="vs">VS</text>
-                                <image class="team-logo" src="{{match.teamLogoB}}"></image>
-                                <text class="team-name">{{match.teamNameB}}</text>
+                                <image class="team-logo" src="{{match.logoB}}"></image>
+                                <text class="team-name">{{match.teamB}}</text>
                             </view>
                         </view>
                     </view>
@@ -65,11 +65,11 @@
         <view class="dividing-line"></view>
         <block wx:for="{{teams}}" wx:key="name">
             <view class="team-score-container">
-                <text class="body-rank-text">{{item.rank}}</text>
+                <text class="body-rank-text">{{item.num}}</text>
                 <image class="team-score-logo" src="{{item.logo}}"></image>
                 <text class="body-name-text">{{item.name}}</text>
                 <image class="team-nation" src="{{item.nation}}"></image>
-                <text class="body-integral-text">{{item.integral}}</text>
+                <text class="body-integral-text">{{item.point}}</text>
             </view>
             <view class="dividing-line"></view>
         </block>

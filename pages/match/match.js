@@ -32,12 +32,12 @@ Page({
     })
 
     wx.request({
-      url: app.globalData.serverHost + '/web/api/public/dota/matches',
+      url: app.globalData.serverHost + '/node/dota/schedules',
       success: (res) => {
-        console.log('getMatches->', res);
+        console.log('schedules->', res);
         if (res.data.success) {
           this.setData({
-            matchDateArray: res.data.data
+            matchDateArray: res.data.payload
           })
         }
       },
@@ -50,12 +50,12 @@ Page({
   getTeams: function () {
 
     wx.request({
-      url: app.globalData.serverHost + '/web/api/public/dota/teams',
+      url: app.globalData.serverHost + '/node/dota/teams',
       success: (res) => {
-        console.log('getTeams->', res);
+        console.log('teams->', res);
         if (res.data.success) {
           this.setData({
-            teams: res.data.data
+            teams: res.data.payload
           })
         }
       }
