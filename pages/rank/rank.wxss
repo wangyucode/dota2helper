@@ -28,7 +28,7 @@
 }
 
 .top-title {
-  width: 15%;
+  width: 12%;
   font-size: 30rpx;
   font-weight: bold;
   text-align: center;
@@ -50,7 +50,7 @@
 }
 
 .top-contents-2 {
-  width: 30%;
+  width: 34%;
   font-size: 30rpx;
   font-weight: bold;
   color: black;
@@ -69,7 +69,7 @@
 }
 
 .list-title {
-  width: 15%;
+  width: 12%;
   font-size: 30rpx;
   color: black;
   border: 3rpx solid #a43927;
@@ -85,7 +85,7 @@
 }
 
 .list-contents-2 {
-  width: 30%;
+  width: 34%;
   font-size: 30rpx;
   color: black;
   border: 3rpx solid #a43927;

@@ -65,7 +65,7 @@
         <view class="dividing-line"></view>
         <block wx:for="{{teams}}" wx:key="name">
             <view class="team-score-container">
-                <text class="body-rank-text">{{item.num}}</text>
+                <text class="body-rank-text">{{item.rank}}</text>
                 <image class="team-score-logo" src="{{item.logo}}"></image>
                 <text class="body-name-text">{{item.name}}</text>
                 <image class="team-nation" src="{{item.nation}}"></image>

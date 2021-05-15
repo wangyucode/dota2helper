@@ -34,9 +34,10 @@ Page({
       success:(res)=>{
         console.log('getRankList->',res);
         if (res.data.success){
+          const rankList = this.data.rankList.concat(res.data.payload.items)
           this.setData({
-            rankList: this.data.rankList.concat(res.data.payload.items),
-            last: res.data.payload.items.length === 0 || this.data.rankList.length >= res.data.payload.total
+            rankList,
+            last: res.data.payload.items.length === 0 || rankList.length >= res.data.payload.total
           });
         }
       }

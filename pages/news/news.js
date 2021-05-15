@@ -61,9 +61,10 @@ Page({
       success: (res) => {
         console.log('getNewsInfo->', res);
         if (res.data.success) {
+          const newsArray = this.data.newsArray.concat(res.data.payload.items)
           this.setData({
-            newsArray: this.data.newsArray.concat(res.data.payload.items),
-            last: res.data.payload.items.length === 0 || this.data.newsArray.length >= res.data.payload.total
+            newsArray,
+            last: res.data.payload.items.length === 0 || newsArray.length >= res.data.payload.total
           });
         }
       }
