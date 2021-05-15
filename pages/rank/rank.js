@@ -8,6 +8,7 @@ Page({
    */
   data: {
     rankList:[],
+    total: 0,
     last: false
   },
 
@@ -37,7 +38,9 @@ Page({
           const rankList = this.data.rankList.concat(res.data.payload.items)
           this.setData({
             rankList,
+            total: res.data.payload.total,
             last: res.data.payload.items.length === 0 || rankList.length >= res.data.payload.total
+            // last: true
           });
         }
       }

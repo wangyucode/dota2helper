@@ -12,7 +12,7 @@
     </view>
     <view class='list-item-contents'>
       <view class='back-dian'></view>
-      <text class='list-item-detail'>改进：排行榜分页显示，提升性能</text>
+      <text class='list-item-detail'>改进：排行榜分页显示，提升性能，添加上榜玩家数量显示</text>
     </view>
   </view>
   <view class='list-item'>
