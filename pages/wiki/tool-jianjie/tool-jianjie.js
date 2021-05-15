@@ -45,8 +45,7 @@ Page({
           this.setData({
             toolDetail: res.data.payload
           })
-          this.setComponents();
-
+          if(res.data.payload.components && res.data.payload.components.length) this.setComponents();
         } else {
           wx.hideLoading();
           wx.showToast({

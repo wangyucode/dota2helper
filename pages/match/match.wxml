@@ -1,7 +1,7 @@
 <!-- pages/match/match.wxml -->
 <view class="view-container">
     <view class="date-match-container" hidden="{{!selectDate || dev}}">
-        <swiper wx:if="{{!dev}}" autoplay="true" interval="4000" duration="300"circular="true">
+        <swiper wx:if="{{!dev}}" autoplay="true" interval="4000" duration="300" circular="true" indicator-dots="true" indicator-color="rgba(0, 0, 0, .3)" indicator-active-color="#ddd">
             <block wx:for="{{hotMatches}}">
                 <swiper-item>
                     <image class="banner-image" src="{{item.img}}" mode="aspectFill"></image>
@@ -79,7 +79,7 @@
             <text class="{{selectDate?'baike-top-select':'baike-top-nomal'}}">近期赛事</text>
             <view class="top-bottom-line" hidden="{{!selectDate}}"></view>
         </view>
-        <view class='top-center-line'  wx:if="{{!dev}}"></view>
+        <view class='top-center-line' wx:if="{{!dev}}"></view>
         <view class="top-item" bindtap='tiClick'>
             <text class="{{selectDate?'baike-top-nomal':'baike-top-select'}}">TI10积分榜</text>
             <view class="top-bottom-line" hidden="{{selectDate}}"></view>

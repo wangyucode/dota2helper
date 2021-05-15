@@ -50,7 +50,7 @@
       <text>{{item.name}}</text>
     </view>
     <view class="component-link-juanzhou" wx:if='{{juanZhouCost>0}}'>
-      <image class="component-icon" src='https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/thumb/7/73/Default_recipe_icon.png/40px-Default_recipe_icon.png?version=65563bcfd76b6f7861474923b347a1c5' mode='aspectFill' />
+      <image class="component-icon" src='/assets/icons/recipe.png' mode='aspectFill' />
       <text>卷轴：{{juanZhouCost}}</text>
     </view>
   </view>

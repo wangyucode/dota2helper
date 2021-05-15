@@ -16,4 +16,5 @@
   <view class="loading-container" hidden="{{last}}">
     <image class="loading" src="/assets/icons/loading.png" mode="aspectFit" />
   </view>
+  <text class="bottom">到底了！</text>
 </view>

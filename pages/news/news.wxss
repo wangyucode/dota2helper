@@ -66,3 +66,11 @@
   background-color: #a0a0a0;
 }
 
+.bottom{
+  text-align: center;
+  color: #555;
+  font-size: 22rpx;
+  padding: 12rpx 0;
+  display: block;
+}
+

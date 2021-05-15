@@ -50,7 +50,7 @@ swiper {
 
 rating-bar{
   position: absolute;
-  bottom: 0;
+  bottom: 32rpx;
   left: 50%;
   transform: translateX(-50%);
 }
