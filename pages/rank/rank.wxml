@@ -1,7 +1,7 @@
 <!-- /pages/rank/rank.wxml -->
 <view class='container-view'>
   <text class="text-title">天梯顶尖玩家</text>
-  <text class="text-tips">每天凌晨3点更新</text>
+  <text class="text-tips">每天上午10点更新</text>
   <view class='top-view'>
     <text class='top-title'>排行</text>
     <text class='top-contents-1'>玩家昵称</text>
@@ -14,4 +14,7 @@
       <text class='list-contents-2'>{{item.team_tag}}</text>
     </view>
   </block>
+  <view class="loading-container" hidden="{{last}}">
+    <image class="loading" src="/assets/icons/loading.png" mode="aspectFit" />
+  </view>
 </view>

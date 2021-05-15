@@ -41,6 +41,7 @@ Page({
         if (res.data.success) {
           app.globalData.dataVersion = res.data.payload.value;
           this.getNewsInfo(app.globalData.dataVersion);
+          wx.hideLoading();
         }
       }
     })
@@ -55,9 +56,6 @@ Page({
   },
 
   getNewsInfo: function () {
-    wx.showLoading({
-      title: '加载中...',
-    });
     wx.request({
       url: `${app.globalData.serverHost}/node/dota/news?page=${page}&size=8`,
       success: (res) => {
@@ -67,13 +65,8 @@ Page({
             newsArray: this.data.newsArray.concat(res.data.payload.items),
             last: res.data.payload.items.length === 0 || this.data.newsArray.length >= res.data.payload.total
           });
-        } else {
-          this.setData({
-            last: true
-          });
         }
-      },
-      complete: wx.hideLoading
+      }
     })
   }
 

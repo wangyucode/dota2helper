@@ -48,3 +48,25 @@ button[type=primary] {
   height: 36rpx;
   background: #ddd;
 }
+
+.loading-container{
+  text-align: center;
+  background: #ddd;
+  padding: 8rpx;
+}
+
+.loading{
+  height: 64rpx;
+  width: 64rpx;
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  0%{
+    transform: rotate(0deg);
+  }
+
+  100%{
+    transform: rotate(360deg);
+  }
+}

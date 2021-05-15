@@ -29,7 +29,7 @@
                     <image class="date-icon" src="/assets/icons/date.png"></image>
                     <text class="date">{{date.date}}</text>
                 </view>
-                <block wx:for="{{date.matchs}}" wx:for-item="match">
+                <block wx:for="{{date.matches}}" wx:for-item="match">
                     <view class="match-hbox">
                         <view class="vbox">
                             <text class="time">{{match.time}}</text>

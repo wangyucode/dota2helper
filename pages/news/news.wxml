@@ -1,9 +1,8 @@
-<!-- pages/news/news.wxml-->
-
+<!-- pages/news/news.wxml -->
 <view class='home-container'>
   <block wx:for='{{newsArray}}' wx:key='href'>
     <view class='container-list' bindtap='enterNewsDetail' data-item='{{item}}'>
-     <view class='container-image'>
+      <view class='container-image'>
         <image class='container-list-image' src='{{item.img}}' mode='aspectFill' lazy-load="true"></image>
       </view>
       <view class='contents-view'>
@@ -14,4 +13,7 @@
     </view>
     <view class='line'></view>
   </block>
+  <view class="loading-container" hidden="{{last}}">
+    <image class="loading" src="/assets/icons/loading.png" mode="aspectFit" />
+  </view>
 </view>
