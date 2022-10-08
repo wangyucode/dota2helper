@@ -40,7 +40,7 @@ Page({
         console.log('getDataVersion->', res);
         if (res.data.success) {
           app.globalData.dataVersion = res.data.payload.value;
-          this.getNewsInfo(app.globalData.dataVersion);
+          this.getNewsInfo();
           wx.hideLoading();
         }
       }

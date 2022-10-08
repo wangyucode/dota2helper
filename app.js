@@ -4,7 +4,7 @@ App({
   },
   globalData: {
     serverHost: 'https://wycode.cn',
-    dataVersion: 'dev',
+    dataVersion: 'preview',
     transferData:{},
     items:[]
   }

@@ -26,7 +26,7 @@
         "pagePath": "pages/news/news",
         "iconPath": "/assets/icons/news.png",
         "selectedIconPath": "/assets/icons/news_1.png",
-        "text": "文章"
+        "text": "公告"
       },
       {
         "pagePath": "pages/match/match",

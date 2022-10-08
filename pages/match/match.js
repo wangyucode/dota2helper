@@ -2,12 +2,9 @@
 const app = getApp();
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
     selectDate: true,
-    dev: true,
+    preview: true,
     matchDateArray: [],
     teams: [],
     hotMatches: []
@@ -76,17 +73,14 @@ Page({
     })
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+  onLoad: function () {
     this.getTeams();
-    if (app.globalData.dataVersion !== 'dev') {
+    if (app.globalData.dataVersion !== 'preview') {
       this.getMatches();
       this.getHotMatches();
     }
     this.setData({
-      dev: app.globalData.dataVersion === 'dev'
+      preview: app.globalData.dataVersion === 'preview'
     });
   },
 })

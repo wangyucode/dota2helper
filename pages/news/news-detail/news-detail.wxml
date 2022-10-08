@@ -6,7 +6,7 @@
   <view class='top-time'>
     <text>{{date}}</text>
   </view>
-  <text class='message-view' decode='true'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{content}}</text>
+  <text wx:if="{{content}}" class='message-view' decode='true'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{content}}</text>
   <image class='top-image' mode="widthFix" src="{{img}}"></image>
   <block wx:for='{{detail}}'>
     <text class='detail-p' wx:if="{{item.type==='p'}}">{{item.content}}</text>
