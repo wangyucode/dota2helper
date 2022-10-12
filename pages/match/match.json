@@ -1,6 +1,3 @@
 {
-    "navigationBarTitleText": "比赛",
-    "usingComponents": {
-        "rating-bar": "/components/ratingbar/rating-bar"
-    }
+    "navigationBarTitleText": "比赛"
 }

@@ -22,6 +22,13 @@ Page({
     })
   },
 
+  onClickMatch: function (e) {
+    app.globalData.transferData = e.currentTarget.dataset.item;
+    wx.navigateTo({
+      url: '/pages/match/match-detail/detail',
+    })
+  },
+
 
   getMatches: function () {
     wx.showLoading({

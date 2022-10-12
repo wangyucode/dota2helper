@@ -3,6 +3,7 @@
     "pages/news/news",
     "pages/news/news-detail/news-detail",
     "pages/match/match",
+    "pages/match/match-detail/detail",
     "pages/wiki/wiki",
     "pages/wiki/hero-detail/hero-detail",
     "pages/wiki/tool-jianjie/tool-jianjie",

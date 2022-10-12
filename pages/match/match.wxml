@@ -3,19 +3,17 @@
     <view class="date-match-container" hidden="{{!selectDate || preview}}">
         <swiper wx:if="{{!preview}}" autoplay="true" interval="4000" duration="300" circular="true" indicator-dots="true" indicator-color="rgba(0, 0, 0, .3)" indicator-active-color="#ddd">
             <block wx:for="{{hotMatches}}">
-                <swiper-item>
+                <swiper-item bind:tap="onClickMatch" data-item="{{item}}">
                     <image class="banner-image" src="{{item.img}}" mode="aspectFill"></image>
                     <text class="banner-name">{{item.title}}</text>
                     <image class="status-image" src="/assets/icons/{{item.status}}.png"></image>
                     <view class="banner-left-bottom">
-                        <text class="banner-organizer">{{item.organizer}}</text>
                         <text wx:if="{{item.prize}}" class="banner-prize">{{item.prize}}</text>
                     </view>
                     <view class="banner-right-bottom">
                         <text class="banner-time">{{item.start}}-{{item.end}}</text>
                         <text class="banner-location">{{item.location}}</text>
                     </view>
-                    <rating-bar count="{{item.star}}"></rating-bar>
                 </swiper-item>
             </block>
         </swiper>

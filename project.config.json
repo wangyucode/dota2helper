@@ -43,7 +43,7 @@
         "ignoreUploadUnusedFiles": true
     },
     "compileType": "miniprogram",
-    "libVersion": "2.2.2",
+    "libVersion": "2.26.2",
     "appid": "wx8a383e1143f5b2c9",
     "projectname": "dota2helper",
     "simulatorType": "wechat",

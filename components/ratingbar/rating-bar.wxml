@@ -1,2 +1,0 @@
-<!-- components/ratingbar/rating-bar.wxml -->
-<image class="rating-star" wx:for="{{stars}}" src="/assets/icons/star.png"></image>

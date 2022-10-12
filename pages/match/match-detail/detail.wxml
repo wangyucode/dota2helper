@@ -1,0 +1,14 @@
+<!-- pages/match/match.wxml -->
+<view class="view-container">
+    <view class="vbox">
+        <image class="image" src="{{img}}"></image>
+        <text class="title">{{title}}</text>
+        <image class="status" src="/assets/icons/{{status}}.png"></image>
+        <text class="time">时间：{{start}} ~ {{end}}</text>
+        <text class="location">地点：{{location}}</text>
+        <text class="prize">奖金：{{prize}}</text>
+        <text>规则：</text>
+        <text class="rules">{{rules}}</text>
+    </view>
+    <ad unit-id="adunit-80139f59872d3984" ad-intervals="30"></ad>
+</view>

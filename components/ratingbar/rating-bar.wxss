@@ -1,5 +1,0 @@
-/* components/ratingbar/rating-bar.wxss */
-.rating-star{
-    height: 36rpx;
-    width: 36rpx;
-}

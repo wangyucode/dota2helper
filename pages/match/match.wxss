@@ -42,17 +42,10 @@ swiper {
   background: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.0));
 }
 
-.banner-organizer,.banner-prize ,.banner-time,.banner-location{
+.banner-prize ,.banner-time,.banner-location{
   font-size: 24rpx;
   color: #eeeeee;
   display: block;
-}
-
-rating-bar{
-  position: absolute;
-  bottom: 32rpx;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .status-image{
@@ -155,8 +148,8 @@ rating-bar{
 }
 
 .team-logo {
-  width: 80rpx;
-  height: 48rpx;
+  width: 56rpx;
+  height: 56rpx;
   margin: 12rpx;
 }
 

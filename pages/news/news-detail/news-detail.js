@@ -35,8 +35,9 @@ Page({
         this.setData({
           detail: res.data.payload
         })
+        setTimeout(wx.hideLoading, res.data.payload.length);
       },
-      complete: () => {
+      fail: () => {
         wx.hideLoading()
       }
     })
