@@ -7,7 +7,8 @@ Page({
     preview: true,
     matchDateArray: [],
     teams: [],
-    hotMatches: []
+    hotMatches: [],
+    activeTeam: 0
   },
 
   dateClick: function () {
@@ -27,6 +28,12 @@ Page({
     wx.navigateTo({
       url: '/pages/match/match-detail/detail',
     })
+  },
+
+  onClickTeam: function (e) {
+    this.setData({
+      activeTeam: e.currentTarget.dataset.index
+    });
   },
 
 

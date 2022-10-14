@@ -2,7 +2,7 @@
 <view class="view-container">
     <view class="date-match-container" hidden="{{!selectDate || preview}}">
         <swiper wx:if="{{!preview}}" autoplay="true" interval="4000" duration="300" circular="true" indicator-dots="true" indicator-color="rgba(0, 0, 0, .3)" indicator-active-color="#ddd">
-            <block wx:for="{{hotMatches}}">
+            <block wx:for="{{hotMatches}}" wx:key="title">
                 <swiper-item bind:tap="onClickMatch" data-item="{{item}}">
                     <image class="banner-image" src="{{item.img}}" mode="aspectFill"></image>
                     <text class="banner-name">{{item.title}}</text>
@@ -61,16 +61,31 @@
             <text class="header-integral-text">积分</text>
         </view>
         <view class="dividing-line"></view>
-        <block wx:for="{{teams}}" wx:key="name">
-            <view class="team-score-container">
+        <view wx:for="{{teams}}" wx:key="rank" wx:for-index="i" class="team {{activeTeam === i ? 'active': ''}}">
+            <view class="team-score-container" bind:tap="onClickTeam" data-index="{{i}}">
                 <text class="body-rank-text">{{item.rank}}</text>
                 <image class="team-score-logo" src="{{item.logo}}"></image>
                 <text class="body-name-text">{{item.name}}</text>
                 <image class="team-nation" src="{{item.nation}}"></image>
                 <text class="body-integral-text">{{item.point}}</text>
+                <image src='/assets/icons/arrow_down.png' class='list-item-image'></image>
             </view>
             <view class="dividing-line"></view>
-        </block>
+            <view class="team-member-container">
+                <view class="team-member" wx:for="{{item.members}}" wx:for-item="member">
+                    <image src="{{member.img}}" class="member-img"></image>
+                    <text class="member-name">{{member.name}}</text>
+                    <text class="member-note">{{member.note}}</text>
+                </view>
+            </view>
+            <view class="team-record" wx:for="{{item.records}}" wx:for-item="record">
+                    <image src="{{record.img}}" class="record-img"></image>
+                    <text class="record-name">{{record.name}}</text>
+                    <text class="record-rank">{{record.rank}}</text>
+                    <text class="record-point">{{record.point}}</text>
+            </view>
+            <view class="dividing-line"></view>
+        </view>
     </view>
     <view class='match-top'>
         <view class="top-item" bindtap='dateClick' wx:if="{{!preview}}">
@@ -79,7 +94,7 @@
         </view>
         <view class='top-center-line' wx:if="{{!preview}}"></view>
         <view class="top-item" bindtap='tiClick'>
-            <text class="{{selectDate?'baike-top-nomal':'baike-top-select'}}">TI10积分榜</text>
+            <text class="{{selectDate?'baike-top-nomal':'baike-top-select'}}">战队积分榜</text>
             <view class="top-bottom-line" hidden="{{selectDate}}"></view>
         </view>
     </view>

@@ -10,20 +10,9 @@
   flex-direction: column;
 }
 
-.image-container {
-  margin-left: 25rpx;
-  margin-right: 25rpx;
-  margin-top: 10rpx;
-}
-
-.image-icon{
+.image-icon {
   width: 48rpx;
   height: 48rpx;
-}
-
-.image-contents {
-  width: 100%;
-  height: 100%;
 }
 
 .image-name {
@@ -41,28 +30,18 @@
   text-align: center;
 }
 
-.list {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  /* margin-left: 25rpx;
-  margin-right: 25rpx; *//* text-align: center; */
-  margin-top: 10rpx;
-  margin-bottom: 20rpx;
-}
-
 .jianjie-detail {
   display: flex;
   flex-direction: column;
   background-color: #4e1207;
   margin-left: 25rpx;
   margin-right: 25rpx;
+  padding: 16rpx 28rpx;
 }
 
 .jianjie-detail-info {
   font-size: 28rpx;
   color: white;
-  margin: 15rpx;
 }
 
 .contents {
@@ -117,7 +96,7 @@
   align-items: center;
 }
 
-.text-name{
+.text-name {
   font-size: 34rpx;
   color: black;
   font-weight: bold;
@@ -252,28 +231,24 @@
 
 .shuxing-view {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   background-color: #141516;
   margin-top: 15rpx;
-}
-
-.shu-quan-view {
-  width: 50rpx;
-  height: 50rpx;
-  border-radius: 25rpx;
-  background-color: #010109;
-  position: relative;
-  margin-right: 30rpx;
-  margin-left: 30rpx;
+  flex-shrink: 0;
 }
 
 .shu-quan-text {
-  position: absolute;
+  text-align: center;
+  line-height: 25px;
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50rpx;
+  background-color: #010109;
   font-size: 26rpx;
   font-weight: bold;
   color: #a43927;
-  bottom: 9rpx;
-  left: 8rpx;
+  margin-right: 16rpx;
+  margin-left: 16rpx;
 }
 
 .skill-contents-view {
@@ -305,15 +280,54 @@
   font-style: italic;
 }
 
-.list-contents1{
+.list-contents1 {
   display: flex;
   flex-direction: row;
   margin-bottom: 10rpx;
 }
 
-.list-contents1-image{
+.list-contents1-image {
+  flex-shrink: 0;
   width: 40rpx;
   height: 40rpx;
   border-radius: 8rpx;
   margin-right: 10rpx;
+}
+
+.left{
+  display: flex;
+  flex-direction: column;
+  margin: 16rpx;
+}
+
+.hero-img{
+  width: 256rpx;
+  height: 144rpx;
+}
+
+.health-box{
+  position: relative;
+  background: linear-gradient(90deg,#286323,#7af03c);
+}
+
+.health{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.health-regen{
+  color: #286323;
+  font-weight: bold;
+}
+
+.dividing-line-attributes{
+  background-color: #444;
+  width: 1rpx;
+  height: inhert;
+  display: inline-block;
+  text-align: right;
 }

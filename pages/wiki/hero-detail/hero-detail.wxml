@@ -8,20 +8,30 @@
     <text class="text-name">{{name}}</text>
   </view>
   <view class='jianjie-detail'>
-    <text class='jianjie-detail-info' decode='true'>攻击类型&nbsp;:&nbsp;&nbsp;{{hero.attackType}}</text>
-    <text class='jianjie-detail-info' decode='true'>其他简称&nbsp;:&nbsp;&nbsp;{{hero.otherName}}</text>
+    <text class='jianjie-detail-info'>攻击类型：{{hero.attackType}}</text>
+    <text class='jianjie-detail-info'>主属性：{{hero.type}}</text>
+    <text class='jianjie-detail-info'>英文名：{{hero.eng}}</text>
+    <text class='jianjie-detail-info'>复杂程度：{{hero.complexity}}</text>
   </view>
   <view class='history-view'>
-    <view class='list-title-history'>故事背景</view>
+    <view class='list-title-history'>故事</view>
     <view class='jiange' style='margin-bottom:10rpx;'></view>
     <view class='history-item'>
       <text class='history-text' decode='true'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{hero.story}}</text>
     </view>
   </view>
   <view class='history-view'>
-    <view class='list-title-history'>英雄属性</view>
+    <view class='list-title-history'>属性</view>
     <view class='jiange'></view>
     <view class='shuxing-view'>
+      <view class="left">
+        <image src='{{img}}' class='hero-img'></image>
+        <view class='health-box'>
+          <text class="health">{{hero.health}}</text>
+          <text class="health-regen">+{{hero.healthRegen}}</text>
+        </view>
+      </view>
+      <view class='dividing-line-attributes'></view>
       <view class='list'>
         <view class='list-item'>
           <image class='list-item-image1' src="{{type=='力量'?'/assets/icons/strength_1.png':'/assets/icons/pro1.png'}}"></image>
@@ -53,43 +63,35 @@
     </view>
   </view>
   <view class='shu-view'>
-    <view class='list-title-history'>天赋树</view>
+    <view class='list-title-history'>天赋</view>
     <view class='jiange'></view>
     <view class='shu-item'>
       <text class='shu-text-left'>{{hero.talent25Left}}</text>
-      <view class='shu-quan-view'>
-        <text class='shu-quan-text'>25</text>
-      </view>
+      <text class='shu-quan-text'>25</text>
       <text class='shu-text-right'>{{hero.talent25Right}}</text>
     </view>
     <view class='line'></view>
     <view class='shu-item'>
       <text class='shu-text-left'>{{hero.talent20Left}}</text>
-      <view class='shu-quan-view'>
-        <text class='shu-quan-text'>20</text>
-      </view>
+      <text class='shu-quan-text'>20</text>
       <text class='shu-text-right'>{{hero.talent20Right}}</text>
     </view>
     <view class='line'></view>
     <view class='shu-item'>
       <text class='shu-text-left'>{{hero.talent15Left}}</text>
-      <view class='shu-quan-view'>
-        <text class='shu-quan-text'>15</text>
-      </view>
+      <text class='shu-quan-text'>15</text>
       <text class='shu-text-right'>{{hero.talent15Right}}</text>
     </view>
     <view class='line'></view>
     <view class='shu-item'>
       <text class='shu-text-left'>{{hero.talent10Left}}</text>
-      <view class='shu-quan-view'>
-        <text class='shu-quan-text'>10</text>
-      </view>
+      <text class='shu-quan-text'>10</text>
       <text class='shu-text-right'>{{hero.talent10Right}}</text>
     </view>
     <view class='line'></view>
   </view>
   <view class='history-view'>
-    <view class='list-title-history'>技能介绍</view>
+    <view class='list-title-history'>技能</view>
     <view class='jiange' style='margin-bottom: 15rpx;'></view>
     <block wx:for='{{hero.abilities}}'>
       <view class='jineng-contents'>
@@ -107,7 +109,15 @@
         </view>
         <view class='list-contents1'>
           <image class='list-contents1-image' src='/assets/icons/cooldown.png'></image>
-          <text class='skill-contents-text1' wx:if='{{item.coolDown.length > 0}}'>冷却时间：{{item.coolDown}}</text>
+          <text class='skill-contents-text1' >冷却时间：{{item.coolDown}}</text>
+        </view>
+        <view wx:if="{{item.scepter}}" class='list-contents1'>
+          <image class='list-contents1-image' src='/assets/icons/scepter.png'></image>
+          <text class='skill-contents-text1' >神杖升级：{{item.scepter}}</text>
+        </view>
+        <view wx:if="{{item.shard}}" class='list-contents1'>
+          <image class='list-contents1-image' src='/assets/icons/shard.png'></image>
+          <text class='skill-contents-text1' >魔晶升级：{{item.shard}}</text>
         </view>
       </view>
       <block wx:for='{{item.attributes}}' wx:for-index="key" wx:for-item="attr">
@@ -115,7 +125,9 @@
           <text class='skill-contents-text1'>{{key}}：{{attr}}</text>
         </view>
       </block>
-      <text class='skill-annotation' wx:if='{{item.annotation.length > 0}}'>{{item.annotation}}</text>
+      <text class='skill-annotation' wx:if='{{item.annotation.length > 0}}'>
+        {{item.annotation}}
+      </text>
       <view class='line' style='margin-top:10rpx;'></view>
     </block>
   </view>

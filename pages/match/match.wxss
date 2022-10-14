@@ -11,12 +11,12 @@ swiper {
   height: 400rpx;
 }
 
-.banner-image{
+.banner-image {
   height: 100%;
   width: 100%;
 }
 
-.banner-name{
+.banner-name {
   position: absolute;
   left: 0;
   right: 0;
@@ -26,14 +26,14 @@ swiper {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.0));
 }
 
-.banner-left-bottom{
+.banner-left-bottom {
   position: absolute;
   padding: 8rpx;
   bottom: 0;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.0));
 }
 
-.banner-right-bottom{
+.banner-right-bottom {
   position: absolute;
   padding: 8rpx;
   bottom: 0;
@@ -42,13 +42,15 @@ swiper {
   background: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.0));
 }
 
-.banner-prize ,.banner-time,.banner-location{
+.banner-prize,
+.banner-time,
+.banner-location {
   font-size: 24rpx;
   color: #eeeeee;
   display: block;
 }
 
-.status-image{
+.status-image {
   position: absolute;
   height: 128rpx;
   width: 128rpx;
@@ -221,72 +223,147 @@ swiper {
   margin-top: 80rpx;
 }
 
-.team-header{
+.team-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 24rpx 12rpx;
+  padding: 24rpx 24rpx;
 }
 
-.header-rank-text{
+.header-rank-text {
+  text-align: center;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.header-team-text {
+  width: 240rpx;
+  text-align: center;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.header-nation-text {
+  text-align: center;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.header-integral-text {
   width: 96rpx;
   text-align: center;
   font-size: 30rpx;
   font-weight: bold;
 }
 
-.header-team-text{
-  width: 384rpx;
-  text-align: center;
-  font-size: 30rpx;
-  font-weight: bold;
-}
-
-.header-nation-text{
-  width: 178rpx;
-  text-align: center;
-  font-size: 30rpx;
-  font-weight: bold;
-}
-
-.header-integral-text{
-  width: 96rpx;
-  text-align: center;
-  font-size: 30rpx;
-  font-weight: bold;
-}
-
-.team-score-container{
+.team-score-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 12rpx;
 }
 
-.body-rank-text{
+.active .team-score-container {
+  background-color: #ddd;
+}
+
+.body-rank-text {
   width: 96rpx;
   text-align: center;
   font-size: 28rpx;
 }
 
-.team-score-logo{
-  width: 128rpx;
-  height: 76rpx;
+.team-score-logo {
+  width: 32px;
+  height: 48rpx;
 }
 
-.body-name-text{
-  width: 240rpx;
+.body-name-text {
+  width: 200rpx;
   font-size: 28rpx;
 }
 
-.team-nation{
+.team-nation {
   width: 56rpx;
   height: 36rpx;
 }
 
-.body-integral-text{
-  width: 128rpx;
+.body-integral-text {
+  padding-left: 48rpx;
   display: inline-block;
   text-align: center;
   font-size: 28rpx;
+}
+
+.list-item-image {
+  width: 30rpx;
+  height: 30rpx;
+  transition: transform 0.5s;
+}
+
+.active .list-item-image {
+  transform: rotate(90deg)
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  max-height: 74rpx;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+
+.active.team {
+  max-height: 1000rpx;
+}
+
+.team-member-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.member-img,
+.record-img {
+  width: 64rpx;
+  height: 64rpx;
+  flex-shrink: 0;
+}
+
+.member-name {
+  font-size: 24rpx;
+  white-space: nowrap;
+}
+
+.member-note {
+  font-size: 22rpx;
+  color: #a43927;
+}
+
+.team-member {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16rpx 0;
+  gap: 8rpx;
+}
+
+
+.team-record {
+  margin: 0 64rpx;
+  padding: 4rpx 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.team .team-record:not(:last-child) {
+  border-bottom: #ddd 1rpx solid;
+}
+
+.record-name,
+.record-rank,
+.record-point {
+  font-size: 24rpx;
 }
