@@ -1,8 +1,5 @@
 <!-- pages/home/hero-detail.xml -->
 <view class='view-container'>
-  <view class='image-container'>
-    <image src='{{img}}' class='image-contents' mode='widthFix'></image>
-  </view>
   <view class='list-title'>
     <image src='{{icon}}' class='image-icon'></image>
     <text class="text-name">{{name}}</text>
@@ -30,22 +27,24 @@
           <text class="health">{{hero.health}}</text>
           <text class="health-regen">+{{hero.healthRegen}}</text>
         </view>
+        <view class='mana-box'>
+          <text class="mana">{{hero.mana}}</text>
+          <text class="mana-regen">+{{hero.manaRegen}}</text>
+        </view>
+        <view class='attr-box'>
+          <image class='attr-img' src="{{type=='力量'?'/assets/icons/strength_1.png':'/assets/icons/pro1.png'}}"></image>
+          <text class='attr-text'>{{hero.strengthStart}} + {{hero.strengthGrow}}</text>
+        </view>
+        <view class='attr-box'>
+          <image class='attr-img' src="{{type=='敏捷'?'/assets/icons/agility_1.png':'/assets/icons/pro2.png'}}"></image>
+          <text class='attr-text'>{{hero.agilityStart}} + {{hero.agilityGrow}}</text>
+        </view>
+        <view class='attr-box'>
+          <image class='attr-img' src="{{type=='智力'?'/assets/icons/intelligence_1.png':'/assets/icons/pro3.png'}}"></image>
+          <text class='attr-text'>{{hero.intelligenceStart}} + {{hero.intelligenceGrow}}</text>
+        </view>
       </view>
       <view class='dividing-line-attributes'></view>
-      <view class='list'>
-        <view class='list-item'>
-          <image class='list-item-image1' src="{{type=='力量'?'/assets/icons/strength_1.png':'/assets/icons/pro1.png'}}"></image>
-          <text class='list-item-text'>{{hero.strengthStart}} + {{hero.strengthGrow}}</text>
-        </view>
-        <view class='list-item'>
-          <image class='list-item-image1' src="{{type=='敏捷'?'/assets/icons/agility_1.png':'/assets/icons/pro2.png'}}"></image>
-          <text class='list-item-text'>{{hero.agilityStart}} + {{hero.agilityGrow}}</text>
-        </view>
-        <view class='list-item'>
-          <image class='list-item-image1' src="{{type=='智力'?'/assets/icons/intelligence_1.png':'/assets/icons/pro3.png'}}"></image>
-          <text class='list-item-text'>{{hero.intelligenceStart}} + {{hero.intelligenceGrow}}</text>
-        </view>
-      </view>
       <view class='list'>
         <view class='list-item'>
           <image class='list-item-image2' src='/assets/icons/pro4.png'></image>

@@ -70,13 +70,6 @@
   margin-right: 25rpx;
 }
 
-.list-item-image1 {
-  width: 80rpx;
-  height: 80rpx;
-  margin-left: 15rpx;
-  margin-top: 10rpx;
-}
-
 .list-item-image2 {
   width: 80rpx;
   height: 80rpx;
@@ -294,24 +287,25 @@
   margin-right: 10rpx;
 }
 
-.left{
+.left {
   display: flex;
   flex-direction: column;
   margin: 16rpx;
 }
 
-.hero-img{
+.hero-img {
   width: 256rpx;
   height: 144rpx;
 }
 
-.health-box{
+.health-box {
   position: relative;
-  background: linear-gradient(90deg,#286323,#7af03c);
+  background: linear-gradient(90deg, #286323, #7af03c);
 }
 
-.health{
-  position: absolute;
+.health,
+.mana {
+  display: inline-block;
   width: 100%;
   text-align: center;
   color: white;
@@ -319,15 +313,48 @@
   text-shadow: 1px 1px 2px #000;
 }
 
-.health-regen{
+.health-regen,
+.mana-regen {
+  position: absolute;
   color: #286323;
   font-weight: bold;
+  right: 12rpx;
+  font-size: 24rpx;
+  top: 4rpx;
 }
 
-.dividing-line-attributes{
+.mana-box {
+  position: relative;
+  background: linear-gradient(90deg,#1056db,#73f5fe);
+  margin-bottom: 16rpx;
+}
+
+.mana-regen {
+  color: #1056db;
+}
+
+.dividing-line-attributes {
   background-color: #444;
   width: 1rpx;
   height: inhert;
   display: inline-block;
   text-align: right;
+}
+
+.attr-box{
+  display: flex;
+  align-items: center;
+  padding: 4rpx 16rpx;
+  gap: 16rpx;
+  justify-content: center;
+}
+
+.attr-img {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.attr-text {
+  font-size: 26rpx;
+  color: white;
 }
