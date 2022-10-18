@@ -3,30 +3,39 @@
   flex-direction: column;
 }
 
-.tips-container{
+.tips-container {
   margin: 0 24rpx;
   justify-content: space-between;
 }
 
-.text-tips{
+.text-tips {
   color: #555;
   font-size: 22rpx;
   padding: 12rpx 0;
 }
 
-.text-title{
+.text-title {
   font-size: 34rpx;
   font-weight: bold;
   text-align: center;
   margin: 12rpx;
 }
 
+.rank-table {
+  display: flex;
+  flex-direction: column;
+  gap: 1rpx;
+  margin: 0 24rpx;
+  background-color: #a43927;
+}
+
 .top-view {
   display: flex;
   flex-direction: row;
-  background-color: white;
-  margin-left: 24rpx;
-  margin-right: 24rpx;
+  background-color: #a43927;
+  gap: 1rpx;
+  border: #a43927 1rpx solid;
+  border-bottom: none;
 }
 
 .top-title {
@@ -35,9 +44,7 @@
   font-weight: bold;
   text-align: center;
   color: black;
-  border: 3rpx solid #a43927;
-  padding-top:  10rpx;
-  padding-bottom:  10rpx;
+  background-color: white;
 }
 
 .top-contents-1 {
@@ -45,10 +52,8 @@
   font-size: 30rpx;
   font-weight: bold;
   color: black;
-  border: 3rpx solid #a43927;
+  background-color: white;
   text-align: center;
-  padding-top:  10rpx;
-  padding-bottom:  10rpx;
 }
 
 .top-contents-2 {
@@ -56,44 +61,43 @@
   font-size: 30rpx;
   font-weight: bold;
   color: black;
-  border: 3rpx solid #a43927;
+  background-color: white;
   text-align: center;
-  padding-top:  10rpx;
-  padding-bottom:  10rpx;
 }
 
 .list-view {
   display: flex;
   flex-direction: row;
-  background-color: white;
-  margin-left: 24rpx;
-  margin-right: 24rpx;
+  background-color: #a43927;
+  border-left: #a43927 1rpx solid;
+  border-right: #a43927 1rpx solid;
+  gap: 1rpx;
 }
 
 .list-title {
   width: 12%;
   font-size: 30rpx;
   color: black;
-  border: 3rpx solid #a43927;
   text-align: center;
+  background-color: white;
 }
 
 .list-contents-1 {
   width: 55%;
   font-size: 30rpx;
   color: black;
-  border: 3rpx solid #a43927;
   text-align: center;
+  background-color: white;
 }
 
 .list-contents-2 {
   width: 34%;
   font-size: 30rpx;
   color: black;
-  border: 3rpx solid #a43927;
   text-align: center;
+  background-color: white;
 }
 
-.bottom{
+.bottom {
   text-align: center;
 }

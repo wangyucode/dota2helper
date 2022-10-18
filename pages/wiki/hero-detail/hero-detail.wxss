@@ -27,7 +27,8 @@
 .list-item {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  align-items: center;
+  gap: 16rpx;
 }
 
 .jianjie-detail {
@@ -78,7 +79,6 @@
 .list-item-text {
   font-size: 26rpx;
   color: white;
-  margin-top: 10rpx;
 }
 
 .list-title {
@@ -325,7 +325,7 @@
 
 .mana-box {
   position: relative;
-  background: linear-gradient(90deg,#1056db,#73f5fe);
+  background: linear-gradient(90deg, #1056db, #73f5fe);
   margin-bottom: 16rpx;
 }
 
@@ -341,7 +341,7 @@
   text-align: right;
 }
 
-.attr-box{
+.attr-box {
   display: flex;
   align-items: center;
   padding: 4rpx 16rpx;
@@ -357,4 +357,23 @@
 .attr-text {
   font-size: 26rpx;
   color: white;
+}
+
+.list {
+  width: 100%;
+  display: flex;
+  gap: 16rpx;
+  padding: 16rpx;
+  justify-content: space-around;
+}
+
+.attr-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.attr-icon {
+  width: 32rpx;
+  height: 32rpx;
 }

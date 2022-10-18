@@ -3,8 +3,9 @@ App({
   onLaunch: function() {
   },
   globalData: {
+    appVersion: '1.8',
     serverHost: 'https://wycode.cn',
-    dataVersion: 'preview',
+    preview: true,
     transferData:{},
     items:[]
   }

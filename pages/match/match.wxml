@@ -61,7 +61,7 @@
             <text class="header-integral-text">积分</text>
         </view>
         <view class="dividing-line"></view>
-        <view wx:for="{{teams}}" wx:key="rank" wx:for-index="i" class="team {{activeTeam === i ? 'active': ''}}">
+        <view wx:for="{{teams}}" wx:for-index="i" class="team {{activeTeam === i ? 'active': ''}}">
             <view class="team-score-container" bind:tap="onClickTeam" data-index="{{i}}">
                 <text class="body-rank-text">{{item.rank}}</text>
                 <image class="team-score-logo" src="{{item.logo}}"></image>

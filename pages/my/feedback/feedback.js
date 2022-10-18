@@ -1,15 +1,10 @@
 // pages/about/feedback/feedback.js
-var contact = ''
 var content = ''
 const app = getApp();
 Page({
 
   contentInput: function (e) {
     content = e.detail.value
-  },
-
-  contactInput: function (e) {
-    contact = e.detail.value
   },
 
   submit: function () {
@@ -32,8 +27,7 @@ Page({
         type: 0,
         key: '6l2xpvnbuza8mn9idepvfl35nhoi2twv',
         app: 'dota',
-        fromUserName: contact,
-        fromUserId: '-1',
+        user: '',
         content: content,
         topic: '/feedback'
       },
@@ -47,7 +41,6 @@ Page({
             mask: true
           });
           this.setData({
-            contact: '',
             content: ''
           })
           setTimeout(() => { wx.navigateBack({}) }, 1000);

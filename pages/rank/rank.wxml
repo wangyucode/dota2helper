@@ -5,20 +5,22 @@
     <text class="text-tips" hidden="{{total === 0}}">{{total}}个玩家上榜</text>
     <text class="text-tips">每天上午10点更新</text>
   </view>
-  <view class='top-view'>
-    <text class='top-title'>排行</text>
-    <text class='top-contents-1'>玩家昵称</text>
-    <text class='top-contents-2'>战队</text>
-  </view>
-  <block wx:for='{{rankList}}'>
-    <view class='list-view'>
-      <text class='list-title'>{{item.rank}}</text>
-      <text class='list-contents-1'>{{item.name}}</text>
-      <text class='list-contents-2'>{{item.team_tag}}</text>
+  <view class='rank-table'>
+    <view class='top-view'>
+      <text class='top-title'>排行</text>
+      <text class='top-contents-1'>玩家昵称</text>
+      <text class='top-contents-2'>战队</text>
     </view>
-  </block>
+    <block wx:for='{{rankList}}'>
+      <view class='list-view'>
+        <text class='list-title'>{{item.rank}}</text>
+        <text class='list-contents-1'>{{item.name}}</text>
+        <text class='list-contents-2'>{{item.team_tag}}</text>
+      </view>
+    </block>
+  </view>
   <view class="loading-container" hidden="{{last}}">
     <image class="loading" src="/assets/icons/loading.png" mode="aspectFit" />
   </view>
-  <text class="bottom text-tips">到底了！</text>
+  <text class="bottom text-tips" hidden="{{!last}}">到底了！</text>
 </view>

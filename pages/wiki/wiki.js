@@ -151,6 +151,20 @@ Page({
     })
   },
 
+  getDataVersion: function () {
+    wx.request({
+      url: app.globalData.serverHost + '/node/config?k=CONFIG_DOTA_VERSION',
+      success: (res) => {
+        console.log('getDataVersion->', res);
+        if (res.data.success) {
+          this.setData({
+            dataVersion: res.data.payload.value
+          });
+        }
+      }
+    })
+  },
+
   heroDetail: function (e) {
     const hero = e.currentTarget.dataset.item;
     console.log("enterDetail->", hero)
@@ -179,11 +193,9 @@ Page({
       title: '请稍后...',
     });
 
-    this.setData({
-      dataVersion: app.globalData.dataVersion
-    });
     this.getHeroList();
     this.getToolsList();
+    this.getDataVersion();
   },
 
   heroClick: function () {

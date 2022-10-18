@@ -3,6 +3,13 @@
 Page({
 
   data: {
+    version: '',
+  },
+
+  onload: function() {
+    this.setData({
+      version: getApp().globalData.appVersion
+    });
   },
 
   enterUpdateLog: function (e) {

@@ -48,15 +48,48 @@
       <view class='list'>
         <view class='list-item'>
           <image class='list-item-image2' src='/assets/icons/pro4.png'></image>
-          <text class='list-item-text'>{{hero.attackPower}}</text>
+          <view class="attr-item">
+            <image class="attr-icon" src="/assets/icons/icon_damage.png" />
+            <text class='list-item-text'>{{hero.attackPower}}</text>
+          </view>
+          <view class="attr-item">
+            <image class="attr-icon" src="/assets/icons/icon_attack_time.png" />
+            <text class='list-item-text'>{{hero.attackRate}}</text>
+          </view>
+          <view class="attr-item">
+            <image class="attr-icon" src="/assets/icons/icon_attack_range.png" />
+            <text class='list-item-text'>{{hero.attackRange}}</text>
+          </view>
+          <view class="attr-item">
+            <image class="attr-icon" src="/assets/icons/icon_projectile_speed.png" />
+            <text class='list-item-text'>{{hero.projectileSpeed}}</text>
+          </view>
         </view>
         <view class='list-item'>
           <image class='list-item-image2' src='/assets/icons/pro5.png'></image>
-          <text class='list-item-text'>{{hero.armor}}</text>
+          <view class="attr-item">
+            <image class="attr-icon" src="/assets/icons/icon_armor.png" />
+            <text class='list-item-text'>{{hero.armor}}</text>
+          </view>
+          <view class="attr-item">
+            <image class="attr-icon" src="/assets/icons/icon_magic_resist.png" />
+            <text class='list-item-text'>{{hero.magicResistance}}</text>
+          </view>
         </view>
         <view class='list-item'>
           <image class='list-item-image2' src='/assets/icons/pro6.png'></image>
-          <text class='list-item-text'>{{hero.speed}}</text>
+          <view class="attr-item">
+            <image class="attr-icon" src="/assets/icons/icon_movement_speed.png" />
+            <text class='list-item-text'>{{hero.speed}}</text>
+          </view>
+          <view class="attr-item">
+            <image class="attr-icon" src="/assets/icons/icon_turn_rate.png" />
+            <text class='list-item-text'>{{hero.turnRate}}</text>
+          </view>
+          <view class="attr-item">
+            <image class="attr-icon" src="/assets/icons/icon_vision.png" />
+            <text class='list-item-text'>{{hero.sightDay+'/'+hero.sightNight}}</text>
+          </view>
         </view>
       </view>
     </view>
