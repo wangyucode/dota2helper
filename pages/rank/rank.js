@@ -31,7 +31,7 @@ Page({
 
   getRankList:function(){
     wx.request({
-      url: `${app.globalData.serverHost}/node/dota/leaderboard?page=${page}&size=30`,
+      url: `${app.globalData.serverHost}/node/dota/leaderboard?page=${page}&size=50`,
       success:(res)=>{
         console.log('getRankList->',res);
         if (res.data.success){

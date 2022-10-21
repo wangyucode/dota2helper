@@ -86,12 +86,12 @@ Page({
 
     onLoad: function () {
         this.getTeams();
-        if (app.globalData.priview) {
+        if (!app.globalData.preview) {
             this.getMatches();
             this.getHotMatches();
         }
         this.setData({
-            preview: app.globalData.priview
+            preview: app.globalData.preview
         });
     },
 })

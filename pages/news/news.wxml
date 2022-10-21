@@ -2,12 +2,12 @@
 <view class='home-container'>
   <block wx:for='{{newsArray}}' wx:key='href'>
     <view class='container-list' bindtap='enterNewsDetail' data-item='{{item}}'>
-      <view class='container-image'>
+      <view class='container-image' wx:if="{{!preview}}">
         <image class='container-list-image' src='{{item.img}}' mode='aspectFill' lazy-load="true"></image>
       </view>
       <view class='contents-view'>
         <text class='contents-title'>{{item.title}}</text>
-        <text class='contents-message'>{{item.content}}</text>
+        <text class='contents-message' wx:if="{{!preview}}">{{item.content}}</text>
         <text class='contents-time'>{{item.date}}</text>
       </view>
     </view>

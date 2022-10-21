@@ -45,7 +45,6 @@
                             </view>
                         </view>
                     </view>
-                    <view class="dividing-line"></view>
                 </block>
             </view>
         </block>
@@ -60,7 +59,6 @@
             <view class="top-center-line"></view>
             <text class="header-integral-text">积分</text>
         </view>
-        <view class="dividing-line"></view>
         <view wx:for="{{teams}}" wx:for-index="i" class="team {{activeTeam === i ? 'active': ''}}">
             <view class="team-score-container" bind:tap="onClickTeam" data-index="{{i}}">
                 <text class="body-rank-text">{{item.rank}}</text>
@@ -70,7 +68,6 @@
                 <text class="body-integral-text">{{item.point}}</text>
                 <image src='/assets/icons/arrow_down.png' class='list-item-image'></image>
             </view>
-            <view class="dividing-line"></view>
             <view class="team-member-container">
                 <view class="team-member" wx:for="{{item.members}}" wx:for-item="member">
                     <image src="{{member.img}}" class="member-img"></image>
@@ -84,7 +81,6 @@
                     <text class="record-rank">{{record.rank}}</text>
                     <text class="record-point">{{record.point}}</text>
             </view>
-            <view class="dividing-line"></view>
         </view>
     </view>
     <view class='match-top'>

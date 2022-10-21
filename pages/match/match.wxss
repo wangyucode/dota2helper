@@ -114,6 +114,7 @@ swiper {
   display: flex;
   padding: 12rpx;
   align-items: center;
+  border-bottom: 1rpx #ddd solid;
 }
 
 .time {
@@ -311,6 +312,7 @@ swiper {
   max-height: 74rpx;
   overflow: hidden;
   transition: max-height 0.5s;
+  border-bottom: #ddd 1rpx solid;
 }
 
 .active.team {
@@ -321,6 +323,7 @@ swiper {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1rpx #ddd solid;
 }
 
 .member-img,
@@ -358,7 +361,7 @@ swiper {
   justify-content: space-between;
 }
 
-.team .team-record:not(:last-child) {
+.team-record:not(:last-child) {
   border-bottom: #ddd 1rpx solid;
 }
 
