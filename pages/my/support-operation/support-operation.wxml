@@ -21,12 +21,6 @@
         </view>
     </navigator>
   <view class='line'></view>
-  <view class='list-item' bindtap="toReward" hover-class='list-item-hover'>
-    <text class='list-item-text-info'>打赏我</text>
-    <view class='flex-open'></view>
-    <image class='right-arrow' src='/assets/icons/arrow_down.png'></image>
-  </view>
-  <view class='line'></view>
   <view class='list-item'>
     <text class='list-item-text-info'>联系我？请访问网址 wycode.cn</text>
   </view>
