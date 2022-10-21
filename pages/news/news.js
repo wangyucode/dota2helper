@@ -1,5 +1,6 @@
 // pages/news/news.js
 const app = getApp()
+const size = 8;
 let page = 0;
 Page({
 
@@ -14,7 +15,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function () {
     this.getPreviewStatus();
   },
 
@@ -35,13 +36,12 @@ Page({
       mask: true
     });
     wx.request({
-      url: app.globalData.serverHost + '/node/config?k=CONFIG_DOTA_VERSION',
+      url: `${app.globalData.serverHost}/node/appStatus?a=dota&v=${app.globalData.appVersion}`,
       success: (res) => {
-        console.log('getDataVersion->', res);
+        console.log('getPreviewStatus->', res);
         if (res.data.success) {
-          app.globalData.dataVersion = res.data.payload.value;
+          app.globalData.preview = res.data.payload;
           this.getNewsInfo();
-          wx.hideLoading();
         }
       }
     })
@@ -57,14 +57,16 @@ Page({
 
   getNewsInfo: function () {
     wx.request({
-      url: `${app.globalData.serverHost}/node/dota/news?page=${page}&size=8`,
+      url: `${app.globalData.serverHost}/node/dota/news?page=${page}&size=${size}`,
       success: (res) => {
         console.log('getNewsInfo->', res);
+        wx.hideLoading();
         if (res.data.success) {
-          const newsArray = this.data.newsArray.concat(res.data.payload.items)
+          const arrayToConcat = app.globalData.preview ? res.data.payload.items.filter(item => item.preview) : res.data.payload.items;
+          const newsArray = this.data.newsArray.concat(arrayToConcat);
           this.setData({
             newsArray,
-            last: res.data.payload.items.length === 0 || newsArray.length >= res.data.payload.total
+            last: arrayToConcat.length < size || newsArray.length >= res.data.payload.total
           });
         }
       }

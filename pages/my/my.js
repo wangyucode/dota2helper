@@ -6,7 +6,7 @@ Page({
     version: '',
   },
 
-  onload: function() {
+  onLoad: function() {
     this.setData({
       version: getApp().globalData.appVersion
     });
