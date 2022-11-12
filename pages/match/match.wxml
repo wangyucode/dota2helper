@@ -1,7 +1,7 @@
 <!-- pages/match/match.wxml -->
 <view class="view-container">
-    <view class="date-match-container" hidden="{{!selectDate || preview}}">
-        <swiper wx:if="{{!preview}}" autoplay="true" interval="4000" duration="300" circular="true" indicator-dots="true" indicator-color="rgba(0, 0, 0, .3)" indicator-active-color="#ddd">
+    <view class="date-match-container" hidden="{{!selectDate}}">
+        <swiper autoplay="true" interval="4000" duration="300" circular="true" indicator-dots="true" indicator-color="rgba(0, 0, 0, .3)" indicator-active-color="#ddd">
             <block wx:for="{{hotMatches}}" wx:key="title">
                 <swiper-item bind:tap="onClickMatch" data-item="{{item}}">
                     <image class="banner-image" src="{{item.img}}" mode="aspectFill"></image>
@@ -49,7 +49,7 @@
             </view>
         </block>
     </view>
-    <view class="team-container" hidden="{{selectDate && !preview}}">
+    <view class="team-container" hidden="{{selectDate}}">
         <view class="team-header">
             <text class="header-rank-text">排名</text>
             <view class="top-center-line"></view>

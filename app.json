@@ -1,10 +1,8 @@
 {
   "pages": [
-    "pages/news/news",
-    "pages/news/news-detail/news-detail",
+    "pages/wiki/wiki",
     "pages/match/match",
     "pages/match/match-detail/detail",
-    "pages/wiki/wiki",
     "pages/wiki/hero-detail/hero-detail",
     "pages/wiki/tool-jianjie/tool-jianjie",
     "pages/rank/rank",
@@ -24,22 +22,16 @@
     "selectedColor": "#a43927",
     "list": [
       {
-        "pagePath": "pages/news/news",
-        "iconPath": "/assets/icons/news.png",
-        "selectedIconPath": "/assets/icons/news_1.png",
-        "text": "公告"
+        "pagePath": "pages/wiki/wiki",
+        "iconPath": "/assets/icons/baike.png",
+        "selectedIconPath": "/assets/icons/baike_1.png",
+        "text": "百科"
       },
       {
         "pagePath": "pages/match/match",
         "iconPath": "/assets/icons/match.png",
         "selectedIconPath": "/assets/icons/match_1.png",
         "text": "比赛"
-      },
-      {
-        "pagePath": "pages/wiki/wiki",
-        "iconPath": "/assets/icons/baike.png",
-        "selectedIconPath": "/assets/icons/baike_1.png",
-        "text": "百科"
       },
       {
         "pagePath": "pages/rank/rank",

@@ -4,7 +4,6 @@ Page({
 
     data: {
         selectDate: true,
-        preview: true,
         matchDateArray: [],
         teams: [],
         hotMatches: [],
@@ -86,12 +85,7 @@ Page({
 
     onLoad: function () {
         this.getTeams();
-        if (!app.globalData.preview) {
-            this.getMatches();
-            this.getHotMatches();
-        }
-        this.setData({
-            preview: app.globalData.preview
-        });
+        this.getMatches();
+        this.getHotMatches();
     },
 })
