@@ -1,10 +1,10 @@
 <!-- /pages/my/update-log/update-log.wxml -->
 <view class='view-container'>
     <view class='list-item'>
-    <text class='list-item-version'>V1.9</text>
+    <text class='list-item-version'>V1.9.1</text>
     <view class='list-item-contents'>
       <view class='back-dian'></view>
-      <text class='list-item-detail'>因政策要求，移除文章模块</text>
+      <text class='list-item-detail'>因政策要求，移除文章、赛事预告模块</text>
     </view>
   </view>
   <view class='list-item'>

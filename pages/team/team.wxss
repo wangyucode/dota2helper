@@ -1,0 +1,174 @@
+/* pages/match/match.wxss */
+
+.view-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.team-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-logo {
+  width: 56rpx;
+  height: 56rpx;
+  margin: 12rpx;
+}
+
+.team-name {
+  font-size: 26rpx;
+  min-width: 160rpx;
+  max-width: 160rpx;
+  text-align: center;
+}
+
+.team-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24rpx 24rpx;
+  border-bottom: #ddd 1rpx solid;
+}
+
+.header-rank-text {
+  text-align: center;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.header-team-text {
+  width: 240rpx;
+  text-align: center;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.header-nation-text {
+  text-align: center;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.header-integral-text {
+  width: 96rpx;
+  text-align: center;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.team-score-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12rpx;
+}
+
+.active .team-score-container {
+  background-color: #ddd;
+}
+
+.body-rank-text {
+  width: 96rpx;
+  text-align: center;
+  font-size: 28rpx;
+}
+
+.team-score-logo {
+  width: 32px;
+  height: 48rpx;
+}
+
+.body-name-text {
+  width: 200rpx;
+  font-size: 28rpx;
+}
+
+.team-nation {
+  width: 56rpx;
+  height: 36rpx;
+}
+
+.body-integral-text {
+  padding-left: 48rpx;
+  display: inline-block;
+  text-align: center;
+  font-size: 28rpx;
+}
+
+.list-item-image {
+  width: 30rpx;
+  height: 30rpx;
+  transition: transform 0.5s;
+}
+
+.active .list-item-image {
+  transform: rotate(90deg)
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  max-height: 74rpx;
+  overflow: hidden;
+  transition: max-height 0.5s;
+  border-bottom: #ddd 1rpx solid;
+}
+
+.active.team {
+  max-height: 1000rpx;
+}
+
+.team-member-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1rpx #ddd solid;
+}
+
+.member-img,
+.record-img {
+  width: 64rpx;
+  height: 64rpx;
+  flex-shrink: 0;
+}
+
+.member-name {
+  font-size: 24rpx;
+  white-space: nowrap;
+}
+
+.member-note {
+  font-size: 22rpx;
+  color: #a43927;
+}
+
+.team-member {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16rpx 0;
+  gap: 8rpx;
+}
+
+
+.team-record {
+  margin: 0 64rpx;
+  padding: 4rpx 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.team-record:not(:last-child) {
+  border-bottom: #ddd 1rpx solid;
+}
+
+.record-name,
+.record-rank,
+.record-point {
+  font-size: 24rpx;
+}

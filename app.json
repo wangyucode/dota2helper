@@ -1,8 +1,7 @@
 {
   "pages": [
     "pages/wiki/wiki",
-    "pages/match/match",
-    "pages/match/match-detail/detail",
+    "pages/team/team",
     "pages/wiki/hero-detail/hero-detail",
     "pages/wiki/tool-jianjie/tool-jianjie",
     "pages/rank/rank",
@@ -28,10 +27,10 @@
         "text": "百科"
       },
       {
-        "pagePath": "pages/match/match",
+        "pagePath": "pages/team/team",
         "iconPath": "/assets/icons/match.png",
         "selectedIconPath": "/assets/icons/match_1.png",
-        "text": "比赛"
+        "text": "战队"
       },
       {
         "pagePath": "pages/rank/rank",
